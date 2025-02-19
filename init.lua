@@ -101,3 +101,6 @@ require('plug').add({
 })
 require('plug').load()
 vim.cmd('nmap f <Plug>(clever-f-f)')
+require('mappings')
+require('autocmds')
+require('options')
