@@ -29,6 +29,8 @@ require('plug').add({
       vim.keymap.set('n', '<leader>gs', '<cmd>Git status<cr>', { silent = true })
       vim.keymap.set('n', '<leader>gA', '<cmd>Git add .<cr>', { silent = true })
       vim.keymap.set('n', '<leader>gc', '<cmd>Git commit<cr>', { silent = true })
+      vim.keymap.set('n', '<leader>gv', '<cmd>Git log<cr>', { silent = true })
+      vim.keymap.set('n', '<leader>gV', '<cmd>Git log %<cr>', { silent = true })
     end,
   },
   {
