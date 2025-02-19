@@ -43,6 +43,11 @@ require('plug').add({
     config = function()
       require('cmp').setup()
     end,
+    depends = {
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+    },
   },
   {
     'wsdjeg/scrollbar.vim',
@@ -50,9 +55,11 @@ require('plug').add({
     config = function() end,
   },
   {
-    'mhinz/vim-startify',
+    'nvimdev/dashboard-nvim',
+    events = { 'VimEnter' },
     config = function()
-      vim.g.startify_change_to_dir = 0
+      require('dashboard').setup({})
+      vim.keymap.set('n', '<leader>as', '<cmd>Dashboard<cr>', { silent = true })
     end,
   },
   {
@@ -72,7 +79,7 @@ require('plug').add({
         },
         view = {
           width = 35,
-	  side = 'right',
+          side = 'right',
         },
         renderer = {
           group_empty = true,
