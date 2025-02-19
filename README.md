@@ -1,3 +1,5 @@
-# 我的 Neovim 配置
+# Eric's Neovim Config
+
+- Plugin manager: [nvim-plug](https://github.com/wsdjeg/nvim-plug)
 
 
