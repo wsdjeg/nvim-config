@@ -26,8 +26,10 @@ require('plug').add({
     'wsdjeg/git.vim',
     cmds = { 'Git' },
     config_before = function()
-	    vim.keymap.set('n', '<leader>gs', '<cmd>Git status<cr>', {silent = true})
-    end
+      vim.keymap.set('n', '<leader>gs', '<cmd>Git status<cr>', { silent = true })
+      vim.keymap.set('n', '<leader>gA', '<cmd>Git add .<cr>', { silent = true })
+      vim.keymap.set('n', '<leader>gc', '<cmd>Git commit<cr>', { silent = true })
+    end,
   },
   {
     'wsdjeg/nvim-plug',
@@ -36,8 +38,8 @@ require('plug').add({
   {
     'hrsh7th/nvim-cmp',
     config = function()
-	    require('cmp').setup()
-    end
+      require('cmp').setup()
+    end,
   },
   {
     'wsdjeg/scrollbar.vim',
@@ -48,9 +50,33 @@ require('plug').add({
     'mhinz/vim-startify',
   },
   {
+    'wsdjeg/SpaceVim',
+  },
+  {
+    'wsdjeg/format.nvim',
+    config = function()
+      require('format').setup({
+        custom_formatters = {
+          lua = {
+            exe = 'stylua',
+            args = { '-' },
+            stdin = true,
+          },
+        },
+      })
+    end,
+  },
+  {
     'rakr/vim-one',
     config = function()
-      vim.cmd('colorscheme one')
+      vim.cmd([[
+      colorscheme one
+      hi VertSplit guibg=#282c34 guifg=#181A1F
+      hi SPCFloatBorder guibg=#282c34 guifg=#181A1F
+      hi SPCNormalFloat guifg=#abb2bf guibg=#282c34
+      hi clear StatusLineNC
+      hi link StatusLineNC Normal
+      ]])
     end,
     priority = 100,
   },
@@ -63,4 +89,3 @@ require('plug').add({
   },
 })
 require('plug').load()
-
