@@ -25,6 +25,9 @@ require('plug').add({
   {
     'wsdjeg/git.vim',
     cmds = { 'Git' },
+    config_before = function()
+	    vim.keymap.set('n', '<leader>gs', '<cmd>Git status<cr>', {silent = true})
+    end
   },
   {
     'wsdjeg/nvim-plug',
@@ -33,6 +36,7 @@ require('plug').add({
   {
     'hrsh7th/nvim-cmp',
     config = function()
+	    require('cmd').setup()
     end
   },
   {
