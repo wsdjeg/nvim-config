@@ -36,7 +36,7 @@ require('plug').add({
   {
     'hrsh7th/nvim-cmp',
     config = function()
-	    require('cmd').setup()
+	    require('cmp').setup()
     end
   },
   {
