@@ -86,6 +86,9 @@ require('plug').add({
     config = function()
       require('flygrep').setup()
     end,
+    config_before = function()
+      vim.keymap.set('n', '<leader>s/', '<cmd>FlyGrep<cr>', { silent = true })
+    end,
   },
 })
 require('plug').load()
