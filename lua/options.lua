@@ -6,8 +6,6 @@ vim.o.laststatus = 2
 
 vim.o.showcmd = false
 
-vim.o.shada = ''
-
 vim.o.autoindent = true
 
 vim.o.linebreak = true
@@ -19,10 +17,6 @@ vim.o.linebreak = true
 vim.o.number = true
 
 vim.o.autoread = true
-
-vim.o.backup = true
-
-vim.o.undofile = true
 
 vim.o.undolevels = 1000
 

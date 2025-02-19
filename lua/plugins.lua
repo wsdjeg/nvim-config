@@ -72,6 +72,7 @@ require('plug').add({
       vim.g.loaded_netrw = 1
       vim.g.loaded_netrwPlugin = 1
       vim.keymap.set('n', '<F3>', '<cmd>NvimTreeToggle<cr>', { silent = true })
+      vim.keymap.set('n', '<leader>fo', '<cmd>NvimTreeFindFile<cr>', { silent = true })
     end,
     config = function()
       require('nvim-tree').setup({
