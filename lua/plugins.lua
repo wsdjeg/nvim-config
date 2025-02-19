@@ -50,6 +50,12 @@ require('plug').add({
   },
   {
     'mhinz/vim-startify',
+    config = function()
+      vim.g.startify_change_to_dir = 0
+    end,
+  },
+  {
+    'wsdjeg/winbar.nvim',
   },
   {
     'wsdjeg/SpaceVim',
@@ -67,6 +73,10 @@ require('plug').add({
         },
       })
     end,
+    config_before = function()
+      vim.keymap.set('n', '<leader>bf', '<cmd>Format<cr>', { silent = true })
+    end,
+    cmds = { 'Format' },
   },
   {
     'rakr/vim-one',
