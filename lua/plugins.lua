@@ -40,6 +40,14 @@ require('plug').add({
     fetch = true,
   },
   {
+    'D:/wsdjeg/rooter.nvim',
+    config = function()
+      require('rooter').setup({
+        root_pattern = { '.git' },
+      })
+    end,
+  },
+  {
     'hrsh7th/nvim-cmp',
     events = { 'InsertEnter' },
     config_after = function()
