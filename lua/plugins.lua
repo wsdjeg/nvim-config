@@ -42,7 +42,7 @@ require('plug').add({
   {
     'hrsh7th/nvim-cmp',
     events = { 'InsertEnter' },
-    config = function()
+    config_after = function()
       local cmp = require('cmp')
       vim.o.tagbsearch = false
 
@@ -282,7 +282,7 @@ require('plug').add({
     end,
   },
   {
-    'nvimdev/dashboard-nvim',
+    'wsdjeg/dashboard-nvim',
     events = { 'VimEnter' },
     config = function()
       require('dashboard').setup({})
