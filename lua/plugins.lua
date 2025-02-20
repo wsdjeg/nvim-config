@@ -345,12 +345,21 @@ require('plug').add({
     config = function()
       vim.cmd([[
       colorscheme one
-      hi VertSplit guibg=#282c34 guifg=#181A1F
-      hi SPCFloatBorder guibg=#282c34 guifg=#181A1F
-      hi SPCNormalFloat guifg=#abb2bf guibg=#282c34
-      hi clear StatusLineNC
-      hi link StatusLineNC Normal
       ]])
+      vim.api.nvim_create_autocmd({ 'ColorScheme' }, {
+        pattern = { 'one' },
+        group = vim.api.nvim_create_augroup('colorscheme-one', { clear = treu }),
+        callback = function()
+          vim.cmd([[
+	      hi VertSplit guibg=#282c34 guifg=#181A1F
+	      hi SPCFloatBorder guibg=#282c34 guifg=#181A1F
+	      hi SPCNormalFloat guifg=#abb2bf guibg=#282c34
+	      hi clear StatusLineNC
+	      hi link StatusLineNC Normal
+	      hi link WinSeparator VertSplit
+	      ]])
+        end,
+      })
     end,
     priority = 100,
   },
