@@ -61,6 +61,12 @@ require('plug').add({
       { 'uga-rosa/cmp-dictionary' },
       { 'onsails/lspkind.nvim' },
       { 'notomo/cmp-neosnippet' },
+      {
+        'neovim/nvim-lspconfig',
+        config = function()
+          require('plugins.lspconfig')
+        end,
+      },
     },
   },
   {

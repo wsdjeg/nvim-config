@@ -140,6 +140,11 @@ cmp.setup({
     }),
   },
   sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    {
+      name = 'dictionary',
+      keyword_length = 2,
+    },
     { name = 'path' },
     { name = 'neosnippet' },
   }, {
