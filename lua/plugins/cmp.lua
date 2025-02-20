@@ -1,3 +1,4 @@
+vim.cmd('runtime! after/plugin/*.lua')
 local cmp = require('cmp')
 vim.o.tagbsearch = false
 
