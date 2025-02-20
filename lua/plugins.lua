@@ -382,6 +382,16 @@ require('plug').add({
     end,
   },
   {
+    'wsdjeg/vim-zettelkasten',
+    config_before = function()
+      vim.g.zettelkasten_directory = 'D:/me/zettelkasten'
+      vim.g.zettelkasten_template_directory = 'D:/me/zettelkasten_template'
+    end,
+    config = function()
+      vim.keymap.set('n', '<leader>mzb', '<cmd>ZkBrowse<cr>', { silent = true })
+    end
+  },
+  {
     'preservim/tagbar',
     cmds = { 'TagbarToggle' },
     config_before = function()
