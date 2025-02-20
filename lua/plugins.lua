@@ -40,10 +40,10 @@ require('plug').add({
     fetch = true,
   },
   {
-    'D:/wsdjeg/rooter.nvim',
+    'wsdjeg/rooter.nvim',
     config = function()
       require('rooter').setup({
-        root_pattern = { '.git' },
+        root_pattern = { '.git/' },
       })
     end,
   },

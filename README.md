@@ -6,6 +6,7 @@
 - Code Format: [format.nvim](https://github.com/wsdjeg/format.nvim)
 - Git integration: [git.vim](https://github.com/wsdjeg/git.vim)
 - File Explorer: [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+- Project Rooter: [rooter.nvim](https://github.com/wsdjeg/rooter.nvim)
 
 ## Key Bindings
 
