@@ -138,9 +138,6 @@ require('plug').add({
   {
     'rakr/vim-one',
     config = function()
-      vim.cmd([[
-      colorscheme one
-      ]])
       vim.api.nvim_create_autocmd({ 'ColorScheme' }, {
         pattern = { 'one' },
         group = vim.api.nvim_create_augroup('colorscheme-one', { clear = treu }),
@@ -155,6 +152,9 @@ require('plug').add({
 	      ]])
         end,
       })
+      vim.cmd([[
+      colorscheme one
+      ]])
     end,
     priority = 100,
   },
