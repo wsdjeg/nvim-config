@@ -41,6 +41,7 @@ require('plug').add({
   },
   {
     'hrsh7th/nvim-cmp',
+    events = {'InsertEnter'},
     config = function()
       local cmp = require('cmp')
       vim.o.tagbsearch = false
