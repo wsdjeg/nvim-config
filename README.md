@@ -7,6 +7,7 @@
 - Git integration: [git.vim](https://github.com/wsdjeg/git.vim)
 - File Explorer: [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - Project Rooter: [rooter.nvim](https://github.com/wsdjeg/rooter.nvim)
+- MRU(Most Recently Used) Files: [mru.nvim](https://github.com/wsdjeg/mru.nvim)
 
 ## Key Bindings
 

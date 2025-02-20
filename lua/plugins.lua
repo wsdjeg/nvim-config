@@ -47,7 +47,12 @@ require('plug').add({
       })
     end,
   },
-  { 'D:/wsdjeg/mru.nvim' },
+  {
+    'D:/wsdjeg/mru.nvim',
+    config = function()
+      require('mru').setup({ enable_cache = true })
+    end,
+  },
   {
     'hrsh7th/nvim-cmp',
     config = function()
