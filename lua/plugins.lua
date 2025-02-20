@@ -49,7 +49,6 @@ require('plug').add({
   },
   {
     'hrsh7th/nvim-cmp',
-    events = { 'InsertEnter' },
     config = function()
       require('plugins.cmp')
     end,
