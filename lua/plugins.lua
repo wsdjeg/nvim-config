@@ -41,31 +41,30 @@ require('plug').add({
   },
   {
     'hrsh7th/nvim-cmp',
-    events = {'InsertEnter'},
+    events = { 'InsertEnter' },
     config = function()
       local cmp = require('cmp')
       vim.o.tagbsearch = false
-
 
       local feedkey = function(key, mode)
         vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
       end
 
       local function expand_snippet(_) -- {{{
-          if vim.fn['neosnippet#expandable']() == 1 then
-            feedkey('<plug>(neosnippet_expand)', '')
-          end
+        if vim.fn['neosnippet#expandable']() == 1 then
+          feedkey('<plug>(neosnippet_expand)', '')
+        end
       end
       -- }}}
 
       local function smart_tab(fallback) -- {{{
-          if vim.fn['neosnippet#expandable_or_jumpable']() == 1 then
-            feedkey('<plug>(neosnippet_expand_or_jump)', '')
-          elseif cmp.visible() then
-            cmp.select_next_item()
-          else
-            fallback()
-          end
+        if vim.fn['neosnippet#expandable_or_jumpable']() == 1 then
+          feedkey('<plug>(neosnippet_expand_or_jump)', '')
+        elseif cmp.visible() then
+          cmp.select_next_item()
+        else
+          fallback()
+        end
       end
 
       --1. `auto_completion_return_key_behavior` set the action to perform
@@ -76,13 +75,13 @@ require('plug').add({
       --   By default it is `complete`.
 
       local function enter(f) -- {{{
-          expand_snippet(nil)
-          if cmp.visible() then
-            cmp.mapping.confirm({ select = false })
-            return cmp.close()
-          else
-            pcall(f)
-          end
+        expand_snippet(nil)
+        if cmp.visible() then
+          cmp.mapping.confirm({ select = false })
+          return cmp.close()
+        else
+          pcall(f)
+        end
       end
       -- }}}
 
@@ -274,6 +273,13 @@ require('plug').add({
     'wsdjeg/scrollbar.vim',
     events = { 'VimEnter' },
     config = function() end,
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    events = { 'VimEnter' },
+    config = function()
+      require('lualine').setup()
+    end,
   },
   {
     'nvimdev/dashboard-nvim',
