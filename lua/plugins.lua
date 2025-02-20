@@ -365,6 +365,17 @@ require('plug').add({
     end,
   },
   {
+    'preservim/tagbar',
+    cmds = { 'TagbarToggle' },
+    config_before = function()
+      vim.keymap.set('n', '<F2>', '<cmd>TagbarToggle<cr>', { silent = true })
+
+      vim.g.tagbar_width = 30
+      vim.g.tagbar_left = 1
+      vim.g.tagbar_iconchars = { '▶', '▼' }
+    end,
+  },
+  {
     'nvim-telescope/telescope.nvim',
     cmds = { 'Telescope' },
     depends = {
