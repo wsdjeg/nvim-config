@@ -47,6 +47,7 @@ require('plug').add({
       })
     end,
   },
+  { 'D:/wsdjeg/mru.nvim' },
   {
     'hrsh7th/nvim-cmp',
     config = function()
