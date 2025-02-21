@@ -48,7 +48,7 @@ require('plug').add({
     end,
   },
   {
-    'D:/wsdjeg/mru.nvim',
+    'wsdjeg/mru.nvim',
     config = function()
       require('mru').setup({ enable_cache = true })
     end,
@@ -210,7 +210,7 @@ require('plug').add({
     },
     config_before = function()
       vim.keymap.set('n', '<C-p>', '<cmd>Telescope find_files<cr>', { silent = true })
-      vim.keymap.set('n', '<leader>fr', '<cmd>Telescope oldfiles<cr>', { silent = true })
+      vim.keymap.set('n', '<leader>fr', '<cmd>Telescope mru<cr>', { silent = true })
       vim.keymap.set('n', '<leader>bb', '<cmd>Telescope buffers<cr>', { silent = true })
     end,
     config = function()
@@ -235,6 +235,7 @@ require('plug').add({
           },
         },
       })
+      require('telescope').load_extension('mru')
     end,
   },
 })
