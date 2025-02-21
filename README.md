@@ -9,6 +9,12 @@
 - Project Rooter: [rooter.nvim](https://github.com/wsdjeg/rooter.nvim)
 - MRU(Most Recently Used) Files: [mru.nvim](https://github.com/wsdjeg/mru.nvim)
 
+## Forked plugins:
+
+- dashboard: [wsdjeg/dashboard-nvim](https://github.com/wsdjeg/dashboard-nvim)
+  - use mru.nvim for recent files
+
+
 ## Key Bindings
 
 | Key Binding | Description   |
