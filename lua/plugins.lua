@@ -91,7 +91,10 @@ require('plug').add({
     'wsdjeg/dashboard-nvim',
     events = { 'VimEnter' },
     config = function()
-      require('dashboard').setup({})
+      require('dashboard').setup({
+        shortcut_type = 'number',
+        config = { project = { enable = false } },
+      })
       vim.keymap.set('n', '<leader>as', '<cmd>Dashboard<cr>', { silent = true })
     end,
   },
