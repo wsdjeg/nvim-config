@@ -216,6 +216,7 @@ require('plug').add({
       vim.keymap.set('n', '<leader>fr', '<cmd>Telescope mru<cr>', { silent = true })
       vim.keymap.set('n', '<leader>bb', '<cmd>Telescope buffers<cr>', { silent = true })
       vim.keymap.set('n', '<leader>ji', '<cmd>Telescope ctags_outline<cr>', { silent = true })
+      vim.keymap.set('n', '<leader>pl', '<cmd>Telescope project<cr>', { silent = true })
     end,
     config = function()
       local actions = require('telescope.actions')
