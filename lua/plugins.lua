@@ -207,11 +207,15 @@ require('plug').add({
       {
         'nvim-lua/plenary.nvim',
       },
+      {
+        'fcying/telescope-ctags-outline.nvim',
+      },
     },
     config_before = function()
       vim.keymap.set('n', '<C-p>', '<cmd>Telescope find_files<cr>', { silent = true })
       vim.keymap.set('n', '<leader>fr', '<cmd>Telescope mru<cr>', { silent = true })
       vim.keymap.set('n', '<leader>bb', '<cmd>Telescope buffers<cr>', { silent = true })
+      vim.keymap.set('n', '<leader>ji', '<cmd>Telescope ctags_outline<cr>', { silent = true })
     end,
     config = function()
       local actions = require('telescope.actions')
@@ -235,7 +239,6 @@ require('plug').add({
           },
         },
       })
-      require('telescope').load_extension('mru')
     end,
   },
 })
