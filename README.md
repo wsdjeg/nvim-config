@@ -8,6 +8,9 @@
 - File Explorer: [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - Project Rooter: [rooter.nvim](https://github.com/wsdjeg/rooter.nvim)
 - MRU(Most Recently Used) Files: [mru.nvim](https://github.com/wsdjeg/mru.nvim)
+- tabline: [tabline.nvim](https://github.com/wsdjeg/tabline.nvim)
+- winbar: [winbar.nvim](https://github.com/wsdjeg/winbar.nvim)
+- statusline: [statusline.nvim](https://github.com/wsdjeg/statusline.nvim)
 
 ## Forked plugins:
 
