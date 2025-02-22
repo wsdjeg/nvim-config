@@ -81,10 +81,17 @@ require('plug').add({
     config = function() end,
   },
   {
-    'nvim-lualine/lualine.nvim',
+    'D:/wsdjeg/statusline.nvim',
     events = { 'VimEnter' },
     config = function()
-      require('lualine').setup()
+      require('statusline').setup()
+    end,
+  },
+  {
+    'D:/wsdjeg/tabline.nvim',
+    events = { 'VimEnter' },
+    config = function()
+      require('tabline').setup()
     end,
   },
   {
