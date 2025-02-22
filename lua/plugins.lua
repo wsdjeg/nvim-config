@@ -88,10 +88,16 @@ require('plug').add({
     end,
   },
   {
-    'D:/wsdjeg/tabline.nvim',
+    'wsdjeg/tabline.nvim',
     events = { 'VimEnter' },
     config = function()
-      require('tabline').setup()
+      for i = 1, 9, 1 do
+        vim.keymap.set('n', '\\' .. i, function()
+          require('tabline').jump(i)
+        end, { silent = true })
+      end
+
+      require('tabline').setup({ show_index = true })
     end,
   },
   {
