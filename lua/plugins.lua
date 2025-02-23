@@ -142,9 +142,6 @@ require('plug').add({
     cmds = { 'NvimTreeToggle', 'NvimTreeFocus', 'NvimTreeFindFile' },
   },
   {
-    'wsdjeg/SpaceVim',
-  },
-  {
     'wsdjeg/format.nvim',
     config = function()
       require('format').setup({
