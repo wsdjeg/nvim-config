@@ -50,7 +50,7 @@ require('plug').add({
   {
     'wsdjeg/mru.nvim',
     config = function()
-      require('mru').setup({ enable_cache = true })
+      require('mru').setup({ enable_cache = true, ignore_path_regexs = { '/.git/' } })
     end,
   },
   {
@@ -158,8 +158,8 @@ require('plug').add({
     end,
     cmds = { 'NvimTreeToggle', 'NvimTreeFocus', 'NvimTreeFindFile' },
     depends = {
-        { 'nvim-tree/nvim-web-devicons' }
-    }
+      { 'nvim-tree/nvim-web-devicons' },
+    },
   },
   {
     'wsdjeg/format.nvim',
@@ -186,6 +186,10 @@ require('plug').add({
         pattern = { 'one' },
         group = vim.api.nvim_create_augroup('colorscheme-one', { clear = treu }),
         callback = function()
+          -- DashboardHeader DashboardFooter
+          -- Hyper theme
+          -- DashboardProjectTitle DashboardProjectTitleIcon DashboardProjectIcon
+          -- DashboardMruTitle DashboardMruIcon DashboardFiles DashboardShortCutIcon
           vim.cmd([[
 	      hi VertSplit guibg=#282c34 guifg=#181A1F
 	      hi SPCFloatBorder guibg=#282c34 guifg=#181A1F
@@ -193,6 +197,12 @@ require('plug').add({
 	      hi clear StatusLineNC
 	      hi link StatusLineNC Normal
 	      hi link WinSeparator VertSplit
+          hi link DashboardHeader Number
+          hi link DashboardFooter Number
+          hi link DashboardFiles Comment
+          hi link DashboardShortCutIcon Character
+          hi link DashboardMruTitle Todo
+          hi link DashboardMruIcon Label
 	      ]])
         end,
       })
