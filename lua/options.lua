@@ -53,3 +53,4 @@ vim.opt.shortmess:append('c')
 vim.opt.shortmess:append('s')
 -- Do not wrap lone lines
 vim.o.wrap = false
+vim.o.showmode = false
