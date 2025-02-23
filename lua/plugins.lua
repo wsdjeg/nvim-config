@@ -157,6 +157,9 @@ require('plug').add({
       })
     end,
     cmds = { 'NvimTreeToggle', 'NvimTreeFocus', 'NvimTreeFindFile' },
+    depends = {
+        { 'nvim-tree/nvim-web-devicons' }
+    }
   },
   {
     'wsdjeg/format.nvim',
