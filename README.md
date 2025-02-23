@@ -11,11 +11,11 @@
 - tabline: [tabline.nvim](https://github.com/wsdjeg/tabline.nvim)
 - winbar: [winbar.nvim](https://github.com/wsdjeg/winbar.nvim)
 - statusline: [statusline.nvim](https://github.com/wsdjeg/statusline.nvim)
+- Code completion: [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 
 ## Forked plugins:
 
 - dashboard: [wsdjeg/dashboard-nvim](https://github.com/wsdjeg/dashboard-nvim)
-  - use mru.nvim for recent files
 
 
 ## Key Bindings
