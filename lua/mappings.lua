@@ -15,4 +15,5 @@ vim.keymap.set('n', '<leader>bc', function()
       vim.cmd(string.format('noautocmd bd %d', i))
     end
   end
+  vim.cmd.redrawtabline()
 end, { silent = true })
