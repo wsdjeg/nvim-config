@@ -35,11 +35,6 @@ require('plug').add({
       vim.keymap.set('n', '<leader>gp', '<cmd>Git push<cr>', { silent = true })
       vim.keymap.set('n', '<leader>gd', '<cmd>Git diff<cr>', { silent = true })
     end,
-    config = function()
-      require('statusline').register_sections('vcs', function()
-        return vim.fn['git#branch#current']()
-      end)
-    end,
   },
   {
     'wsdjeg/nvim-plug',
@@ -90,6 +85,9 @@ require('plug').add({
     'D:/wsdjeg/statusline.nvim',
     events = { 'VimEnter' },
     config = function()
+      require('statusline').register_sections('vcs', function()
+        return vim.fn['git#branch#current']()
+      end)
       require('statusline').setup({
         left_sections = { 'winnr', 'filename', 'vcs' },
       })
