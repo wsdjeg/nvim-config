@@ -91,7 +91,7 @@ require('plug').add({
     events = { 'VimEnter' },
     config = function()
       require('statusline').setup({
-        left_sections = { 'winnr', 'vcs', 'filename' },
+        left_sections = { 'winnr', 'filename', 'vcs' },
       })
       for i = 1, 9 do
         vim.keymap.set(
