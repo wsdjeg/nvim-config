@@ -85,6 +85,9 @@ require('plug').add({
     events = { 'VimEnter' },
     config = function()
       require('statusline').setup()
+      for i = 1, 9 do
+        vim.keymap.set('n', '<leader>' .. i, '<cmd>exe "' .. i .. 'wincmd w"<cr>', { silent = true })
+      end
     end,
   },
   {
