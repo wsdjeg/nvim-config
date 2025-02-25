@@ -86,7 +86,7 @@ require('plug').add({
     events = { 'VimEnter' },
     config = function()
       require('statusline').register_sections('vcs', function()
-        return vim.fn['git#branch#current']()
+        return '%{ git#branch#current() }'
       end)
       require('statusline').setup({
         left_sections = { 'winnr', 'filename', 'vcs' },
