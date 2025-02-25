@@ -23,6 +23,9 @@ require('plug').setup({
 
 require('plug').add({
   {
+    'D:/wsdjeg/logger.nvim',
+  },
+  {
     'wsdjeg/git.vim',
     cmds = { 'Git' },
     on_func = { 'git#branch#current' },
