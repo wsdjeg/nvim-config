@@ -25,6 +25,7 @@ require('plug').add({
   {
     'wsdjeg/git.vim',
     cmds = { 'Git' },
+    on_func = { 'git#branch#current' },
     config_before = function()
       vim.keymap.set('n', '<leader>gs', '<cmd>Git status<cr>', { silent = true })
       vim.keymap.set('n', '<leader>gA', '<cmd>Git add .<cr>', { silent = true })
@@ -33,6 +34,11 @@ require('plug').add({
       vim.keymap.set('n', '<leader>gV', '<cmd>Git log %<cr>', { silent = true })
       vim.keymap.set('n', '<leader>gp', '<cmd>Git push<cr>', { silent = true })
       vim.keymap.set('n', '<leader>gd', '<cmd>Git diff<cr>', { silent = true })
+    end,
+    config = function()
+      require('statusline').register_sections('vcs', function()
+        return vim.fn['git#branch#current']()
+      end)
     end,
   },
   {
@@ -84,9 +90,16 @@ require('plug').add({
     'D:/wsdjeg/statusline.nvim',
     events = { 'VimEnter' },
     config = function()
-      require('statusline').setup()
+      require('statusline').setup({
+        left_sections = { 'winnr', 'vcs', 'filename' },
+      })
       for i = 1, 9 do
-        vim.keymap.set('n', '<leader>' .. i, '<cmd>exe "' .. i .. 'wincmd w"<cr>', { silent = true })
+        vim.keymap.set(
+          'n',
+          '<leader>' .. i,
+          '<cmd>exe "' .. i .. 'wincmd w"<cr>',
+          { silent = true }
+        )
       end
     end,
   },
