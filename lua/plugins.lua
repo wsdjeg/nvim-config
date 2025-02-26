@@ -24,6 +24,9 @@ require('plug').setup({
 require('plug').add({
   {
     'D:/wsdjeg/logger.nvim',
+    config = function()
+      vim.keymap.set('n', '<leader>hL', '<cmd>lua require("logger").viewRuntimeLog()<cr>', { silent = true })
+    end,
   },
   {
     'wsdjeg/git.vim',
