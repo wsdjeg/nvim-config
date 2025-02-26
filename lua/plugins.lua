@@ -29,6 +29,12 @@ require('plug').add({
     end,
   },
   {
+    'wsdjeg/nvim-plug',
+    fetch = true,
+  },
+})
+require('plug').add({
+  {
     'wsdjeg/git.vim',
     cmds = { 'Git' },
     on_func = { 'git#branch#current' },
@@ -41,10 +47,6 @@ require('plug').add({
       vim.keymap.set('n', '<leader>gp', '<cmd>Git push<cr>', { silent = true })
       vim.keymap.set('n', '<leader>gd', '<cmd>Git diff<cr>', { silent = true })
     end,
-  },
-  {
-    'wsdjeg/nvim-plug',
-    fetch = true,
   },
   {
     'D:/wsdjeg/rooter.nvim',
