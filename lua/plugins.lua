@@ -51,7 +51,7 @@ require('plug').add({
     config = function()
       require('rooter').setup({
         root_pattern = { '.git/' },
-        logger = require('logger').derive('rooter'),
+        enable_logger = true,
       })
     end,
   },
