@@ -23,7 +23,7 @@ require('plug').setup({
 
 require('plug').add({
   {
-    'D:/wsdjeg/logger.nvim',
+    'wsdjeg/logger.nvim',
     config = function()
       vim.keymap.set('n', '<leader>hL', '<cmd>lua require("logger").viewRuntimeLog()<cr>', { silent = true })
     end,
@@ -51,7 +51,7 @@ require('plug').add({
     config = function()
       require('rooter').setup({
         root_pattern = { '.git/' },
-        -- logger = require('logger').derive('rooter')
+        logger = require('logger').derive('rooter'),
       })
     end,
   },
