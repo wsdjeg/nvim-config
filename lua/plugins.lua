@@ -76,6 +76,7 @@ require('plug').add({
           lua = { exe = 'lua', opt = { '-' }, usestdin = true },
         },
       })
+      vim.keymap.set('n', '<leader>lr', '<cmd>require("code-runner").open()<cr>', { silent = true })
     end,
   },
   {
