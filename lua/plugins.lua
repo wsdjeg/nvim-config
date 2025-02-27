@@ -25,7 +25,12 @@ require('plug').add({
   {
     'D:/wsdjeg/logger.nvim',
     config = function()
-      vim.keymap.set('n', '<leader>hL', '<cmd>lua require("logger").viewRuntimeLog()<cr>', { silent = true })
+      vim.keymap.set(
+        'n',
+        '<leader>hL',
+        '<cmd>lua require("logger").viewRuntimeLog()<cr>',
+        { silent = true }
+      )
     end,
   },
   {
@@ -66,7 +71,11 @@ require('plug').add({
   {
     'D:/wsdjeg/code-runner.nvim',
     config = function()
-      require('code-runner').setup()
+      require('code-runner').setup({
+        runners = {
+          lua = { exe = 'lua', opt = { '-' }, usestdin = true },
+        },
+      })
     end,
   },
   {
