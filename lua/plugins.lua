@@ -76,9 +76,15 @@ require('plug').add({
           lua = { exe = 'lua', opt = { '-' }, usestdin = true },
         },
       })
-      vim.keymap.set('n', '<leader>lr', '<cmd>lua require("code-runner").open()<cr>', { silent = true })
+      vim.keymap.set(
+        'n',
+        '<leader>lr',
+        '<cmd>lua require("code-runner").open()<cr>',
+        { silent = true }
+      )
     end,
   },
+  { 'D:/wsdjeg/tasks.nvim' },
   {
     'hrsh7th/nvim-cmp',
     config = function()
