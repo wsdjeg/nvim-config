@@ -1,5 +1,7 @@
 # Eric's Neovim Config
 
+![Image](https://github.com/user-attachments/assets/2cc4d59d-6659-4760-8963-48a1aaf390be)
+
 ## Plugins
 
 - Plugin manager: [nvim-plug](https://github.com/wsdjeg/nvim-plug)
