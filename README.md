@@ -16,6 +16,7 @@
 - Code completion: [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - Terminal: [terminal.nvim](https://github.com/wsdjeg/terminal.nvim)
 - Tasks manager: [tasks.nvim](https://github.com/wsdjeg/tasks.nvim)
+- Scrollbar: [scrollbar.vim](https://github.com/wsdjeg/scrollbar.vim)
 
 ## Forked plugins:
 
