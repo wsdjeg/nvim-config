@@ -177,6 +177,7 @@ require('plug').add({
   },
   {
     'wsdjeg/winbar.nvim',
+    enabled = false,
   },
   {
     'nvim-tree/nvim-tree.lua',
