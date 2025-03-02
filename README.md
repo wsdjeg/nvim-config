@@ -19,13 +19,15 @@
 
 - dashboard: [wsdjeg/dashboard-nvim](https://github.com/wsdjeg/dashboard-nvim)
 
-
 ## Key Bindings
 
-| Key Binding | Description   |
-| ----------- | ------------- |
-| `SPC-f-s`   | save file     |
-| `SPC-b-f`   | format buffer |
-| `SPC g s`   | `:Git status` |
-| `SPC g A`   | `:Git add .`  |
-| `SPC g c`   | `:Git commit` |
+| Key Binding | Description                |
+| ----------- | -------------------------- |
+| `SPC-f-s`   | save file                  |
+| `SPC-b-f`   | format buffer              |
+| `SPC g s`   | `:Git status`              |
+| `SPC g A`   | `:Git add .`               |
+| `SPC g c`   | `:Git commit`              |
+| `SPC '`     | open float terminal window |
+| `SPC p l`   | list recent projects       |
+| `SPC f r`   | list recent files          |
