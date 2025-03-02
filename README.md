@@ -12,6 +12,8 @@
 - winbar: [winbar.nvim](https://github.com/wsdjeg/winbar.nvim)
 - statusline: [statusline.nvim](https://github.com/wsdjeg/statusline.nvim)
 - Code completion: [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- Terminal: [terminal.nvim](https://github.com/wsdjeg/terminal.nvim)
+- Tasks manager: [tasks.nvim](https://github.com/wsdjeg/tasks.nvim)
 
 ## Forked plugins:
 
