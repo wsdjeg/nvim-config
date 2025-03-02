@@ -31,3 +31,4 @@
 | `SPC '`     | open float terminal window |
 | `SPC p l`   | list recent projects       |
 | `SPC f r`   | list recent files          |
+| `SPC Tab`   | same as `:b#`              |
