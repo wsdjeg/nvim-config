@@ -17,6 +17,8 @@
 - Terminal: [terminal.nvim](https://github.com/wsdjeg/terminal.nvim)
 - Tasks manager: [tasks.nvim](https://github.com/wsdjeg/tasks.nvim)
 - Scrollbar: [scrollbar.vim](https://github.com/wsdjeg/scrollbar.vim)
+- Fuzzy finder: [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- Code outline: [tagbar](https://github.com/preservim/tagbar)
 
 ## Forked plugins:
 
