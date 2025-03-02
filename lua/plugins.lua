@@ -23,7 +23,7 @@ require('plug').setup({
 
 require('plug').add({
   {
-    'D:/wsdjeg/logger.nvim',
+    'wsdjeg/logger.nvim',
     config = function()
       vim.keymap.set(
         'n',
@@ -54,7 +54,7 @@ require('plug').add({
     end,
   },
   {
-    'D:/wsdjeg/rooter.nvim',
+    'wsdjeg/rooter.nvim',
     config = function()
       require('rooter').setup({
         root_pattern = { '.git/' },
@@ -69,7 +69,7 @@ require('plug').add({
     end,
   },
   {
-    'D:/wsdjeg/code-runner.nvim',
+    'wsdjeg/code-runner.nvim',
     config = function()
       require('code-runner').setup({
         runners = {
@@ -84,8 +84,18 @@ require('plug').add({
       )
     end,
   },
-  { 'D:/wsdjeg/tasks.nvim' },
-  { 'D:/wsdjeg/terminal.nvim' },
+  { 'wsdjeg/tasks.nvim' },
+  {
+    'wsdjeg/terminal.nvim',
+    config = function()
+      vim.keymap.set(
+        'n',
+        "<leader>'",
+        '<cmd>lua require("terminal").open()<cr>',
+        { silent = true }
+      )
+    end,
+  },
   {
     'hrsh7th/nvim-cmp',
     config = function()
@@ -114,7 +124,7 @@ require('plug').add({
     config = function() end,
   },
   {
-    'D:/wsdjeg/statusline.nvim',
+    'wsdjeg/statusline.nvim',
     events = { 'VimEnter' },
     config = function()
       require('statusline').register_sections('vcs', function()
