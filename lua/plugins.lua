@@ -86,14 +86,15 @@ require('plug').add({
   },
   { 'wsdjeg/tasks.nvim' },
   {
+    'wsdjeg/todo.nvim',
+    config = function()
+      vim.keymap.set('n', '<leader>ao', '<cmd>lua require("todo").list()<cr>', { silent = true })
+    end,
+  },
+  {
     'wsdjeg/terminal.nvim',
     config = function()
-      vim.keymap.set(
-        'n',
-        "<leader>'",
-        '<cmd>lua require("terminal").open()<cr>',
-        { silent = true }
-      )
+      vim.keymap.set('n', "<leader>'", '<cmd>lua require("terminal").open()<cr>', { silent = true })
     end,
   },
   {
