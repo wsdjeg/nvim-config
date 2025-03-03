@@ -180,6 +180,10 @@ require('plug').add({
     enabled = false,
   },
   {
+    'mhinz/vim-signify',
+    events = { 'VimEnter' },
+  },
+  {
     'nvim-tree/nvim-tree.lua',
     config_before = function()
       vim.g.loaded_netrw = 1
