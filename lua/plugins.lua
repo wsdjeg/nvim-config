@@ -69,7 +69,7 @@ require('plug').add({
     end,
   },
   { 'wsdjeg/repl.nvim' },
-  { 'wsdjeg/ChineseLinter.vim', cmds = {'CheckChinese'} },
+  { 'wsdjeg/ChineseLinter.vim', cmds = { 'CheckChinese' } },
   {
     'wsdjeg/code-runner.nvim',
     config = function()
@@ -181,6 +181,12 @@ require('plug').add({
   {
     'wsdjeg/winbar.nvim',
     enabled = false,
+  },
+  {
+    'wsdjeg/ctrlg.nvim',
+    config = function()
+      vim.keymap.set('n', '<C-g>', '<cmd>lua require("ctrlg").display()<cr>', { silent = true })
+    end,
   },
   {
     'mhinz/vim-signify',
