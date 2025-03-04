@@ -68,6 +68,7 @@ require('plug').add({
       require('mru').setup({ enable_cache = true, ignore_path_regexs = { '/.git/' } })
     end,
   },
+  { 'wsdjeg/repl.nvim' },
   {
     'wsdjeg/code-runner.nvim',
     config = function()
