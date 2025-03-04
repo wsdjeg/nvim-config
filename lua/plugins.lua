@@ -85,7 +85,7 @@ require('plug').add({
     end,
   },
   { 'wsdjeg/tasks.nvim' },
-  { 'mzlogin/vim-markdown-toc', cmds = {'GenTocGFM'} },
+  { 'mzlogin/vim-markdown-toc' },
   {
     'wsdjeg/todo.nvim',
     config = function()
