@@ -69,6 +69,7 @@ require('plug').add({
     end,
   },
   { 'wsdjeg/repl.nvim' },
+  { 'wsdjeg/ChineseLinter.vim', cmds = {'CheckChinese'} },
   {
     'wsdjeg/code-runner.nvim',
     config = function()
