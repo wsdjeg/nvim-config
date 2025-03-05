@@ -101,13 +101,19 @@ require('plug').add({
     end,
   },
   {
-    'D:/wsdjeg/nvim-completion',
+    'hrsh7th/nvim-cmp',
     config = function()
-      require('nvim-completion').setup({
-        matcher = 'levenshtein', -- 或 "fzy"
-      })
+      require('plugins.cmp')
     end,
     depends = {
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+      { 'Shougo/neosnippet.vim' },
+      { 'Shougo/neosnippet-snippets' },
+      { 'uga-rosa/cmp-dictionary' },
+      { 'onsails/lspkind.nvim' },
+      { 'notomo/cmp-neosnippet' },
       {
         'neovim/nvim-lspconfig',
         config = function()
