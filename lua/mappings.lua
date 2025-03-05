@@ -18,3 +18,11 @@ vim.keymap.set('n', '<leader>bc', function()
   vim.cmd.redrawtabline()
 end, { silent = true })
 vim.keymap.set('n', '<leader><tab>', '<cmd>b#<cr>', { silent = true })
+
+-- Ctrl+Shift+Up/Down to move up and down
+vim.keymap.set('n', '<C-S-Down>', '<cmd>m .+1<cr>==', { silent = true })
+vim.keymap.set('n', '<C-S-Up>', '<cmd>m .-2<cr>==', { silent = true })
+vim.keymap.set('i', '<C-S-Down>', '<Esc>:m .+1<cr>==gi', { silent = true })
+vim.keymap.set('i', '<C-S-Up>', '<Esc>:m .-2<cr>==gi', { silent = true })
+vim.keymap.set('v', '<C-S-Down>', ":m '>+1<cr>gv=gv", { silent = true })
+vim.keymap.set('v', '<C-S-Up>', ":m '<-2<cr>gv=gv", { silent = true })
