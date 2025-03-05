@@ -262,19 +262,19 @@ require('plug').add({
           -- DashboardProjectTitle DashboardProjectTitleIcon DashboardProjectIcon
           -- DashboardMruTitle DashboardMruIcon DashboardFiles DashboardShortCutIcon
           vim.cmd([[
-	      hi VertSplit guibg=#282c34 guifg=#181A1F
-	      hi SPCFloatBorder guibg=#282c34 guifg=#181A1F
-	      hi SPCNormalFloat guifg=#abb2bf guibg=#282c34
-	      hi clear StatusLineNC
-	      hi link StatusLineNC Normal
-	      hi link WinSeparator VertSplit
+          hi VertSplit guibg=#282c34 guifg=#181A1F
+          hi SPCFloatBorder guibg=#282c34 guifg=#181A1F
+          hi SPCNormalFloat guifg=#abb2bf guibg=#282c34
+          hi clear StatusLineNC
+          hi link StatusLineNC Normal
+          hi link WinSeparator VertSplit
           hi link DashboardHeader Number
           hi link DashboardFooter Number
           hi link DashboardFiles Comment
           hi link DashboardShortCutIcon Character
           hi link DashboardMruTitle Todo
           hi link DashboardMruIcon Label
-	      ]])
+          ]])
         end,
       })
       vim.cmd([[
@@ -319,7 +319,7 @@ require('plug').add({
     config = function()
       require('ibl').setup({
         exclude = { filetypes = { 'dashboard' } },
-        scope = {enabled = false}
+        scope = { enabled = false },
       })
     end,
   },
