@@ -315,6 +315,18 @@ require('plug').add({
     end,
   },
   {
+    'lukas-reineke/indent-blankline.nvim',
+    config = function()
+      require('ibl').setup()
+    end,
+  },
+  {
+    'windwp/nvim-autopairs',
+    config = function()
+      require('nvim-autopairs').setup({})
+    end,
+  },
+  {
     'nvim-telescope/telescope.nvim',
     cmds = { 'Telescope' },
     depends = {
