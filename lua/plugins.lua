@@ -247,6 +247,14 @@ require('plug').add({
     end,
     config_before = function()
       vim.keymap.set('n', '<leader>bf', '<cmd>Format<cr>', { silent = true })
+      vim.keymap.set('n', '<leader>lf', function()
+        local cf = vim.call('context_filetype#get')
+        if vim.o.filetype == 'markdown' and cf.filetype ~= 'markdown' then
+            local line1 = cf['range'][1][1]
+            local line2 = cf['range'][2][1]
+            vim.cmd(string.format('%s,%sFormat! %s', line1, line2, cf.filetype))
+        end
+      end, { silent = true })
     end,
     cmds = { 'Format' },
     depends = { { 'Shougo/context_filetype.vim' } },
