@@ -249,6 +249,7 @@ require('plug').add({
       vim.keymap.set('n', '<leader>bf', '<cmd>Format<cr>', { silent = true })
     end,
     cmds = { 'Format' },
+    depends = { { 'Shougo/context_filetype.vim' } },
   },
   {
     'rakr/vim-one',
