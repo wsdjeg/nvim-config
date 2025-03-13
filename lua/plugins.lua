@@ -65,7 +65,11 @@ require('plug').add({
   {
     'wsdjeg/mru.nvim',
     config = function()
-      require('mru').setup({ enable_cache = true, ignore_path_regexs = { '/.git/' } })
+      require('mru').setup({
+        enable_cache = true,
+        ignore_path_regexs = { '/.git/' },
+        enable_logger = true,
+      })
     end,
   },
   { 'wsdjeg/repl.nvim' },
@@ -250,9 +254,9 @@ require('plug').add({
       vim.keymap.set('n', '<leader>lf', function()
         local cf = vim.call('context_filetype#get')
         if vim.o.filetype == 'markdown' and cf.filetype ~= 'markdown' then
-            local line1 = cf['range'][1][1]
-            local line2 = cf['range'][2][1]
-            vim.cmd(string.format('%s,%sFormat! %s', line1, line2, cf.filetype))
+          local line1 = cf['range'][1][1]
+          local line2 = cf['range'][2][1]
+          vim.cmd(string.format('%s,%sFormat! %s', line1, line2, cf.filetype))
         end
       end, { silent = true })
     end,
