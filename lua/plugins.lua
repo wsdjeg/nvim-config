@@ -206,6 +206,16 @@ require('plug').add({
     enabled = false,
   },
   {
+    'smoka7/hop.nvim',
+    config_before = function()
+      vim.keymap.set('n', '<leader>jl', '<cmd>HopLine<cr>', { silent = true })
+    end,
+    cmds = { 'HopWord', 'HopLine' },
+    config = function()
+      require('hop').setup({})
+    end,
+  },
+  {
     'wsdjeg/ctrlg.nvim',
     config = function()
       vim.keymap.set('n', '<C-g>', '<cmd>lua require("ctrlg").display()<cr>', { silent = true })
