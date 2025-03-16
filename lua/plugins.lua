@@ -132,6 +132,15 @@ require('plug').add({
     config = function() end,
   },
   {
+    'kylechui/nvim-surround',
+    events = { 'VimEnter' },
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end,
+  },
+  {
     'wsdjeg/statusline.nvim',
     events = { 'VimEnter' },
     config = function()
