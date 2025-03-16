@@ -143,14 +143,15 @@ require('plug').add({
     config = function() end,
   },
   {
+    'wsdjeg/iedit.nvim',
+    config = function()
+      vim.keymap.set('n', '<leader>se', "<cmd>lua require('iedit').start()<cr>", { silent = true })
+    end,
+  },
+  {
     'yorickpeterse/nvim-window',
     config = function()
-      vim.keymap.set(
-        'n',
-        'sj',
-        "<cmd>lua require('nvim-window').pick()<cr>",
-        { silent = true }
-      )
+      vim.keymap.set('n', 'sj', "<cmd>lua require('nvim-window').pick()<cr>", { silent = true })
     end,
   },
   {
