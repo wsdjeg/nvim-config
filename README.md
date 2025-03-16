@@ -19,6 +19,7 @@
 - Scrollbar: [scrollbar.vim](https://github.com/wsdjeg/scrollbar.vim)
 - Fuzzy finder: [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - Code outline: [tagbar](https://github.com/preservim/tagbar)
+- [hop.nvim](https://github.com/smoka7/hop.nvim): an EasyMotion-like plugin allowing you to jump anywhere in a document
 
 ## Forked plugins:
 
