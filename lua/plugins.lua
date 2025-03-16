@@ -101,6 +101,7 @@ require('plug').add({
     end,
   },
   { 'wsdjeg/tasks.nvim' },
+  { 'rhysd/clever-f.vim' },
   { 'mzlogin/vim-markdown-toc' },
   {
     'wsdjeg/todo.nvim',
