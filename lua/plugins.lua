@@ -277,7 +277,7 @@ require('plug').add({
     config = function()
       vim.api.nvim_create_autocmd({ 'ColorScheme' }, {
         pattern = { 'one' },
-        group = vim.api.nvim_create_augroup('colorscheme-one', { clear = treu }),
+        group = vim.api.nvim_create_augroup('colorscheme-one', { clear = true }),
         callback = function()
           -- DashboardHeader DashboardFooter
           -- Hyper theme
