@@ -73,6 +73,16 @@ require('plug').add({
     end,
   },
   { 'wsdjeg/repl.nvim' },
+  {
+    'wsdjeg/cpicker.nvim',
+    cmds = {
+      'Cpicker',
+      'CpickerCursorForeground',
+      'CpickerColorMix',
+      'CpickerCursorChangeHighlight',
+      'CpickerClearColorPatch',
+    },
+  },
   { 'wsdjeg/ChineseLinter.vim', cmds = { 'CheckChinese' } },
   {
     'wsdjeg/code-runner.nvim',
@@ -135,9 +145,9 @@ require('plug').add({
     'kylechui/nvim-surround',
     events = { 'VimEnter' },
     config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
+      require('nvim-surround').setup({
+        -- Configuration here, or leave empty to use defaults
+      })
     end,
   },
   {
