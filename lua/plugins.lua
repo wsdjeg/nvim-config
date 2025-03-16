@@ -142,6 +142,17 @@ require('plug').add({
     config = function() end,
   },
   {
+    'yorickpeterse/nvim-window',
+    config = function()
+      vim.keymap.set(
+        'n',
+        'sj',
+        "<cmd>lua require('nvim-window').pick()<cr>",
+        { silent = true }
+      )
+    end,
+  },
+  {
     'kylechui/nvim-surround',
     events = { 'VimEnter' },
     config = function()
