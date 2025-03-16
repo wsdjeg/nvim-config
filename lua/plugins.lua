@@ -25,6 +25,7 @@ require('plug').add({
   {
     'wsdjeg/logger.nvim',
     config = function()
+      require('logger').setup({ level = 0 })
       vim.keymap.set(
         'n',
         '<leader>hL',
