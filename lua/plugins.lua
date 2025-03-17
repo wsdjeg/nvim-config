@@ -88,6 +88,7 @@ require('plug').add({
         },
       })
     end,
+    cmds = {'CodeCompanionChat'},
     depends = {
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-treesitter/nvim-treesitter' },
