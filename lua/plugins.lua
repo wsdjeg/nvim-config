@@ -74,6 +74,7 @@ require('plug').add({
     end,
   },
   { 'wsdjeg/repl.nvim' },
+  { 'olimorris/codecompanion.nvim' },
   {
     'MeanderingProgrammer/render-markdown.nvim',
     cmds = {'RenderMarkdown'},
