@@ -75,9 +75,19 @@ require('plug').add({
   },
   { 'wsdjeg/repl.nvim' },
   {
+    'MeanderingProgrammer/render-markdown.nvim',
+    cmds = {'RenderMarkdown'},
+    config = function()
+      require('render-markdown').setup({})
+    end,
+  },
+  {
     'toppair/peek.nvim',
     build = 'deno task --quiet build:fast',
     cmds = { 'PeekOpen', 'PeekClose' },
+    config_before = function()
+      vim.keymap.set('n', '<leader>lp', '<cmd>PeekOpen<cr>', { silent = true })
+    end,
     config = function()
       -- default config:
       require('peek').setup({
