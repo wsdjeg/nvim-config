@@ -74,10 +74,24 @@ require('plug').add({
     end,
   },
   { 'wsdjeg/repl.nvim' },
-  { 'olimorris/codecompanion.nvim' },
+  {
+    'olimorris/codecompanion.nvim',
+    config = function()
+      require('codecompanion').setup({
+        strategies = {
+          chat = {
+            adapter = 'anthropic',
+          },
+          inline = {
+            adapter = 'anthropic',
+          },
+        },
+      })
+    end,
+  },
   {
     'MeanderingProgrammer/render-markdown.nvim',
-    cmds = {'RenderMarkdown'},
+    cmds = { 'RenderMarkdown' },
     config = function()
       require('render-markdown').setup({})
     end,
