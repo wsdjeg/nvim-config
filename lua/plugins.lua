@@ -388,6 +388,7 @@ require('plug').add({
           hi VertSplit guibg=#282c34 guifg=#181A1F
           hi SPCFloatBorder guibg=#282c34 guifg=#181A1F
           hi SPCNormalFloat guifg=#abb2bf guibg=#282c34
+          hi EndOfBuffer guifg=#282c34 guifg=#282c34
           hi clear StatusLineNC
           hi link StatusLineNC Normal
           hi link WinSeparator VertSplit
