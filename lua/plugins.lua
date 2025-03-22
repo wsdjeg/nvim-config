@@ -1,3 +1,14 @@
+if vim.fn.isdirectory('D:/bundle_dir/wsdjeg/logger.nvim') == 0 then
+  vim.fn.system({
+    'git',
+    'clone',
+    '--depth',
+    '1',
+    'https://github.com/wsdjeg/logger.nvim.git',
+    'D:/bundle_dir/wsdjeg/logger.nvim',
+  })
+end
+vim.opt.runtimepath:append('D:/bundle_dir/wsdjeg/logger.nvim')
 if vim.fn.isdirectory('D:/bundle_dir/wsdjeg/nvim-plug') == 0 then
   vim.fn.system({
     'git',
@@ -14,7 +25,7 @@ require('plug').setup({
 
   bundle_dir = 'D:/bundle_dir',
   raw_plugin_dir = 'D:/bundle_dir/raw_plugin',
-  ui = 'default',
+  ui = 'notify',
   http_proxy = 'http://127.0.0.1:7890',
   https_proxy = 'http://127.0.0.1:7890',
   enable_priority = true,
@@ -33,6 +44,10 @@ require('plug').add({
         { silent = true }
       )
     end,
+    fetch = true,
+  },
+  {
+    'wsdjeg/notify.nvim',
   },
   {
     'wsdjeg/nvim-plug',
