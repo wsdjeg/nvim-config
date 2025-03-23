@@ -41,6 +41,10 @@ require('plug').add({
     'wsdjeg/nvim-plug',
     fetch = true,
   },
+  {
+    'wsdjeg/SpaceVim',
+    fetch = true,
+  },
 })
 require('plug').add({
   {
@@ -78,6 +82,12 @@ require('plug').add({
   },
   { 'wsdjeg/repl.nvim' },
   {
+    'wsdjeg/ctags.nvim',
+    config = function()
+      require('ctags').setup()
+    end,
+  },
+  {
     'olimorris/codecompanion.nvim',
     config = function()
       require('codecompanion').setup({
@@ -91,7 +101,7 @@ require('plug').add({
         },
       })
     end,
-    cmds = {'CodeCompanionChat'},
+    cmds = { 'CodeCompanionChat' },
     depends = {
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-treesitter/nvim-treesitter' },
