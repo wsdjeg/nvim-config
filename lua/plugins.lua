@@ -90,10 +90,12 @@ require('plug').add({
         local project_root = vim.fn.getcwd()
         local dir = require('ctags.util').unify_path(require('ctags.config').cache_dir)
           .. require('ctags.util').path_to_fname(project_root)
+        local tags =
+          vim.fn.filter(vim.fn.split(vim.o.tags, ','), 'v:val !~# ".cache/SpaceVim/tags"')
         table.insert(tags, dir .. '/tags')
         vim.o.tags = table.concat(tags, ',')
       end
-      -- require('rooter').reg_callback(update_ctags_option)
+      require('rooter').reg_callback(update_ctags_option)
     end,
   },
   {
