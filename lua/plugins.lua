@@ -91,7 +91,7 @@ require('plug').add({
         local dir = require('ctags.util').unify_path(require('ctags.config').cache_dir)
           .. require('ctags.util').path_to_fname(project_root)
         local tags = vim.tbl_filter(function(t)
-          return not vim.startswith(t, require('ctags.config').cache_dir)
+          return not vim.startswith(t, require('ctags.util').unify_path(require('ctags.config').cache_dir))
         end, vim.split(vim.o.tags, ','))
         table.insert(tags, dir .. '/tags')
         vim.o.tags = table.concat(tags, ',')
