@@ -14,7 +14,7 @@ require('plug').setup({
 
   bundle_dir = 'D:/bundle_dir',
   raw_plugin_dir = 'D:/bundle_dir/raw_plugin',
-  ui = 'notify',
+  -- ui = 'notify',
   http_proxy = 'http://127.0.0.1:7890',
   https_proxy = 'http://127.0.0.1:7890',
   enable_priority = true,
@@ -91,12 +91,17 @@ require('plug').add({
         local dir = require('ctags.util').unify_path(require('ctags.config').cache_dir)
           .. require('ctags.util').path_to_fname(project_root)
         local tags = vim.tbl_filter(function(t)
-          return not vim.startswith(t, require('ctags.util').unify_path(require('ctags.config').cache_dir))
+          return not vim.startswith(
+            t,
+            require('ctags.util').unify_path(require('ctags.config').cache_dir)
+          )
         end, vim.split(vim.o.tags, ','))
         table.insert(tags, dir .. '/tags')
         vim.o.tags = table.concat(tags, ',')
       end
-      require('rooter').reg_callback(update_ctags_option)
+      vim.fn.timer_start(500, function()
+        require('rooter').reg_callback(update_ctags_option)
+      end, { ['repeat'] = 1 })
     end,
   },
   {
