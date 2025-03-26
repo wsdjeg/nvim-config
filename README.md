@@ -62,10 +62,6 @@
 - [wsdjeg/logger.nvim](https://github.com/wsdjeg/logger.nvim): Neovim runtime logger
 <!-- wsdjeg repos end -->
 
-## Forked plugins:
-
-- dashboard: [wsdjeg/dashboard-nvim](https://github.com/wsdjeg/dashboard-nvim)
-
 ## Key Bindings
 
 | Key Binding | Description                |
