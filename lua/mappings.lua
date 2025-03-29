@@ -17,6 +17,10 @@ vim.keymap.set('n', '<leader>bc', function()
   end
   vim.cmd.redrawtabline()
 end, { silent = true })
+vim.keymap.set('n', '<leader>bd', function()
+  vim.cmd('bd')
+  vim.cmd.redrawtabline()
+end, { silent = true })
 vim.keymap.set('n', '<leader><tab>', '<cmd>b#<cr>', { silent = true })
 
 -- Ctrl+Shift+Up/Down to move up and down
