@@ -77,9 +77,9 @@ require('plug').add({
     end,
   },
   {
-    'wsdjeg/repl.nvim',
+    'D:/wsdjeg/repl.nvim',
     config = function()
-      require('repl').setup({ executables = { lua = 'lua' } })
+      require('repl').setup({ executables = { lua = 'lua', python = 'python' } })
       vim.keymap.set(
         'n',
         '<leader>lsi',
