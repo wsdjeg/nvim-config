@@ -36,7 +36,6 @@ require('plug').add({
   },
   {
     'wsdjeg/notify.nvim',
-    desc = 'notify api detached from spacevim',
   },
   {
     'wsdjeg/nvim-plug',
@@ -57,7 +56,6 @@ require('plug').add({
       vim.keymap.set('n', '<leader>gp', '<cmd>Git push<cr>', { silent = true })
       vim.keymap.set('n', '<leader>gd', '<cmd>Git diff<cr>', { silent = true })
     end,
-    desc = 'a plugin to use git command in neovim',
   },
   {
     'wsdjeg/rooter.nvim',
@@ -67,7 +65,6 @@ require('plug').add({
         enable_logger = true,
       })
     end,
-    desc = 'change current dir to the root of project',
   },
   {
     'wsdjeg/mru.nvim',
@@ -78,7 +75,6 @@ require('plug').add({
         enable_logger = true,
       })
     end,
-    desc = 'most recent use files',
   },
   { 'wsdjeg/repl.nvim' },
   {
@@ -166,7 +162,6 @@ require('plug').add({
       vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
       vim.keymap.set('n', '<leader>lp', '<cmd>PeekOpen<cr>', { silent = true })
     end,
-    desc = 'markdown preview',
   },
   {
     'wsdjeg/cpicker.nvim',
@@ -194,7 +189,6 @@ require('plug').add({
         { silent = true }
       )
     end,
-    desc = 'code runner',
   },
   { 'wsdjeg/tasks.nvim' },
   { 'rhysd/clever-f.vim' },
