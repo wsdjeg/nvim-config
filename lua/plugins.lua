@@ -38,6 +38,9 @@ require('plug').add({
     'wsdjeg/notify.nvim',
   },
   {
+    'wsdjeg/job.nvim',
+  },
+  {
     'wsdjeg/nvim-plug',
     fetch = true,
   },
