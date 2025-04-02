@@ -76,7 +76,24 @@ require('plug').add({
       })
     end,
   },
-  { 'wsdjeg/repl.nvim' },
+  {
+    'wsdjeg/repl.nvim',
+    config = function()
+      require('repl').setup({ executables = { lua = 'lua' } })
+      vim.keymap.set(
+        'n',
+        '<leader>lsi',
+        '<cmd>lua require("repl").start(vim.o.filetype)<cr>',
+        { silent = true }
+      )
+      vim.keymap.set(
+        'n',
+        '<leader>lsl',
+        '<cmd>lua require("repl").send("line")<cr>',
+        { silent = true }
+      )
+    end,
+  },
   {
     'wsdjeg/ctags.nvim',
     config = function()
@@ -216,7 +233,15 @@ require('plug').add({
       { 'hrsh7th/cmp-path' },
       { 'Shougo/neosnippet.vim' },
       { 'Shougo/neosnippet-snippets' },
-      { 'uga-rosa/cmp-dictionary' },
+      {
+        'uga-rosa/cmp-dictionary',
+        config = function()
+          require('cmp_dictionary').setup({
+            paths = { 'D:/me/dict/words.txt' },
+            exact_length = 2,
+          })
+        end,
+      },
       { 'onsails/lspkind.nvim' },
       { 'notomo/cmp-neosnippet' },
       {
