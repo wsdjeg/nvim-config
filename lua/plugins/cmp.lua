@@ -1,4 +1,5 @@
 local cmp = require('cmp')
+vim.lsp.enable('luals')
 vim.o.tagbsearch = false
 
 local feedkey = function(key, mode)

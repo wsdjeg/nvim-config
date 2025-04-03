@@ -247,12 +247,6 @@ require('plug').add({
       },
       { 'onsails/lspkind.nvim' },
       { 'notomo/cmp-neosnippet' },
-      {
-        'neovim/nvim-lspconfig',
-        config = function()
-          require('plugins.lspconfig')
-        end,
-      },
     },
   },
   {
