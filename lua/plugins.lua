@@ -24,6 +24,7 @@ require('plug').setup({
 require('plug').add({
   {
     'wsdjeg/logger.nvim',
+    priority = 99,
     config = function()
       require('logger').setup({ level = 0 })
       vim.keymap.set(
@@ -39,6 +40,7 @@ require('plug').add({
   },
   {
     'wsdjeg/job.nvim',
+    priority = 100,
   },
   {
     'wsdjeg/nvim-plug',
