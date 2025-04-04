@@ -470,6 +470,7 @@ require('plug').add({
     end,
     config = function()
       vim.keymap.set('n', '<leader>mzb', '<cmd>ZkBrowse<cr>', { silent = true })
+      vim.keymap.set('n', '<leader>mzn', '<cmd>ZkNew<cr>', { silent = true })
     end,
   },
   {
