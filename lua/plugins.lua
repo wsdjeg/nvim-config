@@ -49,9 +49,7 @@ require('plug').add({
 })
 require('plug').add({
   {
-    'wsdjeg/git.vim',
-    cmds = { 'Git' },
-    on_func = { 'git#branch#current' },
+    'wsdjeg/git.nvim',
     config_before = function()
       vim.keymap.set('n', '<leader>gs', '<cmd>Git status<cr>', { silent = true })
       vim.keymap.set('n', '<leader>gA', '<cmd>Git add .<cr>', { silent = true })
@@ -282,7 +280,7 @@ require('plug').add({
     events = { 'VimEnter' },
     config = function()
       require('statusline').register_sections('vcs', function()
-        return '%{ git#branch#current() }'
+        return '%{ v:lua.require("git.command.branch").current() }'
       end)
       require('statusline').setup({
         left_sections = { 'winnr', 'filename', 'vcs' },
