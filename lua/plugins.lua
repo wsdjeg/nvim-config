@@ -234,8 +234,7 @@ require('plug').add({
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'hrsh7th/cmp-buffer' },
       { 'hrsh7th/cmp-path' },
-      { 'Shougo/neosnippet.vim' },
-      { 'Shougo/neosnippet-snippets' },
+      { 'L3MON4D3/LuaSnip' },
       {
         'uga-rosa/cmp-dictionary',
         config = function()
@@ -246,7 +245,7 @@ require('plug').add({
         end,
       },
       { 'onsails/lspkind.nvim' },
-      { 'notomo/cmp-neosnippet' },
+      { 'saadparwaiz1/cmp_luasnip' },
     },
   },
   {

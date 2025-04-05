@@ -1,4 +1,5 @@
 local cmp = require('cmp')
+local luasnip = require("luasnip")
 vim.lsp.enable('luals')
 vim.o.tagbsearch = false
 
@@ -104,18 +105,41 @@ cmp.setup({
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
     }),
-    ['<Tab>'] = smart_tab,
-    ['<M-/>'] = expand_snippet,
-    ['<S-Tab>'] = function(fallback)
+    ['<C-n>'] = ctrl_n,
+    ['<C-p>'] = ctrl_p,
+    ['<CR>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
-        cmp.select_prev_item()
+        if luasnip.expandable() then
+          luasnip.expand()
+        else
+          cmp.confirm({
+            select = true,
+          })
+        end
       else
         fallback()
       end
-    end,
-    ['<C-n>'] = ctrl_n,
-    ['<C-p>'] = ctrl_p,
-    ['<CR>'] = enter,
+    end),
+
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.locally_jumpable(1) then
+        luasnip.jump(1)
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.locally_jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
   },
   formatting = {
     format = function(entry, vim_item)
