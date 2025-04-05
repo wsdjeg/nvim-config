@@ -37,6 +37,7 @@ require('plug').add({
   },
   {
     'wsdjeg/notify.nvim',
+    priority = 100,
   },
   {
     'wsdjeg/job.nvim',
