@@ -246,6 +246,7 @@ require('plug').add({
       },
       { 'onsails/lspkind.nvim' },
       { 'saadparwaiz1/cmp_luasnip' },
+      { 'rafamadriz/friendly-snippets' },
     },
   },
   {
