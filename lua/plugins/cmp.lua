@@ -3,45 +3,6 @@ local luasnip = require("luasnip")
 vim.lsp.enable('luals')
 vim.o.tagbsearch = false
 
-local feedkey = function(key, mode)
-  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
-end
-
-local function expand_snippet(_) -- {{{
-  if vim.fn['neosnippet#expandable']() == 1 then
-    feedkey('<plug>(neosnippet_expand)', '')
-  end
-end
--- }}}
-
-local function smart_tab(fallback) -- {{{
-  if vim.fn['neosnippet#expandable_or_jumpable']() == 1 then
-    feedkey('<plug>(neosnippet_expand_or_jump)', '')
-  elseif cmp.visible() then
-    cmp.select_next_item()
-  else
-    fallback()
-  end
-end
-
---1. `auto_completion_return_key_behavior` set the action to perform
---   when the `Return`/`Enter` key is pressed. the possible values are:
---   - `complete` completes with the current selection
---   - `smart` completes with current selection and expand snippet or argvs
---   - `nil`
---   By default it is `complete`.
-
-local function enter(f) -- {{{
-  expand_snippet(nil)
-  if cmp.visible() then
-    cmp.mapping.confirm({ select = false })
-    return cmp.close()
-  else
-    pcall(f)
-  end
-end
--- }}}
-
 local function ctrl_p(f) -- {{{
   if cmp.visible() then
     cmp.select_prev_item()
