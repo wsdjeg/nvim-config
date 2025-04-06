@@ -82,6 +82,7 @@ cmp.setup({
                     cmp.confirm({
                         select = false,
                     })
+                    return cmp.close()
                 end
             else
                 fallback()
