@@ -636,8 +636,22 @@ require('plug').add({
     {
         'D:/wsdjeg/record-screen.nvim',
         config = function()
-            vim.keymap.set('n', '<F8>', '<cmd>lua require("record-screen").start()<cr>', { silent = true })
-            vim.keymap.set('n', '<F9>', '<cmd>lua require("record-screen").stop()<cr>', { silent = true })
+            require('record-screen').setup({
+                cmd = 'ffmpeg',
+                argvs = { '-f', 'gdigrab', '-i', 'desktop','-pix_fmt', 'yuv420p', '-f', 'mp4' },
+            })
+            vim.keymap.set(
+                'n',
+                '<F8>',
+                '<cmd>lua require("record-screen").start()<cr>',
+                { silent = true }
+            )
+            vim.keymap.set(
+                'n',
+                '<F9>',
+                '<cmd>lua require("record-screen").stop()<cr>',
+                { silent = true }
+            )
         end,
     },
 })
