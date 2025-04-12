@@ -47,6 +47,10 @@ require('plug').add({
         'wsdjeg/nvim-plug',
         fetch = true,
     },
+    -- 一些常用仓库，让 nvim-plug 帮我下载并更新，但不加入 vim 插件列表。
+    { 'neovim/neovim', fetch = true },
+    { 'vim/vim', fetch = true },
+    { 'wsdjeg/SpaceVim', fetch = true },
 })
 require('plug').add({
     {
@@ -638,7 +642,7 @@ require('plug').add({
         config = function()
             require('record-screen').setup({
                 cmd = 'ffmpeg',
-                argvs = { '-f', 'gdigrab', '-i', 'desktop','-pix_fmt', 'yuv420p', '-f', 'mp4' },
+                argvs = { '-f', 'gdigrab', '-i', 'desktop', '-pix_fmt', 'yuv420p', '-f', 'mp4' },
             })
             vim.keymap.set(
                 'n',
