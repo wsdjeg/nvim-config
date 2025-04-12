@@ -79,7 +79,7 @@ require('plug').add({
         config = function()
             require('mru').setup({
                 enable_cache = true,
-                ignore_path_regexs = { '/.git/', '/bundle_dir/' },
+                ignore_path_regexs = { '/.git/' },
                 enable_logger = true,
             })
         end,
