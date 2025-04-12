@@ -303,7 +303,14 @@ require('plug').add({
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'hrsh7th/cmp-buffer' },
             { 'hrsh7th/cmp-path' },
-            { 'L3MON4D3/LuaSnip', priority = 60 },
+            {
+                'L3MON4D3/LuaSnip',
+                priority = 60,
+                config = function()
+                    require('luasnip.loaders.from_snipmate').lazy_load()
+                    require('luasnip.loaders.from_vscode').lazy_load()
+                end,
+            },
             {
                 'uga-rosa/cmp-dictionary',
                 config = function()
@@ -314,6 +321,7 @@ require('plug').add({
                 end,
             },
             { 'onsails/lspkind.nvim' },
+            { 'honza/vim-snippets' },
             { 'saadparwaiz1/cmp_luasnip' },
             { 'rafamadriz/friendly-snippets' },
         },
