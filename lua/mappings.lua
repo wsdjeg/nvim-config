@@ -2,6 +2,17 @@ vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>fs', '<cmd>w<cr>', { silent = true })
 vim.keymap.set('n', '<leader>qq', '<cmd>q<cr>', { silent = true })
 vim.keymap.set('n', '<leader>qa', '<cmd>qa<cr>', { silent = true })
+vim.keymap.set('n', '<leader>bm', function(opt)
+    vim.cmd.enew()
+    local msg = vim.fn.execute('message')
+    vim.api.nvim_buf_set_lines(0, 0, -1, false, vim.fn.split(msg, '\n'))
+    vim.o.modifiable = false
+    vim.o.modified = false
+    vim.o.buftype = 'nofile'
+    vim.o.buflisted = false
+    vim.o.bufhidden = 'wipe'
+    vim.keymap.set('n', 'q', '<cmd>close<cr>', { buffer = true })
+end, { silent = true })
 
 -- Windows manager
 vim.keymap.set('n', 'so', '<cmd>only<cr>', { silent = true })
