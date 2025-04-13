@@ -693,5 +693,15 @@ require('plug').add({
             )
         end,
     },
+    {
+        'NStefan002/2048.nvim',
+        config = function()
+            require('2048').setup()
+        end,
+    },
+    {'linrongbin16/gitlinker.nvim', config = function()
+
+
+    end}
 })
 require('plug').load()
