@@ -699,9 +699,11 @@ require('plug').add({
             require('2048').setup()
         end,
     },
-    {'linrongbin16/gitlinker.nvim', config = function()
-
-
-    end}
+    {
+        'linrongbin16/gitlinker.nvim',
+        config = function()
+            require('gitlinker').setup()
+        end,
+    },
 })
 require('plug').load()
