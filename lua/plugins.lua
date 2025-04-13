@@ -700,9 +700,15 @@ require('plug').add({
         end,
     },
     {
-        'linrongbin16/gitlinker.nvim',
+        'D:/wsdjeg/gitlink.nvim',
         config = function()
-            require('gitlinker').setup()
+            require('gitlink').setup()
+            vim.keymap.set('n', '<leader>fy', function()
+                require('gitlink').copy()
+            end, { silent = true })
+            vim.keymap.set('n', '<leader>fY', function()
+                require('gitlink').open()
+            end, { silent = true })
         end,
     },
 })
