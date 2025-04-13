@@ -5,7 +5,7 @@ vim.keymap.set('n', '<leader>qa', '<cmd>qa<cr>', { silent = true })
 
 -- Windows manager
 vim.keymap.set('n', 'so', '<cmd>only<cr>', { silent = true })
-vim.keymap.set('n', 'sp', '<cmd>split<cr>', { silent = true })
+vim.keymap.set('n', 'sh', '<cmd>split<cr>', { silent = true })
 vim.keymap.set('n', 'sv', '<cmd>vsplit<cr>', { silent = true })
 vim.keymap.set('n', 'q', function()
     vim.cmd.quit()
