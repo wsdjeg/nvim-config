@@ -307,7 +307,8 @@ require('plug').add({
                 priority = 60,
                 config = function()
                     local paths = {}
-                    paths[#paths + 1] = require('plug.config').bundle_dir .. '/honza/vim-snippets/snippets'
+                    paths[#paths + 1] = require('plug.config').bundle_dir
+                        .. '/honza/vim-snippets/snippets'
                     paths[#paths + 1] = vim.fn.stdpath('config') .. '/snippets'
                     require('luasnip').config.setup({ enable_autosnippets = true })
                     require('luasnip.loaders.from_snipmate').lazy_load({ paths = paths })
@@ -548,12 +549,16 @@ require('plug').add({
     },
     {
         'wsdjeg/flygrep.nvim',
-        cmds = { 'FlyGrep' },
+        cmds = { 'FlyGrep', 'FlyGrepCword' },
         config = function()
             require('flygrep').setup()
+            vim.api.nvim_create_user_command('FlyGrepCword', function(opt)
+                require('flygrep').open({ input = vim.fn.expand('<cword>') })
+            end, { nargs = '*' })
         end,
         config_before = function()
             vim.keymap.set('n', '<leader>s/', '<cmd>FlyGrep<cr>', { silent = true })
+            vim.keymap.set('n', '<leader>sp', '<cmd>FlyGrepCword<cr>', { silent = true })
         end,
     },
     {
