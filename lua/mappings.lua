@@ -30,6 +30,13 @@ vim.keymap.set('n', '<leader>bd', function()
 end, { silent = true })
 vim.keymap.set('n', '<leader><tab>', '<cmd>b#<cr>', { silent = true })
 
+-- LSP mappings
+
+vim.keymap.set('n', '<leader>lf', vim.lsp.buf.references, { silent = true })
+vim.keymap.set('n', '<leader>el', vim.diagnostic.setqflist, { silent = true })
+vim.keymap.set('n', '<leader>en', vim.diagnostic.goto_next, { silent = true })
+vim.keymap.set('n', '<leader>ep', vim.diagnostic.goto_prev, { silent = true })
+
 -- Ctrl+Shift+Up/Down to move up and down
 vim.keymap.set('n', '<C-S-Down>', '<cmd>m .+1<cr>==', { silent = true })
 vim.keymap.set('n', '<C-S-Up>', '<cmd>m .-2<cr>==', { silent = true })
