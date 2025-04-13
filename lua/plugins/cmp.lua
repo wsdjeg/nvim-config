@@ -141,12 +141,8 @@ cmp.setup({
     },
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        {
-            name = 'dictionary',
-            keyword_length = 2,
-        },
-        { name = 'path' },
         { name = 'luasnip' },
+        { name = 'path' },
     }, {
         {
             name = 'buffer',
@@ -159,6 +155,10 @@ cmp.setup({
                     return vim.tbl_keys(bufs)
                 end,
             },
+        },
+        {
+            name = 'dictionary',
+            keyword_length = 2,
         },
     }),
 })
