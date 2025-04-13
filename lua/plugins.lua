@@ -307,8 +307,11 @@ require('plug').add({
                 'L3MON4D3/LuaSnip',
                 priority = 60,
                 config = function()
-                    require('luasnip.loaders.from_snipmate').lazy_load()
-                    require('luasnip.loaders.from_vscode').lazy_load()
+                    local paths = {}
+                    paths[#paths + 1] = require('plug.config').bundle_dir .. '/honza/vim-snippets/snippets'
+                    paths[#paths + 1] = vim.fn.stdpath('config') .. '/snippets'
+                    require('luasnip').config.setup({ enable_autosnippets = true })
+                    require('luasnip.loaders.from_snipmate').lazy_load({ paths = paths })
                 end,
             },
             {
