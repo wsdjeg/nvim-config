@@ -105,7 +105,7 @@ require('plug').add({
         end,
     },
     {
-        'D:/wsdjeg/repl.nvim',
+        'wsdjeg/repl.nvim',
         config = function()
             require('repl').setup({ executables = { lua = 'lua', python = 'python' } })
             vim.keymap.set(
@@ -673,7 +673,7 @@ require('plug').add({
         end,
     },
     {
-        'D:/wsdjeg/record-screen.nvim',
+        'wsdjeg/record-screen.nvim',
         config = function()
             require('record-screen').setup({
                 cmd = 'ffmpeg',
@@ -700,7 +700,7 @@ require('plug').add({
         end,
     },
     {
-        'D:/wsdjeg/gitlink.nvim',
+        'wsdjeg/gitlink.nvim',
         config = function()
             require('gitlink').setup()
             vim.keymap.set('n', '<leader>fy', function()
