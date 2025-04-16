@@ -99,7 +99,7 @@ require('plug').add({
         config = function()
             require('mru').setup({
                 enable_cache = true,
-                ignore_path_regexs = { '/.git/', '/nvim/runtime/doc/' },
+                ignore_path_regexs = { '/.git/', '/nvim/runtime/doc/', '.mp3$', '.mp4$', '.png$', '.jpg$' },
                 enable_logger = true,
             })
         end,
