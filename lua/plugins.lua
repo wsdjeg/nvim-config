@@ -75,26 +75,6 @@ require('plug').add({
         end,
     },
     {
-        'Yggdroot/LeaderF',
-        config = function()
-            local function mru()
-                return require('mru').get()
-            end
-
-            local function mru_acp(line, args)
-                vim.cmd('e ' .. line)
-            end
-            vim.g.Lf_Extensions = {
-                nvimmru = {
-                    source = mru,
-                    accept = mru_acp,
-                    supports_name_only = 1,
-                    supports_multi = 0,
-                },
-            }
-        end,
-    },
-    {
         'wsdjeg/mru.nvim',
         config = function()
             require('mru').setup({
@@ -568,7 +548,7 @@ require('plug').add({
         priority = 100,
     },
     {
-        'wsdjeg/flygrep.nvim',
+        'D:/wsdjeg/flygrep.nvim',
         cmds = { 'FlyGrep', 'FlyGrepCword' },
         config = function()
             require('flygrep').setup()
