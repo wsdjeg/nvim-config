@@ -4,12 +4,10 @@
                 -- 使用 ffmpeg -f dshow -list_devices true -i dummy 获取设备列表
                 -- ffmpeg -f gdigrab -i desktop -i audio="麦克风阵列 (Realtek(R) Audio)" -pix_fmt yuv420p -f mp4
                 argvs = {
-                    '-rtbufsize',
-                    '1500M',
                     '-f',
                     'dshow',
                     '-i',
-                    'audio="麦克风阵列 (Realtek(R) Audio)"',
+                    'audio=麦克风阵列 (Realtek(R) Audio)',
                     '-f',
                     'gdigrab',
                     '-i',
