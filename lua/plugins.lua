@@ -671,7 +671,20 @@ require('plug').add({
         config = function()
             require('record-screen').setup({
                 cmd = 'ffmpeg',
-                argvs = { '-f', 'gdigrab', '-i', 'desktop', '-pix_fmt', 'yuv420p', '-f', 'mp4' },
+                -- 使用 ffmpeg -f dshow -list_devices true -i dummy 获取设备列表
+                -- ffmpeg -f gdigrab -i desktop -i audio="麦克风阵列 (Realtek(R) Audio)" -pix_fmt yuv420p -f mp4
+                argvs = {
+                    '-f',
+                    'gdigrab',
+                    '-i',
+                    'desktop',
+                    '-i',
+                    'audio="麦克风阵列 (Realtek(R) Audio)"',
+                    '-pix_fmt',
+                    'yuv420p',
+                    '-f',
+                    'mp4',
+                },
             })
             vim.keymap.set(
                 'n',
