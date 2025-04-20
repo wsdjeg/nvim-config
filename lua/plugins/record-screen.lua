@@ -76,7 +76,7 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
                 '-f',
                 'dshow',
                 '-i',
-                'audio=麦克风阵列 (Realtek(R) Audio)',
+                'audio=立体声混音 (Realtek(R) Audio)',
                 '-f',
                 'dshow',
                 '-s',
