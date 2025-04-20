@@ -1,32 +1,81 @@
+require('record-screen').setup({
+    cmd = 'ffmpeg',
+    -- 使用 ffmpeg -f dshow -list_devices true -i dummy 获取设备列表
+    -- ffmpeg -f gdigrab -i desktop -i audio="麦克风阵列 (Realtek(R) Audio)" -pix_fmt yuv420p -f mp4
+    argvs = {
+        '-f',
+        'dshow',
+        '-i',
+        'audio=麦克风阵列 (Realtek(R) Audio)',
+        '-f',
+        'gdigrab',
+        '-i',
+        'desktop',
+        '-pix_fmt',
+        'yuv420p',
+        '-f',
+        'mp4',
+    },
+})
+vim.keymap.set('n', '<F8>', '<cmd>lua require("record-screen").start()<cr>', { silent = true })
+vim.keymap.set('n', '<F9>', '<cmd>lua require("record-screen").stop()<cr>', { silent = true })
 
-            require('record-screen').setup({
-                cmd = 'ffmpeg',
-                -- 使用 ffmpeg -f dshow -list_devices true -i dummy 获取设备列表
-                -- ffmpeg -f gdigrab -i desktop -i audio="麦克风阵列 (Realtek(R) Audio)" -pix_fmt yuv420p -f mp4
-                argvs = {
-                    '-f',
-                    'dshow',
-                    '-i',
-                    'audio=麦克风阵列 (Realtek(R) Audio)',
-                    '-f',
-                    'gdigrab',
-                    '-i',
-                    'desktop',
-                    '-pix_fmt',
-                    'yuv420p',
-                    '-f',
-                    'mp4',
-                },
-            })
-            vim.keymap.set(
-                'n',
-                '<F8>',
-                '<cmd>lua require("record-screen").start()<cr>',
-                { silent = true }
-            )
-            vim.keymap.set(
-                'n',
-                '<F9>',
-                '<cmd>lua require("record-screen").stop()<cr>',
-                { silent = true }
-            )
+vim.api.nvim_create_user_command('RecordScreen', function(opt)
+    local enable_audio = false
+    local enable_camera = false
+    for _, v in ipairs(opt.fargs) do
+        if v == '-audio' then
+            enable_audio = true
+        elseif v == '-camera' then
+            enable_camera = true
+        end
+    end
+    if not enable_camera and not enable_audio then
+        require('record-screen').setup({
+            command = 'ffmpeg',
+            argvs = { '-f', 'gdigrab', '-i', 'desktop', '-pix_fmt', 'yuv420p', '-f', 'mp4' },
+        })
+    elseif enable_audio and not enable_camera then
+        require('record-screen').setup({
+            cmd = 'ffmpeg',
+            -- 使用 ffmpeg -f dshow -list_devices true -i dummy 获取设备列表
+            -- ffmpeg -f gdigrab -i desktop -i audio="麦克风阵列 (Realtek(R) Audio)" -pix_fmt yuv420p -f mp4
+            argvs = {
+                '-f',
+                'dshow',
+                '-i',
+                'audio=麦克风阵列 (Realtek(R) Audio)',
+                '-f',
+                'gdigrab',
+                '-i',
+                'desktop',
+                '-pix_fmt',
+                'yuv420p',
+                '-f',
+                'mp4',
+            },
+        })
+    elseif enable_audio and enable_camera then
+        require('record-screen').setup({
+            cmd = 'ffmpeg',
+            -- 使用 ffmpeg -f dshow -list_devices true -i dummy 获取设备列表
+            -- ffmpeg -f gdigrab -i desktop -i audio="麦克风阵列 (Realtek(R) Audio)" -pix_fmt yuv420p -f mp4
+            argvs = {
+                '-f',
+                'gdigrab', '-r', '60', '-draw_mouse', '1', '-offset_x', '0', '-offset_y', '0', -- '-video_size', '2560x1440',
+                '-i',
+                'desktop',
+                '-f',
+                'dshow',
+                '-i',
+                'audio=麦克风阵列 (Realtek(R) Audio)',
+                '-f', 'dshow', '-s', '640x360', '-i', 'video=Integrated Camera', '-filter_complex', 'overlay=W-w-1:H-h-1',
+                '-pix_fmt',
+                'yuv420p',
+                '-f',
+                'mp4',
+            },
+        })
+    end
+    require('record-screen').start()
+end, { nargs = '*' })
