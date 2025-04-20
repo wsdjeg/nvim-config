@@ -36,12 +36,12 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
             return
         end
     end
-    if not enable_camera and not enable_microphone then
+    if not enable_camera and not enable_microphone and not enable_speaker then
         require('record-screen').setup({
             command = 'ffmpeg',
             argvs = { '-f', 'gdigrab', '-i', 'desktop', '-pix_fmt', 'yuv420p', '-f', 'mp4' },
         })
-    elseif enable_microphone and not enable_camera then
+    elseif enable_microphone and not enable_camera and not enable_speaker then
         require('record-screen').setup({
             cmd = 'ffmpeg',
             -- 使用 ffmpeg -f dshow -list_devices true -i dummy 获取设备列表
@@ -68,14 +68,6 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
             -- ffmpeg -f gdigrab -i desktop -i audio="麦克风阵列 (Realtek(R) Audio)" -pix_fmt yuv420p -f mp4
             argvs = {
                 '-f',
-                'gdigrab',
-                '-r',
-                '60',
-                '-draw_mouse',
-                '1',
-                '-i',
-                'desktop',
-                '-f',
                 'dshow',
                 '-i',
                 'audio=麦克风阵列 (Realtek(R) Audio)',
@@ -85,6 +77,14 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
                 'audio=立体声混音 (Realtek(R) Audio)',
                 '-filter_complex',
                 'amix=inputs=2:duration=first:dropout_transition=2',
+                '-f',
+                'gdigrab',
+                '-r',
+                '60',
+                '-draw_mouse',
+                '1',
+                '-i',
+                'desktop',
                 '-pix_fmt',
                 'yuv420p',
                 '-f',
