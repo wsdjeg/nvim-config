@@ -17,12 +17,16 @@ require('record-screen').setup({
         'mp4',
     },
 })
+
+-- 参考 https://juejin.cn/post/7361684907809947658
+
 vim.api.nvim_create_user_command('RecordScreen', function(opt)
-    local enable_audio = false
+    local enable_microphone = false
     local enable_camera = false
+    local enable_speaker = false
     for _, v in ipairs(opt.fargs) do
         if v == '-audio' then
-            enable_audio = true
+            enable_microphone = true
         elseif v == '-camera' then
             enable_camera = true
         elseif v == 'stop' then
@@ -30,12 +34,12 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
             return
         end
     end
-    if not enable_camera and not enable_audio then
+    if not enable_camera and not enable_microphone then
         require('record-screen').setup({
             command = 'ffmpeg',
             argvs = { '-f', 'gdigrab', '-i', 'desktop', '-pix_fmt', 'yuv420p', '-f', 'mp4' },
         })
-    elseif enable_audio and not enable_camera then
+    elseif enable_microphone and not enable_camera then
         require('record-screen').setup({
             cmd = 'ffmpeg',
             -- 使用 ffmpeg -f dshow -list_devices true -i dummy 获取设备列表
@@ -55,7 +59,7 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
                 'mp4',
             },
         })
-    elseif enable_audio and enable_camera then
+    elseif enable_microphone and enable_camera then
         require('record-screen').setup({
             cmd = 'ffmpeg',
             -- 使用 ffmpeg -f dshow -list_devices true -i dummy 获取设备列表
@@ -93,4 +97,9 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
         })
     end
     require('record-screen').start()
-end, { nargs = '*' })
+end, {
+    nargs = '*',
+    complete = function(...)
+        return { '-microphone', '-camera', '-speaker' }
+    end,
+})
