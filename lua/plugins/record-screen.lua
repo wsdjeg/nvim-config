@@ -17,9 +17,6 @@ require('record-screen').setup({
         'mp4',
     },
 })
-vim.keymap.set('n', '<F8>', '<cmd>lua require("record-screen").start()<cr>', { silent = true })
-vim.keymap.set('n', '<F9>', '<cmd>lua require("record-screen").stop()<cr>', { silent = true })
-
 vim.api.nvim_create_user_command('RecordScreen', function(opt)
     local enable_audio = false
     local enable_camera = false
@@ -28,6 +25,9 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
             enable_audio = true
         elseif v == '-camera' then
             enable_camera = true
+        elseif v == 'stop' then
+            require('record-screen').stop()
+            return
         end
     end
     if not enable_camera and not enable_audio then
@@ -62,14 +62,29 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
             -- ffmpeg -f gdigrab -i desktop -i audio="麦克风阵列 (Realtek(R) Audio)" -pix_fmt yuv420p -f mp4
             argvs = {
                 '-f',
-                'gdigrab', '-r', '60', '-draw_mouse', '1', '-offset_x', '0', '-offset_y', '0', -- '-video_size', '2560x1440',
+                'gdigrab',
+                '-r',
+                '60',
+                '-draw_mouse',
+                '1',
+                '-offset_x',
+                '0',
+                '-offset_y',
+                '0', -- '-video_size', '2560x1440',
                 '-i',
                 'desktop',
                 '-f',
                 'dshow',
                 '-i',
                 'audio=麦克风阵列 (Realtek(R) Audio)',
-                '-f', 'dshow', '-s', '640x360', '-i', 'video=Integrated Camera', '-filter_complex', 'overlay=W-w-1:H-h-1',
+                '-f',
+                'dshow',
+                '-s',
+                '640x360',
+                '-i',
+                'video=Integrated Camera',
+                '-filter_complex',
+                'overlay=W-w-1:H-h-1',
                 '-pix_fmt',
                 'yuv420p',
                 '-f',
