@@ -47,6 +47,9 @@ require('plug').add({
         'wsdjeg/nvim-plug',
         fetch = true,
     },
+    {
+        'D:/wsdjeg/keymap-guide.nvim',
+    },
     -- 一些常用仓库，让 nvim-plug 帮我下载并更新，但不加入 vim 插件列表。
     { 'neovim/neovim', fetch = true },
     { 'vim/vim', fetch = true },
