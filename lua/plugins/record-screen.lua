@@ -44,8 +44,6 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
     elseif enable_microphone and not enable_camera and not enable_speaker then
         require('record-screen').setup({
             cmd = 'ffmpeg',
-            -- 使用 ffmpeg -f dshow -list_devices true -i dummy 获取设备列表
-            -- ffmpeg -f gdigrab -i desktop -i audio="麦克风阵列 (Realtek(R) Audio)" -pix_fmt yuv420p -f mp4
             argvs = {
                 '-f',
                 'dshow',
@@ -64,8 +62,6 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
     elseif enable_microphone and enable_speaker and not enable_camera then
         require('record-screen').setup({
             cmd = 'ffmpeg',
-            -- 使用 ffmpeg -f dshow -list_devices true -i dummy 获取设备列表
-            -- ffmpeg -f gdigrab -i desktop -i audio="麦克风阵列 (Realtek(R) Audio)" -pix_fmt yuv420p -f mp4
             argvs = {
                 '-rtbufsize',
                 '1500M',
@@ -93,11 +89,9 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
                 'mp4',
             },
         })
-    elseif enable_microphone and enable_camera then
+    elseif enable_microphone and enable_camera and not enable_speaker then
         require('record-screen').setup({
             cmd = 'ffmpeg',
-            -- 使用 ffmpeg -f dshow -list_devices true -i dummy 获取设备列表
-            -- ffmpeg -f gdigrab -i desktop -i audio="麦克风阵列 (Realtek(R) Audio)" -pix_fmt yuv420p -f mp4
             argvs = {
                 '-f',
                 'gdigrab',
@@ -114,7 +108,47 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
                 '-f',
                 'dshow',
                 '-i',
+                'audio=麦克风阵列 (Realtek(R) Audio)',
+                '-f',
+                'dshow',
+                '-s',
+                '640x360',
+                '-i',
+                'video=Integrated Camera',
+                '-filter_complex',
+                'overlay=W-w-1:H-h-1',
+                '-pix_fmt',
+                'yuv420p',
+                '-f',
+                'mp4',
+            },
+        })
+    elseif enable_microphone and enable_camera and enable_speaker then
+        require('record-screen').setup({
+            cmd = 'ffmpeg',
+            argvs = {
+                '-f',
+                'dshow',
+                '-i',
+                'audio=麦克风阵列 (Realtek(R) Audio)',
+                '-f',
+                'dshow',
+                '-i',
                 'audio=立体声混音 (Realtek(R) Audio)',
+                '-filter_complex',
+                'amix=inputs=2:duration=first',
+                '-f',
+                'gdigrab',
+                '-r',
+                '60',
+                '-draw_mouse',
+                '1',
+                '-offset_x',
+                '0',
+                '-offset_y',
+                '0', -- '-video_size', '2560x1440',
+                '-i',
+                'desktop',
                 '-f',
                 'dshow',
                 '-s',
