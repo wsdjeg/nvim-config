@@ -20,6 +20,9 @@ require('record-screen').setup({
 
 -- 参考 https://juejin.cn/post/7361684907809947658
 
+vim.keymap.set('n', '<F10>', '<cmd>RecordScreen -microphone<Cr>', { silent = true })
+vim.keymap.set('n', '<F12>', '<cmd>RecordScreen stop<Cr>', { silent = true })
+
 vim.api.nvim_create_user_command('RecordScreen', function(opt)
     local enable_microphone = false
     local enable_camera = false
@@ -50,7 +53,9 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
                 '-i',
                 'audio=麦克风阵列 (Realtek(R) Audio)',
                 '-f',
-                'gdigrab', '-itsoffset', '0.8',
+                'gdigrab',
+                '-itsoffset',
+                '0.8',
                 '-i',
                 'desktop',
                 '-pix_fmt',
@@ -80,7 +85,9 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
                 '-r',
                 '60',
                 '-draw_mouse',
-                '1', '-itsoffset', '0.8',
+                '1',
+                '-itsoffset',
+                '0.8',
                 '-i',
                 'desktop',
                 '-pix_fmt',
