@@ -61,12 +61,14 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
                 'mp4',
             },
         })
-    elseif enable_microphone and enable_speaker then
+    elseif enable_microphone and enable_speaker and not enable_camera then
         require('record-screen').setup({
             cmd = 'ffmpeg',
             -- 使用 ffmpeg -f dshow -list_devices true -i dummy 获取设备列表
             -- ffmpeg -f gdigrab -i desktop -i audio="麦克风阵列 (Realtek(R) Audio)" -pix_fmt yuv420p -f mp4
             argvs = {
+                '-rtbufsize',
+                '1500M',
                 '-f',
                 'dshow',
                 '-i',
