@@ -44,6 +44,26 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
             command = 'ffmpeg',
             argvs = { '-f', 'gdigrab', '-i', 'desktop', '-pix_fmt', 'yuv420p', '-f', 'mp4' },
         })
+    elseif enable_speaker and not enable_camera and not enable_microphone then
+        require('record-screen').setup({
+            cmd = 'ffmpeg',
+            argvs = {
+                '-f',
+                'dshow',
+                '-i',
+                'audio=立体声混音 (Realtek(R) Audio)',
+                '-f',
+                'gdigrab',
+                '-itsoffset',
+                '0.8',
+                '-i',
+                'desktop',
+                '-pix_fmt',
+                'yuv420p',
+                '-f',
+                'mp4',
+            },
+        })
     elseif enable_microphone and not enable_camera and not enable_speaker then
         require('record-screen').setup({
             cmd = 'ffmpeg',
