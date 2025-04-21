@@ -74,7 +74,7 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
                 '-i',
                 'audio=立体声混音 (Realtek(R) Audio)',
                 '-filter_complex',
-                'amix=inputs=2:duration=first',
+                'amix=inputs=2:duration=first:dropout_transition=2',
                 '-f',
                 'gdigrab',
                 '-r',
