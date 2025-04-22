@@ -565,7 +565,7 @@ require('plug').add({
         priority = 100,
     },
     {
-        'D:/wsdjeg/flygrep.nvim',
+        'wsdjeg/flygrep.nvim',
         cmds = { 'FlyGrep', 'FlyGrepCword' },
         config = function()
             require('flygrep').setup({
