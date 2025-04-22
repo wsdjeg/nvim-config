@@ -301,6 +301,12 @@ require('plug').add({
                 '<cmd>lua require("terminal").open()<cr>',
                 { silent = true }
             )
+            vim.keymap.set(
+                'n',
+                '<leader>"',
+                '<cmd>lua require("terminal").open(vim.fn.expand("%:p:h"))<cr>',
+                { silent = true }
+            )
         end,
     },
     {
@@ -420,7 +426,7 @@ require('plug').add({
         end,
     },
     {
-        'wsdjeg/record-key.nvim',
+        'D:/wsdjeg/record-key.nvim',
         cmds = { 'RecordKeyToggle' },
         config_before = function()
             vim.keymap.set('n', '<F9>', '<cmd>RecordKeyToggle<cr>', { silent = true })
