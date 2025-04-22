@@ -183,7 +183,7 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
                 '-i',
                 'video=Integrated Camera',
                 '-filter_complex',
-                'overlay=W-w-1:H-h-1',
+                'overlay=W-w-1:H-h-1', '-preset', 'ultrafast',
                 '-pix_fmt',
                 'yuv420p',
                 '-f',
