@@ -20,7 +20,7 @@ require('record-screen').setup({
 
 -- 参考 https://juejin.cn/post/7361684907809947658
 
-vim.keymap.set('n', '<F10>', '<cmd>RecordScreen -microphone<Cr>', { silent = true })
+vim.keymap.set('n', '<F10>', '<cmd>RecordScreen -microphone -speaker -camera<Cr>', { silent = true })
 vim.keymap.set('n', '<F12>', '<cmd>RecordScreen stop<Cr>', { silent = true })
 
 vim.api.nvim_create_user_command('RecordScreen', function(opt)
