@@ -9,9 +9,10 @@ create_autocmd({ 'BufWritePre' }, {
     end,
 })
 
+-- download im-select from https://github.com/daipeihust/im-select
 local imselect = 'C:\\Users\\wsdjeg\\Downloads\\im-select.exe'
 
-create_autocmd({ 'InsertLeave' }, {
+create_autocmd({ 'InsertLeave', 'FocusGained', 'CmdlineLeave' }, {
     pattern = { '*' },
     group = augroup,
     callback = function(_)
@@ -23,12 +24,5 @@ create_autocmd({ 'FocusLost' }, {
     group = augroup,
     callback = function(_)
         vim.fn.system(imselect .. ' 2052')
-    end,
-})
-create_autocmd({ 'FocusGained' }, {
-    pattern = { '*' },
-    group = augroup,
-    callback = function(_)
-        vim.fn.system(imselect .. ' 1033')
     end,
 })
