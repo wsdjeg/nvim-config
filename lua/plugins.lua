@@ -612,8 +612,8 @@ require('plug').add({
                 window = {
                     width = 0.9,
                     height = 0.9,
-                    col = 0.1,
-                    row = 0.1,
+                    col = 0.05,
+                    row = 0.05,
                 },
             })
             vim.api.nvim_create_user_command('FlyGrepCword', function(opt)
