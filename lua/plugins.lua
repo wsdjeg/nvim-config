@@ -641,6 +641,7 @@ require('plug').add({
             vim.keymap.set('n', '<leader>mzb', '<cmd>ZkBrowse<cr>', { silent = true })
             vim.keymap.set('n', '<leader>mzn', '<cmd>ZkNew<cr>', { silent = true })
             vim.keymap.set('n', '<leader>mzf', '<cmd>ZkListNotes<cr>', { silent = true })
+            vim.keymap.set('n', '<leader>mzt', '<cmd>ZkListTags<cr>', { silent = true })
         end,
     },
     {
