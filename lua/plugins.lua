@@ -51,7 +51,7 @@ require('plug').add({
         'D:/wsdjeg/keymap-guide.nvim',
     },
     {
-        'D:/wsdjeg/music-player.nvim',
+        'wsdjeg/music-player.nvim',
         config = function ()
             require('music-player').setup({
                 musics_directory = 'D:\\wsdjeg\\my-blog\\docs\\musics'
