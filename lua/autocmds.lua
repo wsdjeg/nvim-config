@@ -10,14 +10,14 @@ create_autocmd({ 'BufWritePre' }, {
 })
 
 -- download im-select from https://github.com/daipeihust/im-select
-local imselect = 'C:\\Users\\wsdjeg\\Downloads\\im-select.exe'
+local imselect = 'C:\\Users\\wsdjeg\\Downloads\\im-select-mspy.exe'
 
 local function imselect_cn()
-    vim.system({ imselect, '2052' })
+    vim.system({ imselect, '-k=ctrl+space', '中文模式' })
 end
 
 local function imselect_en()
-    vim.system({ imselect, '1033' })
+    vim.system({ imselect, '-k=ctrl+space', '英语模式' })
 end
 
 local insert_im
@@ -27,7 +27,7 @@ create_autocmd({ 'InsertLeave' }, {
     callback = function(_)
         insert_im = vim.fn.trim(vim.fn.system(imselect))
         vim.system({ imselect }, { text = true }, function(o)
-            insert_im = o.stdout
+            insert_im = vim.trim(vim.iconv(o.stdout, 'cp936', 'utf-8'))
         end)
         imselect_en()
     end,
@@ -36,8 +36,9 @@ create_autocmd({ 'InsertEnter' }, {
     pattern = { '*' },
     group = augroup,
     callback = function(_)
-        if insert_im and insert_im ~= '1033' then
-            vim.system({ imselect, insert_im })
+            local c = '英语模式'
+        if insert_im and insert_im ~= '英语模式' then
+            vim.system({ imselect, '-k=ctrl+space', insert_im })
         end
     end,
 })
