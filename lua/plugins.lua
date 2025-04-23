@@ -17,7 +17,7 @@ require('plug').setup({
     -- ui = 'notify',
     http_proxy = 'http://127.0.0.1:7890',
     https_proxy = 'http://127.0.0.1:7890',
-    enable_priority = true,
+    enable_priority = false,
     max_processes = 16,
 })
 
@@ -52,14 +52,18 @@ require('plug').add({
     },
     {
         'wsdjeg/music-player.nvim',
-        config = function ()
+        config = function()
             require('music-player').setup({
-                musics_directory = 'D:\\wsdjeg\\my-blog\\docs\\musics'
+                musics_directory = 'D:\\wsdjeg\\my-blog\\docs\\musics',
             })
-            vim.keymap.set('n', '<leader>ms', '<cmd>lua require("music-player").stop()<cr>', {silent = true})
-            vim.keymap.set('n', '<leader>mf', '<cmd>Telescope music-player<cr>', {silent = true})
-
-        end
+            vim.keymap.set(
+                'n',
+                '<leader>ms',
+                '<cmd>lua require("music-player").stop()<cr>',
+                { silent = true }
+            )
+            vim.keymap.set('n', '<leader>mf', '<cmd>Telescope music-player<cr>', { silent = true })
+        end,
     },
     -- 一些常用仓库，让 nvim-plug 帮我下载并更新，但不加入 vim 插件列表。
     { 'neovim/neovim', fetch = true },
@@ -274,19 +278,9 @@ require('plug').add({
     },
     { 'wsdjeg/ChineseLinter.vim', cmds = { 'CheckChinese' } },
     {
-        'wsdjeg/code-runner.nvim',
+        'D:/wsdjeg/code-runner.nvim',
         config = function()
-            require('code-runner').setup({
-                runners = {
-                    lua = { exe = 'lua', opt = { '-' }, usestdin = true },
-                },
-            })
-            vim.keymap.set(
-                'n',
-                '<leader>lr',
-                '<cmd>lua require("code-runner").open()<cr>',
-                { silent = true }
-            )
+            require('plugins.code-runner')
         end,
     },
     { 'wsdjeg/tasks.nvim' },
