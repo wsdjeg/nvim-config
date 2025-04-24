@@ -278,7 +278,7 @@ require('plug').add({
     },
     { 'wsdjeg/ChineseLinter.vim', cmds = { 'CheckChinese' } },
     {
-        'D:/wsdjeg/code-runner.nvim',
+        'wsdjeg/code-runner.nvim',
         config = function()
             require('plugins.code-runner')
         end,
@@ -431,7 +431,7 @@ require('plug').add({
         end,
     },
     {
-        'D:/wsdjeg/record-key.nvim',
+        'wsdjeg/record-key.nvim',
         cmds = { 'RecordKeyToggle' },
         config_before = function()
             vim.keymap.set('n', '<F9>', '<cmd>RecordKeyToggle<cr>', { silent = true })
