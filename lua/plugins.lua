@@ -51,7 +51,9 @@ require('plug').add({
         'D:/wsdjeg/keymap-guide.nvim',
     },
     {
-        'D:/wsdjeg/bookmarks.nvim',
+        'D:/wsdjeg/bookmarks.nvim', config = function()
+            vim.keymap.set('n', 'mm', '<Plug>(bookmarksToggle)', {noremap = false})
+        end,
     },
     {
         'wsdjeg/music-player.nvim',
