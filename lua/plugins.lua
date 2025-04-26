@@ -59,7 +59,7 @@ require('plug').add({
             vim.keymap.set('n', 'mc', '<Plug>(bookmarksClear)', { noremap = false })
             vim.keymap.set('n', 'ma', '<Plug>(bookmarksListAll)', { noremap = false })
             vim.keymap.set('n', 'mp', '<Plug>(bookmarksPrevious)', { noremap = false })
-            require('bookmarks').setup()
+            require('bookmarks').setup({sign_text = '🏷️'})
         end,
     },
     {
