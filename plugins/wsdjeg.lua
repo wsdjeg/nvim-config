@@ -1,0 +1,3 @@
+return {
+    'wsdjeg/vim-chat'
+}

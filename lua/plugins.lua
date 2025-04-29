@@ -8,7 +8,8 @@ if vim.fn.isdirectory('D:/bundle_dir/wsdjeg/nvim-plug') == 0 then
         'D:/bundle_dir/wsdjeg/nvim-plug',
     })
 end
-vim.opt.runtimepath:append('D:/bundle_dir/wsdjeg/nvim-plug')
+-- vim.opt.runtimepath:append('D:/bundle_dir/wsdjeg/nvim-plug')
+vim.opt.runtimepath:append('D:/wsdjeg/nvim-plug')
 
 require('plug').setup({
 
