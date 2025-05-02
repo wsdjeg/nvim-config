@@ -30,7 +30,7 @@ require('plug').add({
             require('logger').setup({ level = 0 })
             vim.keymap.set(
                 'n',
-                '<leader>hL',
+                '<leader>hl',
                 '<cmd>lua require("logger").viewRuntimeLog()<cr>',
                 { silent = true }
             )
