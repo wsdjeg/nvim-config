@@ -61,3 +61,18 @@ create_autocmd({ 'FocusLost' }, {
         imselect_cn()
     end,
 })
+
+create_autocmd({'InsertLeave'}, {
+    pattern = {'*'},
+    group = augroup,
+    callback = function(_)
+        vim.wo.cursorline = true
+    end
+})
+create_autocmd({'InsertEnter'}, {
+    pattern = {'*'},
+    group = augroup,
+    callback = function(_)
+        vim.wo.cursorline = false
+    end
+})
