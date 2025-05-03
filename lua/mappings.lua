@@ -4,13 +4,29 @@ vim.keymap.set('n', '<leader>qq', '<cmd>q<cr>', { silent = true })
 vim.keymap.set('n', '<leader>qa', '<cmd>qa<cr>', { silent = true })
 vim.keymap.set('n', '<leader>bm', function(opt)
     local buf = vim.api.nvim_create_buf(false, true)
-    vim.api.nvim_win_set_buf(0, buf)
-    local msg = vim.fn.execute('message')
-    vim.api.nvim_buf_set_lines(buf, 0, -1, false, vim.fn.split(msg, '\n'))
-    vim.api.nvim_set_option_value('modifiable', false, {buf = buf})
-    vim.api.nvim_set_option_value('modified', false, {buf = buf})
-    vim.api.nvim_set_option_value('buftype', 'nofile', {buf = buf})
+    local msg = vim.fn.split(vim.fn.execute('message'), '\n')
+    vim.api.nvim_buf_set_lines(buf, 0, -1, false, msg)
+    vim.api.nvim_set_option_value('modifiable', false, { buf = buf })
+    vim.api.nvim_set_option_value('modified', false, { buf = buf })
+    vim.api.nvim_set_option_value('buftype', 'nofile', { buf = buf })
     vim.keymap.set('n', 'q', '<cmd>bd!<cr>', { buffer = buf })
+    local win = vim.api.nvim_open_win(buf, true, {
+        col = 1,
+        row = math.floor(vim.o.lines / 2),
+        width = vim.o.columns,
+        height = vim.o.lines - math.floor(vim.o.lines / 2),
+        focusable = true,
+        relative = 'editor',
+        title = 'Messages',
+        border = 'single',
+    })
+    vim.api.nvim_set_option_value(
+        'winhighlight',
+        'NormalFloat:Normal,FloatBorder:WinSeparator',
+        { win = win }
+    )
+    vim.api.nvim_set_option_value('number', true, { win = win })
+    vim.api.nvim_set_option_value('relativenumber', false, {win = win})
 end, { silent = true })
 
 -- Windows manager
