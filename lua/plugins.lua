@@ -353,7 +353,7 @@ require('plug').add({
         events = { 'VimEnter' },
         config = function()
             require('statusline').register_sections('vcs', function()
-                return '%{ v:lua.require("git.command.branch").current() .. v:lua.require("git.command.push").status() }'
+                return '%{ v:lua.require("git.command.branch").current() .. v:lua.require("git.command.pull").status() .. v:lua.require("git.command.push").status() }'
             end)
             require('statusline').setup({
                 left_sections = { 'winnr', 'filename', 'vcs' },
