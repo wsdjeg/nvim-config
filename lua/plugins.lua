@@ -52,6 +52,9 @@ require('plug').add({
         'D:/wsdjeg/keymap-guide.nvim',
     },
     {
+        'D:/wsdjeg/plugin-utils.nvim',
+    },
+    {
         'D:/wsdjeg/bookmarks.nvim',
         config = function()
             vim.keymap.set('n', 'mm', '<Plug>(bookmarksToggle)', { noremap = false })
@@ -85,7 +88,7 @@ require('plug').add({
 })
 require('plug').add({
     {
-        'wsdjeg/git.nvim',
+        'D:/wsdjeg/git.nvim',
         config_before = function()
             vim.keymap.set('n', '<leader>gs', '<cmd>Git status<cr>', { silent = true })
             vim.keymap.set('n', '<leader>gA', '<cmd>Git add .<cr>', { silent = true })
@@ -350,7 +353,7 @@ require('plug').add({
         events = { 'VimEnter' },
         config = function()
             require('statusline').register_sections('vcs', function()
-                return '%{ v:lua.require("git.command.branch").current() }'
+                return '%{ v:lua.require("git.command.branch").current() .. v:lua.require("git.command.push").status() }'
             end)
             require('statusline').setup({
                 left_sections = { 'winnr', 'filename', 'vcs' },
