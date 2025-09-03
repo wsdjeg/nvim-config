@@ -2,9 +2,21 @@
 
 > 我的个人配置，仅供参考，不建议直接使用。
 
-## 个人插件列表
+## 快捷键列表
 
-更新列表脚本：
+更新快捷键列表：
+
+```lua
+require('wsdjeg-mappings').update()
+```
+
+<!-- wsdjeg key bindings start -->
+
+<!-- wsdjeg key bindings end -->
+
+## 插件列表
+
+更新列表：
 
 ```lua
 require('wsdjeg-plugins').update()

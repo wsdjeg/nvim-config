@@ -1,5 +1,5 @@
 vim.g.mapleader = ' '
-vim.keymap.set('n', '<leader>fs', '<cmd>w<cr>', { silent = true })
+vim.keymap.set('n', '<leader>fs', '<cmd>w<cr>', { silent = true, desc = 'save current buffer' })
 vim.keymap.set('n', '<leader>qq', '<cmd>q<cr>', { silent = true })
 vim.keymap.set('n', '<leader>qa', '<cmd>qa<cr>', { silent = true })
 vim.keymap.set('n', '<leader>bm', function(opt)
@@ -27,7 +27,7 @@ vim.keymap.set('n', '<leader>bm', function(opt)
     )
     vim.api.nvim_set_option_value('number', true, { win = win })
     vim.api.nvim_set_option_value('relativenumber', false, {win = win})
-end, { silent = true })
+end, { silent = true, desc = 'open message buffer' })
 
 -- Windows manager
 vim.keymap.set('n', 'so', '<cmd>only<cr>', { silent = true })
@@ -49,7 +49,7 @@ vim.keymap.set('n', '<leader>bc', function()
         end
     end
     vim.cmd.redrawtabline()
-end, { silent = true })
+end, { silent = true, desc = 'clear saved buffers' })
 vim.keymap.set('n', '<leader>bd', function()
     vim.cmd('bd')
     vim.cmd.redrawtabline()
