@@ -12,6 +12,75 @@ require('wsdjeg-mappings').update()
 
 <!-- wsdjeg key bindings start -->
 
+| 快捷键                                     | 功能描述                                                                                   |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `<Space>sw`                                | LSP Symbols - Workspace                                                                    |
+| `<Space>ss`                                | Jump to LSP symbol                                                                         |
+| `<Space>bc`                                | clear saved buffers                                                                        |
+| `<Space>bm`                                | open message buffer                                                                        |
+| `<Space>fs`                                | save current buffer                                                                        |
+| `&`                                        | :help &-default                                                                            |
+| `Y`                                        | :help Y-default                                                                            |
+| `[<Space>`                                 | Add empty line above cursor                                                                |
+| `[B`                                       | :brewind                                                                                   |
+| `[b`                                       | :bprevious                                                                                 |
+| `[<lt>C-T>`                                | :ptprevious                                                                                |
+| `[T`                                       | :trewind                                                                                   |
+| `[t`                                       | :tprevious                                                                                 |
+| `[A`                                       | :rewind                                                                                    |
+| `[a`                                       | :previous                                                                                  |
+| `[<lt>C-L>`                                | :lpfile                                                                                    |
+| `[L`                                       | :lrewind                                                                                   |
+| `[l`                                       | :lprevious                                                                                 |
+| `[<lt>C-Q>`                                | :cpfile                                                                                    |
+| `[Q`                                       | :crewind                                                                                   |
+| `[q`                                       | :cprevious                                                                                 |
+| `[D`                                       | Jump to the first diagnostic in the current buffer                                         |
+| `[d`                                       | Jump to the previous diagnostic in the current buffer                                      |
+| `]<Space>`                                 | Add empty line below cursor                                                                |
+| `]B`                                       | :blast                                                                                     |
+| `]b`                                       | :bnext                                                                                     |
+| `]<lt>C-T>`                                | :ptnext                                                                                    |
+| `]T`                                       | :tlast                                                                                     |
+| `]t`                                       | :tnext                                                                                     |
+| `]A`                                       | :last                                                                                      |
+| `]a`                                       | :next                                                                                      |
+| `]<lt>C-L>`                                | :lnfile                                                                                    |
+| `]L`                                       | :llast                                                                                     |
+| `]l`                                       | :lnext                                                                                     |
+| `]<lt>C-Q>`                                | :cnfile                                                                                    |
+| `]Q`                                       | :clast                                                                                     |
+| `]q`                                       | :cnext                                                                                     |
+| `]D`                                       | Jump to the last diagnostic in the current buffer                                          |
+| `]d`                                       | Jump to the next diagnostic in the current buffer                                          |
+| `cS`                                       | Change a surrounding pair, putting replacements on new lines                               |
+| `cs`                                       | Change a surrounding pair                                                                  |
+| `ds`                                       | Delete a surrounding pair                                                                  |
+| `gO`                                       | vim.lsp.buf.document_symbol()                                                              |
+| `gri`                                      | vim.lsp.buf.implementation()                                                               |
+| `grr`                                      | vim.lsp.buf.references()                                                                   |
+| `gra`                                      | vim.lsp.buf.code_action()                                                                  |
+| `grn`                                      | vim.lsp.buf.rename()                                                                       |
+| `gcc`                                      | Toggle comment line                                                                        |
+| `gc`                                       | Toggle comment                                                                             |
+| `gx`                                       | Opens filepath or URI under cursor with the system handler (file explorer, web browser, …) |
+| `ySS`                                      | Add a surrounding pair around the current line, on new lines (normal mode)                 |
+| `yS`                                       | Add a surrounding pair around a motion, on new lines (normal mode)                         |
+| `yss`                                      | Add a surrounding pair around the current line (normal mode)                               |
+| `ys`                                       | Add a surrounding pair around a motion (normal mode)                                       |
+| `<lt>Plug>(nvim-surround-change-line)`     | Change a surrounding pair, putting replacements on new lines                               |
+| `<lt>Plug>(nvim-surround-change)`          | Change a surrounding pair                                                                  |
+| `<lt>Plug>(nvim-surround-delete)`          | Delete a surrounding pair                                                                  |
+| `<lt>Plug>(nvim-surround-normal-cur-line)` | Add a surrounding pair around the current line, on new lines (normal mode)                 |
+| `<lt>Plug>(nvim-surround-normal-line)`     | Add a surrounding pair around a motion, on new lines (normal mode)                         |
+| `<lt>Plug>(nvim-surround-normal-cur)`      | Add a surrounding pair around the current line (normal mode)                               |
+| `<lt>Plug>(nvim-surround-normal)`          | Add a surrounding pair around a motion (normal mode)                                       |
+| `<lt>Plug>luasnip-expand-repeat`           | LuaSnip: Repeat last node expansion                                                        |
+| `<lt>Plug>luasnip-delete-check`            | LuaSnip: Removes current snippet from jumplist                                             |
+| `<lt>C-W><lt>C-D>`                         | Show diagnostics under the cursor                                                          |
+| `<lt>C-W>d`                                | Show diagnostics under the cursor                                                          |
+| `<lt>C-L>`                                 | :help CTRL-L-default                                                                       |
+
 <!-- wsdjeg key bindings end -->
 
 ## 插件列表
