@@ -1,5 +1,6 @@
 vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>fs', '<cmd>w<cr>', { silent = true, desc = 'save current buffer' })
+vim.keymap.set('n', '<leader>?', '<cmd>Telescope keymaps<cr>', { silent = true, desc = 'fuzzy find keymaps' })
 vim.keymap.set('n', '<leader>qq', '<cmd>q<cr>', { silent = true })
 vim.keymap.set('n', '<leader>qa', '<cmd>qa<cr>', { silent = true })
 vim.keymap.set('n', '<leader>bm', function(opt)
@@ -30,7 +31,7 @@ vim.keymap.set('n', '<leader>bm', function(opt)
 end, { silent = true, desc = 'open message buffer' })
 
 -- Windows manager
-vim.keymap.set('n', 'so', '<cmd>only<cr>', { silent = true })
+vim.keymap.set('n', 'so', '<cmd>only<cr>', { silent = true, desc = 'close other windows' })
 vim.keymap.set('n', 'sh', '<cmd>split<cr>', { silent = true })
 vim.keymap.set('n', 'sv', '<cmd>vsplit<cr>', { silent = true })
 vim.keymap.set('n', 'q', function()
