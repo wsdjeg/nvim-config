@@ -247,7 +247,12 @@ require('plug').add({
     },
     { 'wsdjeg/tasks.nvim' },
     { 'rhysd/clever-f.vim' },
-    { 'mzlogin/vim-markdown-toc' },
+    {
+        'mzlogin/vim-markdown-toc',
+        config = function()
+            vim.g.vmt_list_item_char = '-'
+        end,
+    },
     {
         'wsdjeg/todo.nvim',
         config = function()
@@ -464,7 +469,7 @@ require('plug').add({
         events = { 'VimEnter' },
     },
     {
-        'wsdjeg/format.nvim',
+        'D:/wsdjeg/format.nvim',
         config = function()
             require('format').setup({
                 custom_formatters = {
