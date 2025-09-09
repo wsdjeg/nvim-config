@@ -160,5 +160,11 @@ cmp.setup({
             name = 'dictionary',
             keyword_length = 2,
         },
+        {
+            name = 'emoji',
+            option = {
+                insert = true,
+            },
+        },
     }),
 })
