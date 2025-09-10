@@ -49,7 +49,7 @@ require('plug').add({
         fetch = true,
     },
     {
-        'suliatis/Jumppack.nvim',
+        'sbdchd/neoformat',
         fetch = true,
     },
     {
@@ -110,6 +110,12 @@ require('plug').add({
                 root_pattern = { '.git/' },
                 enable_logger = true,
             })
+            vim.keymap.set(
+                'n',
+                '<leader>pl',
+                '<cmd>Telescope project<cr>',
+                { silent = true, desc = 'fuzzy find recent project' }
+            )
         end,
     },
     {
