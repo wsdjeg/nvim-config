@@ -503,7 +503,7 @@ require('plug').add({
                 end
             end, { silent = true })
         end,
-        cmds = { 'Format' },
+        cmds = { 'Format', 'FormatWrite' },
         depends = { { 'Shougo/context_filetype.vim' } },
     },
     {
