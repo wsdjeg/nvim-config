@@ -1,14 +1,22 @@
-if vim.fn.isdirectory('D:/bundle_dir/wsdjeg/nvim-plug') == 0 then
+local bundle_dir = 'D:/bundle_dir/'
+
+local function bootstrap(repo)
+  if vim.fn.isdirectory(bundle_dir .. repo) == 0 then
     vim.fn.system({
-        'git',
-        'clone',
-        '--depth',
-        '1',
-        'https://github.com/wsdjeg/nvim-plug.git',
-        'D:/bundle_dir/wsdjeg/nvim-plug',
+      'git',
+      'clone',
+      '--depth',
+      '1',
+      'https://github.com/' .. repo .. '.git',
+      bundle_dir .. repo,
     })
+  end
+  vim.opt.runtimepath:append(bundle_dir .. repo)
 end
-vim.opt.runtimepath:append('D:/bundle_dir/wsdjeg/nvim-plug')
+
+bootstrap('wsdjeg/job.nvim')
+bootstrap('wsdjeg/logger.nvim')
+bootstrap('wsdjeg/nvim-plug')
 
 require('plug').setup({
 
