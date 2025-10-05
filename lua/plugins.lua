@@ -1,17 +1,17 @@
 local bundle_dir = 'D:/bundle_dir/'
 
 local function bootstrap(repo)
-  if vim.fn.isdirectory(bundle_dir .. repo) == 0 then
-    vim.fn.system({
-      'git',
-      'clone',
-      '--depth',
-      '1',
-      'https://github.com/' .. repo .. '.git',
-      bundle_dir .. repo,
-    })
-  end
-  vim.opt.runtimepath:append(bundle_dir .. repo)
+    if vim.fn.isdirectory(bundle_dir .. repo) == 0 then
+        vim.fn.system({
+            'git',
+            'clone',
+            '--depth',
+            '1',
+            'https://github.com/' .. repo .. '.git',
+            bundle_dir .. repo,
+        })
+    end
+    vim.opt.runtimepath:append(bundle_dir .. repo)
 end
 
 bootstrap('wsdjeg/job.nvim')
@@ -636,7 +636,19 @@ require('plug').add({
             require('nvim-autopairs').setup({})
         end,
     },
-    { 'D:/wsdjeg/picker.nvim' },
+    {
+        'D:/wsdjeg/picker.nvim',
+        config = function()
+            require('picker').setup({
+                highlight = {
+                    matched = 'TODO',
+                },
+                prompt = {
+                    position = 'top',
+                },
+            })
+        end,
+    },
     {
         'nvim-telescope/telescope.nvim',
         cmds = { 'Telescope' },
