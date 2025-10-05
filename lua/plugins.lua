@@ -636,6 +636,7 @@ require('plug').add({
             require('nvim-autopairs').setup({})
         end,
     },
+    { 'D:/wsdjeg/picker.nvim' },
     {
         'nvim-telescope/telescope.nvim',
         cmds = { 'Telescope' },
