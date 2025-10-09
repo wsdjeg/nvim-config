@@ -640,6 +640,7 @@ require('plug').add({
         'D:/wsdjeg/picker.nvim',
         config = function()
             require('picker').setup({
+                window = { enable_preview = true},
                 highlight = {
                     matched = 'Tag',
                 },
