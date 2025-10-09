@@ -641,7 +641,7 @@ require('plug').add({
         config = function()
             require('picker').setup({
                 highlight = {
-                    matched = 'TODO',
+                    matched = 'Tag',
                 },
                 prompt = {
                     position = 'top',
