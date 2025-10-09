@@ -727,9 +727,5 @@ require('plug').add({
             end, { silent = true })
         end,
     },
-    { 'XXiaoA/atone.nvim', config = function()
-        require('atone').setup()
-
-    end },
 })
 require('plug').load()
