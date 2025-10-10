@@ -184,25 +184,6 @@ require('plug').add({
         end,
     },
     {
-        'olimorris/codecompanion.nvim',
-        config = function()
-            require('codecompanion').setup({
-                strategies = {
-                    chat = {
-                        adapter = 'anthropic',
-                    },
-                    inline = {
-                        adapter = 'anthropic',
-                    },
-                },
-            })
-        end,
-        cmds = { 'CodeCompanionChat' },
-        depends = {
-            { 'nvim-lua/plenary.nvim' },
-        },
-    },
-    {
         'MeanderingProgrammer/render-markdown.nvim',
         cmds = { 'RenderMarkdown' },
         config = function()
@@ -655,65 +636,9 @@ require('plug').add({
         end,
     },
     {
-        'nvim-telescope/telescope.nvim',
-        cmds = { 'Telescope' },
-        depends = {
-            {
-                'nvim-lua/plenary.nvim',
-            },
-            {
-                'fcying/telescope-ctags-outline.nvim',
-            },
-        },
-        config_before = function()
-            vim.keymap.set('n', '<leader>pl', '<cmd>Telescope project<cr>', { silent = true })
-        end,
-        config = function()
-            local actions = require('telescope.actions')
-            require('telescope').setup({
-                defaults = {
-                    mappings = {
-                        i = {
-                            -- the default key binding should same as other fuzzy finder layer
-                            -- tab move to next
-                            ['<C-j>'] = actions.move_selection_next,
-                            ['<Tab>'] = actions.move_selection_next,
-                            ['<C-k>'] = actions.move_selection_previous,
-                            ['<S-Tab>'] = actions.move_selection_previous,
-                            ['<Esc>'] = actions.close,
-                            ['<C-h>'] = 'which_key',
-                        },
-                    },
-                    sorting_strategy = 'ascending',
-                    layout_config = {
-                        prompt_position = 'bottom',
-                    },
-                },
-            })
-        end,
-    },
-    {
-        'mfussenegger/nvim-lint',
-        config = function()
-            vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
-                callback = function()
-                    -- try_lint without arguments runs the linters defined in `linters_by_ft`
-                    -- for the current filetype
-                    -- require('lint').try_lint()
-                end,
-            })
-        end,
-    },
-    {
         'wsdjeg/record-screen.nvim',
         config = function()
             require('plugins.record-screen')
-        end,
-    },
-    {
-        'NStefan002/2048.nvim',
-        config = function()
-            require('2048').setup()
         end,
     },
     {
