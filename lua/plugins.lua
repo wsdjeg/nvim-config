@@ -640,7 +640,7 @@ require('plug').add({
         'D:/wsdjeg/picker.nvim',
         config = function()
             require('picker').setup({
-                window = { enable_preview = true},
+                window = { enable_preview = true },
                 highlight = {
                     matched = 'Tag',
                 },
@@ -651,6 +651,7 @@ require('plug').add({
             vim.keymap.set('n', '<C-p>', '<cmd>Picker files<cr>', { silent = true })
             vim.keymap.set('n', '<leader>fr', '<cmd>Picker mru<cr>', { silent = true })
             vim.keymap.set('n', '<leader>bb', '<cmd>Picker buffers<cr>', { silent = true })
+            vim.keymap.set('n', '<leader>ji', '<cmd>Picker buftags<cr>', { silent = true })
         end,
     },
     {
@@ -665,7 +666,6 @@ require('plug').add({
             },
         },
         config_before = function()
-            vim.keymap.set('n', '<leader>ji', '<cmd>Telescope ctags_outline<cr>', { silent = true })
             vim.keymap.set('n', '<leader>pl', '<cmd>Telescope project<cr>', { silent = true })
         end,
         config = function()
