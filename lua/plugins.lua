@@ -75,6 +75,12 @@ require('plug').add({
             vim.keymap.set('n', 'ma', '<Plug>(bookmarksListAll)', { noremap = false })
             vim.keymap.set('n', 'mp', '<Plug>(bookmarksPrevious)', { noremap = false })
             require('bookmarks').setup({ sign_text = '⚑' })
+            vim.keymap.set(
+                'n',
+                '<leader>fb',
+                '<cmd>Picker bookmarks<cr>',
+                { silent = true, desc = 'fuzzy find bookmarks' }
+            )
         end,
     },
     {
