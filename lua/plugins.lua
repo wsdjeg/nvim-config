@@ -111,7 +111,7 @@ require('plug').add({
         end,
     },
     {
-        'wsdjeg/rooter.nvim',
+        'D:/wsdjeg/rooter.nvim',
         config = function()
             require('rooter').setup({
                 root_pattern = { '.git/' },
@@ -119,8 +119,8 @@ require('plug').add({
             })
             vim.keymap.set(
                 'n',
-                '<leader>pl',
-                '<cmd>Telescope project<cr>',
+                '<leader>fp',
+                '<cmd>Picker project<cr>',
                 { silent = true, desc = 'fuzzy find recent project' }
             )
         end,
