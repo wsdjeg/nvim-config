@@ -635,12 +635,36 @@ require('plug').add({
                     position = 'top',
                 },
             })
-            vim.keymap.set('n', '<C-p>', '<cmd>Picker files<cr>', { silent = true })
-            vim.keymap.set('n', '<leader>fr', '<cmd>Picker mru<cr>', { silent = true })
-            vim.keymap.set('n', '<leader>bb', '<cmd>Picker buffers<cr>', { silent = true })
-            vim.keymap.set('n', '<leader>ji', '<cmd>Picker buftags<cr>', { silent = true })
-            vim.keymap.set('n', '<leader>fl', '<cmd>Picker lines<cr>', { silent = true })
-
+            vim.keymap.set(
+                'n',
+                '<C-p>',
+                '<cmd>Picker files<cr>',
+                { silent = true, desc = 'fuzzy find files in current dir' }
+            )
+            vim.keymap.set(
+                'n',
+                '<leader>fr',
+                '<cmd>Picker mru<cr>',
+                { silent = true, desc = 'fuzzy find most recent used files' }
+            )
+            vim.keymap.set(
+                'n',
+                '<leader>bb',
+                '<cmd>Picker buffers<cr>',
+                { silent = true, desc = 'fuzzy find listed buffers' }
+            )
+            vim.keymap.set(
+                'n',
+                '<leader>ji',
+                '<cmd>Picker buftags<cr>',
+                { silent = true, desc = 'fuzzy find ctags outline' }
+            )
+            vim.keymap.set(
+                'n',
+                '<leader>fl',
+                '<cmd>Picker lines<cr>',
+                { silent = true, desc = 'fuzzy find lines in current buffer' }
+            )
         end,
     },
     {
