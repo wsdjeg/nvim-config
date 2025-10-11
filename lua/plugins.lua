@@ -639,6 +639,8 @@ require('plug').add({
             vim.keymap.set('n', '<leader>fr', '<cmd>Picker mru<cr>', { silent = true })
             vim.keymap.set('n', '<leader>bb', '<cmd>Picker buffers<cr>', { silent = true })
             vim.keymap.set('n', '<leader>ji', '<cmd>Picker buftags<cr>', { silent = true })
+            vim.keymap.set('n', '<leader>fl', '<cmd>Picker lines<cr>', { silent = true })
+
         end,
     },
     {
