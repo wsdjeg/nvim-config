@@ -25,5 +25,11 @@ return {
                 excluded_ft = { 'oil' },
             },
         })
+        vim.keymap.set(
+            'n',
+            '<F8>',
+            '<cmd>Atone toggle<Enter>',
+            { desc = 'toggle undotree windows' }
+        )
     end,
 }
