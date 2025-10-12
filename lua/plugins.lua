@@ -386,7 +386,7 @@ require('plug').add({
         end,
     },
     {
-        'wsdjeg/statusline.nvim',
+        'D:/wsdjeg/statusline.nvim',
         events = { 'VimEnter' },
         config = function()
             require('statusline').register_sections('vcs', function()

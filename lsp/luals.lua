@@ -23,6 +23,7 @@ return {
         globals = { 'vim' },
         disable = { 'need-check-nil' },
       },
+      hint = {enable = true, setType = true},
       workspace = {
         -- Make the server aware of Neovim runtime files
         library = vim.tbl_filter(function(var)
