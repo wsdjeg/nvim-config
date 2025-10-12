@@ -60,13 +60,13 @@ require('plug').add({
         fetch = true,
     },
     {
-        'D:/wsdjeg/keymap-guide.nvim',
+        'wsdjeg/keymap-guide.nvim',
     },
     {
-        'D:/wsdjeg/plugin-utils.nvim',
+        'wsdjeg/plugin-utils.nvim',
     },
     {
-        'D:/wsdjeg/bookmarks.nvim',
+        'wsdjeg/bookmarks.nvim',
         config = function()
             vim.keymap.set('n', 'mm', '<Plug>(bookmarksToggle)', { noremap = false })
             vim.keymap.set('n', 'mi', '<Plug>(bookmarksAnnotation)', { noremap = false })
@@ -105,7 +105,7 @@ require('plug').add({
 })
 require('plug').add({
     {
-        'D:/wsdjeg/git.nvim',
+        'wsdjeg/git.nvim',
         config_before = function()
             vim.keymap.set('n', '<leader>gs', '<cmd>Git status<cr>', { silent = true })
             vim.keymap.set('n', '<leader>gA', '<cmd>Git add .<cr>', { silent = true })
@@ -117,7 +117,7 @@ require('plug').add({
         end,
     },
     {
-        'D:/wsdjeg/rooter.nvim',
+        'wsdjeg/rooter.nvim',
         config = function()
             require('rooter').setup({
                 root_pattern = { '.git/' },
@@ -386,7 +386,7 @@ require('plug').add({
         end,
     },
     {
-        'D:/wsdjeg/statusline.nvim',
+        'wsdjeg/statusline.nvim',
         events = { 'VimEnter' },
         config = function()
             require('statusline').register_sections('vcs', function()
@@ -474,7 +474,7 @@ require('plug').add({
         events = { 'VimEnter' },
     },
     {
-        'D:/wsdjeg/format.nvim',
+        'wsdjeg/format.nvim',
         config = function()
             require('format').setup({
                 custom_formatters = {
@@ -624,7 +624,7 @@ require('plug').add({
         end,
     },
     {
-        'D:/wsdjeg/picker.nvim',
+        'wsdjeg/picker.nvim',
         config = function()
             require('picker').setup({
                 window = { enable_preview = true },
