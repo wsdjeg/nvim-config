@@ -666,6 +666,12 @@ require('plug').add({
                 '<cmd>Picker lines<cr>',
                 { silent = true, desc = 'fuzzy find lines in current buffer' }
             )
+            vim.keymap.set(
+                'n',
+                '<leader>ff',
+                '<cmd>Picker<cr>',
+                { silent = true, desc = 'fuzzy find picker source' }
+            )
         end,
     },
     {
