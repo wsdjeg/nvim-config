@@ -45,11 +45,11 @@ require('plug').add({
     },
     {
         'wsdjeg/notify.nvim',
-        priority = 100,
+        fetch = true
     },
     {
         'wsdjeg/job.nvim',
-        priority = 100,
+        fetch = true
     },
     {
         'wsdjeg/nvim-plug',
@@ -61,9 +61,11 @@ require('plug').add({
     },
     {
         'wsdjeg/keymap-guide.nvim',
+        fetch = true,
     },
     {
         'wsdjeg/plugin-utils.nvim',
+        fetch = true,
     },
     {
         'wsdjeg/bookmarks.nvim',
