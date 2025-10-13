@@ -27,6 +27,7 @@ require('plug').setup({
     https_proxy = 'http://127.0.0.1:7890',
     enable_priority = false,
     max_processes = 16,
+    dev_path = 'D:/'
 })
 
 require('plug').add({
