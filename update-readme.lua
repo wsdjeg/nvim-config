@@ -37,7 +37,7 @@ local function generate_content()
             table.insert(lines, '')
             table.insert(lines, '| key binding | description |')
             table.insert(lines, '| --- | --- |')
-            for key in ipairs(v.keys) do
+            for _, key in ipairs(v.keys) do
                 table.insert(
                     lines,
                     '| `' .. table.concat(key[2], '` ') .. ' | ' .. key.desc .. ' |'
