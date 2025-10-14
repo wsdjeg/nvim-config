@@ -84,6 +84,7 @@ require('plug').add({
                 { silent = true, desc = 'fuzzy find bookmarks' }
             )
         end,
+        dev = true,
     },
     {
         'wsdjeg/music-player.nvim',
