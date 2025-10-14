@@ -21,7 +21,7 @@ return {
       diagnostics = {
         -- Get the language server to recognize the `vim` global
         globals = { 'vim' },
-        disable = { 'need-check-nil' },
+        -- disable = { 'need-check-nil' },
       },
       hint = {enable = true, setType = true},
       workspace = {
