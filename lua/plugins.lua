@@ -675,6 +675,7 @@ require('plug').add({
                 { silent = true, desc = 'fuzzy find picker source' }
             )
         end,
+        dev = true,
     },
     {
         'wsdjeg/record-screen.nvim',
