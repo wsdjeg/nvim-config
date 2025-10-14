@@ -1,4 +1,4 @@
-local bundle_dir = 'D:/bundle_dir/'
+local bundle_dir = 'D:/wsdjeg/'
 
 local function bootstrap(repo)
     if vim.fn.isdirectory(bundle_dir .. repo) == 0 then
@@ -7,7 +7,7 @@ local function bootstrap(repo)
             'clone',
             '--depth',
             '1',
-            'https://github.com/' .. repo .. '.git',
+            'git@github.com:' .. repo .. '.git',
             bundle_dir .. repo,
         })
     end
@@ -27,7 +27,7 @@ require('plug').setup({
     https_proxy = 'http://127.0.0.1:7890',
     enable_priority = false,
     max_processes = 16,
-    dev_path = 'D:/'
+    dev_path = 'D:/',
 })
 
 require('plug').add({
@@ -49,7 +49,7 @@ require('plug').add({
     },
     {
         'wsdjeg/job.nvim',
-        fetch = true
+        fetch = true,
     },
     {
         'wsdjeg/nvim-plug',
@@ -149,6 +149,7 @@ require('plug').add({
                 enable_logger = true,
             })
         end,
+        dev = true,
     },
     {
         'wsdjeg/repl.nvim',
