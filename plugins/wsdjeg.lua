@@ -1,3 +1,7 @@
 return {
-    'wsdjeg/vim-chat'
+    'wsdjeg/vim-chat',
+    desc = '(Neo)vim chat client',
+    keys = {
+        { 'n', { '<leader>', 'a', 'c' }, function() end, { desc = 'open chat windows' } },
+    },
 }

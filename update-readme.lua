@@ -33,6 +33,17 @@ local function generate_content()
         else
             table.insert(lines, '- [' .. v.name .. '](' .. v.url .. ')')
         end
+        if v.keys then
+            table.insert(lines, '')
+            table.insert(lines, '| key binding | description |')
+            table.insert(lines, '| --- | --- |')
+            for key in ipairs(v.keys) do
+                table.insert(
+                    lines,
+                    '| `' .. table.concat(key[2], '` ') .. ' | ' .. key.desc .. ' |'
+                )
+            end
+        end
         ::continue::
     end
     return lines
