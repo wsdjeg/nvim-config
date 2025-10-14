@@ -2,6 +2,16 @@
 
 This is my own Neovim configuration for Windows.
 
+- Neovim: v0.11.0
+- OS: Windows 11
+- Terminal: Windows Terminal
+
+## Installation
+
+```
+git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
+```
+
 ## Plugins
 
 - plugin manager: [nvim-plug](https://github.com/wsdjeg/nvim-plug)
