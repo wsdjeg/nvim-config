@@ -609,7 +609,7 @@ require('plug').add({
             vim.keymap.set('n', '<leader>zb', '<cmd>ZkBrowse<cr>', { silent = true })
             vim.keymap.set('n', '<leader>zn', '<cmd>ZkNew<cr>', { silent = true })
             vim.keymap.set('n', '<leader>zf', '<cmd>Picker zettelkasten<cr>', { silent = true })
-            vim.keymap.set('n', '<leader>zt', '<cmd>ZkListTags<cr>', { silent = true })
+            vim.keymap.set('n', '<leader>zt', '<cmd>Picker zettelkasten_tags<cr>', { silent = true })
         end,
     },
     {
