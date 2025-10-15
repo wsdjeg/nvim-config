@@ -606,10 +606,10 @@ require('plug').add({
             vim.g.zettelkasten_template_directory = 'D:/wsdjeg/my-blog/zettelkasten_template'
         end,
         config = function()
-            vim.keymap.set('n', '<leader>mzb', '<cmd>ZkBrowse<cr>', { silent = true })
-            vim.keymap.set('n', '<leader>mzn', '<cmd>ZkNew<cr>', { silent = true })
-            vim.keymap.set('n', '<leader>mzf', '<cmd>ZkListNotes<cr>', { silent = true })
-            vim.keymap.set('n', '<leader>mzt', '<cmd>ZkListTags<cr>', { silent = true })
+            vim.keymap.set('n', '<leader>zb', '<cmd>ZkBrowse<cr>', { silent = true })
+            vim.keymap.set('n', '<leader>zn', '<cmd>ZkNew<cr>', { silent = true })
+            vim.keymap.set('n', '<leader>zf', '<cmd>Picker zettelkasten<cr>', { silent = true })
+            vim.keymap.set('n', '<leader>zt', '<cmd>ZkListTags<cr>', { silent = true })
         end,
     },
     {
