@@ -1,4 +1,4 @@
-local bundle_dir = 'D:/wsdjeg/'
+local bundle_dir = 'D:/'
 
 local function bootstrap(repo)
     if vim.fn.isdirectory(bundle_dir .. repo) == 0 then
