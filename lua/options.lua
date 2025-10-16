@@ -26,6 +26,8 @@ vim.o.autoread = true
 
 vim.o.undolevels = 1000
 
+vim.o.undofile = true
+
 vim.o.writebackup = false
 
 vim.o.matchtime = 0
