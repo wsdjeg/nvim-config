@@ -585,19 +585,6 @@ require('plug').add({
         end,
     },
     {
-        'wsdjeg/vim-zettelkasten',
-        config_before = function()
-            vim.g.zettelkasten_directory = 'D:/wsdjeg/my-blog/zettelkasten'
-            vim.g.zettelkasten_template_directory = 'D:/wsdjeg/my-blog/zettelkasten_template'
-        end,
-        config = function()
-            vim.keymap.set('n', '<leader>zb', '<cmd>ZkBrowse<cr>', { silent = true })
-            vim.keymap.set('n', '<leader>zn', '<cmd>ZkNew<cr>', { silent = true })
-            vim.keymap.set('n', '<leader>zf', '<cmd>Picker zettelkasten<cr>', { silent = true })
-            vim.keymap.set('n', '<leader>zt', '<cmd>Picker zettelkasten_tags<cr>', { silent = true })
-        end,
-    },
-    {
         'lukas-reineke/indent-blankline.nvim',
         config = function()
             require('ibl').setup({
