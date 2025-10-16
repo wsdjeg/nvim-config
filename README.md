@@ -14,123 +14,132 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 
 <!-- nvim-config doc start -->
 
-- [logger.nvim](https://github.com/wsdjeg/logger.nvim)
-
-- [git.nvim](https://github.com/wsdjeg/git.nvim)
-
-- [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
-
-- [terminal.nvim](https://github.com/wsdjeg/terminal.nvim)
-
-- [nvim-surround](https://github.com/kylechui/nvim-surround)
-
-- [rooter.nvim](https://github.com/wsdjeg/rooter.nvim)
-
 - [vim-snippets](https://github.com/honza/vim-snippets)
 
-- [aerial.nvim](https://github.com/stevearc/aerial.nvim)
-
-- [picker.nvim](https://github.com/wsdjeg/picker.nvim)
-
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-
-- [music-player.nvim](https://github.com/wsdjeg/music-player.nvim)
-
-- [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
-
-- [format.nvim](https://github.com/wsdjeg/format.nvim)
-
-- [atone.nvim](https://github.com/XXiaoA/atone.nvim)
-
-- [record-key.nvim](https://github.com/wsdjeg/record-key.nvim)
-
-- [tasks.nvim](https://github.com/wsdjeg/tasks.nvim)
-
-- [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
-
-- [code-runner.nvim](https://github.com/wsdjeg/code-runner.nvim)
-
-- [peek.nvim](https://github.com/toppair/peek.nvim)
-
-- [cmp-emoji](https://github.com/hrsh7th/cmp-emoji)
-
-- [vim-zettelkasten](https://github.com/wsdjeg/vim-zettelkasten)
-
-- [nvim-window](https://github.com/yorickpeterse/nvim-window)
-
-- [flygrep.nvim](https://github.com/wsdjeg/flygrep.nvim)
-
-- [cmp-dictionary](https://github.com/uga-rosa/cmp-dictionary)
-
-- [gitlink.nvim](https://github.com/wsdjeg/gitlink.nvim)
-
-- [iedit.nvim](https://github.com/wsdjeg/iedit.nvim)
-
-- [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
-
-- [ctrlg.nvim](https://github.com/wsdjeg/ctrlg.nvim)
-
-- [scrollbar.nvim](https://github.com/wsdjeg/scrollbar.nvim)
-
-- [clever-f.vim](https://github.com/rhysd/clever-f.vim)
-
-- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
-
-- [ctags.nvim](https://github.com/wsdjeg/ctags.nvim)
-
-- [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc)
-
-- [cmp-path](https://github.com/hrsh7th/cmp-path)
-
-- [statusline.nvim](https://github.com/wsdjeg/statusline.nvim)
-
-- [context_filetype.vim](https://github.com/Shougo/context_filetype.vim)
-
-- [vim-signify](https://github.com/mhinz/vim-signify)
-
 - [vim-one](https://github.com/rakr/vim-one)
-
-- [notify.nvim](https://github.com/wsdjeg/notify.nvim)
-
-- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
-
-- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
-
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-
-- [job.nvim](https://github.com/wsdjeg/job.nvim)
-
-- [repl.nvim](https://github.com/wsdjeg/repl.nvim)
-
-- [bookmarks.nvim](https://github.com/wsdjeg/bookmarks.nvim)
-
-- [vim-chat](https://github.com/wsdjeg/vim-chat)
-
-- [namu.nvim](https://github.com/bassamsdata/namu.nvim)
-
-- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-
-- [dashboard-nvim](https://github.com/wsdjeg/dashboard-nvim)
-
-- [todo.nvim](https://github.com/wsdjeg/todo.nvim)
-
-- [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-
-- [record-screen.nvim](https://github.com/wsdjeg/record-screen.nvim)
-
-- [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
-
-- [ChineseLinter.vim](https://github.com/wsdjeg/ChineseLinter.vim)
-
-- [cpicker.nvim](https://github.com/wsdjeg/cpicker.nvim)
 
 - [nvim-plug](https://github.com/wsdjeg/nvim-plug)
 
 - [tabline.nvim](https://github.com/wsdjeg/tabline.nvim)
 
-- [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
+- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+
+- [atone.nvim](https://github.com/XXiaoA/atone.nvim)
+
+- [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+
+- (Neo)vim chat client: [vim-chat](https://github.com/wsdjeg/vim-chat)
+
+| key binding  | description       |
+| ------------ | ----------------- |
+| `<leader>ac` | open chat windows |
+
+- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
+
+| key binding  | description      |
+| ------------ | ---------------- |
+| `<F3>`       | toggle file tree |
+| `<leader>fo` |                  |
+
+- [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+
+- [mru.nvim](https://github.com/wsdjeg/mru.nvim)
+
+- [cmp-emoji](https://github.com/hrsh7th/cmp-emoji)
+
+- [scrollbar.nvim](https://github.com/wsdjeg/scrollbar.nvim)
+
+- [nvim-surround](https://github.com/kylechui/nvim-surround)
+
+- [vim-zettelkasten](https://github.com/wsdjeg/vim-zettelkasten)
+
+- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+
+- [git.nvim](https://github.com/wsdjeg/git.nvim)
+
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+
+- [gitlink.nvim](https://github.com/wsdjeg/gitlink.nvim)
+
+- [format.nvim](https://github.com/wsdjeg/format.nvim)
+
+- [rooter.nvim](https://github.com/wsdjeg/rooter.nvim)
+
+- [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+
+- [tasks.nvim](https://github.com/wsdjeg/tasks.nvim)
+
+- [code-runner.nvim](https://github.com/wsdjeg/code-runner.nvim)
+
+- [dashboard-nvim](https://github.com/wsdjeg/dashboard-nvim)
+
+- [music-player.nvim](https://github.com/wsdjeg/music-player.nvim)
+
+- [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
+
+- [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
+
+- [statusline.nvim](https://github.com/wsdjeg/statusline.nvim)
+
+- [nvim-window](https://github.com/yorickpeterse/nvim-window)
+
+- [peek.nvim](https://github.com/toppair/peek.nvim)
+
+- [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+
+- [terminal.nvim](https://github.com/wsdjeg/terminal.nvim)
+
+- [ChineseLinter.vim](https://github.com/wsdjeg/ChineseLinter.vim)
+
+- [picker.nvim](https://github.com/wsdjeg/picker.nvim)
+
+- [namu.nvim](https://github.com/bassamsdata/namu.nvim)
+
+- [ctrlg.nvim](https://github.com/wsdjeg/ctrlg.nvim)
+
+- [clever-f.vim](https://github.com/rhysd/clever-f.vim)
+
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+
+- [cpicker.nvim](https://github.com/wsdjeg/cpicker.nvim)
 
 - [hop.nvim](https://github.com/smoka7/hop.nvim)
 
-- [mru.nvim](https://github.com/wsdjeg/mru.nvim)
+- [vim-signify](https://github.com/mhinz/vim-signify)
+
+- [iedit.nvim](https://github.com/wsdjeg/iedit.nvim)
+
+- [repl.nvim](https://github.com/wsdjeg/repl.nvim)
+
+- [aerial.nvim](https://github.com/stevearc/aerial.nvim)
+
+- [ctags.nvim](https://github.com/wsdjeg/ctags.nvim)
+
+- [notify.nvim](https://github.com/wsdjeg/notify.nvim)
+
+- [context_filetype.vim](https://github.com/Shougo/context_filetype.vim)
+
+- [todo.nvim](https://github.com/wsdjeg/todo.nvim)
+
+- [flygrep.nvim](https://github.com/wsdjeg/flygrep.nvim)
+
+- [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
+
+- [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc)
+
+- [cmp-dictionary](https://github.com/uga-rosa/cmp-dictionary)
+
+- [logger.nvim](https://github.com/wsdjeg/logger.nvim)
+
+- [job.nvim](https://github.com/wsdjeg/job.nvim)
+
+- [bookmarks.nvim](https://github.com/wsdjeg/bookmarks.nvim)
+
+- [record-key.nvim](https://github.com/wsdjeg/record-key.nvim)
+
+- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+
+- [record-screen.nvim](https://github.com/wsdjeg/record-screen.nvim)
+
+- [cmp-path](https://github.com/hrsh7th/cmp-path)
 <!-- nvim-config doc end -->

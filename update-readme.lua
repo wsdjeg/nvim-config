@@ -40,7 +40,7 @@ local function generate_content()
             for _, key in ipairs(v.keys) do
                 table.insert(
                     lines,
-                    '| `' .. table.concat(key[2], '` ') .. ' | ' .. key.desc .. ' |'
+                    '| `' .. key[2] .. '` | ' .. (key[4].desc or '') .. ' |'
                 )
             end
         end
@@ -52,3 +52,4 @@ end
 M.content_func = generate_content
 
 M.update()
+vim.cmd('Format')
