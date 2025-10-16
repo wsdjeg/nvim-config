@@ -12,6 +12,8 @@ This is my own Neovim configuration for Windows.
 git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 ```
 
+## Plugins and Key bindings
+
 <!-- nvim-config doc start -->
 
 - [vim-snippets](https://github.com/honza/vim-snippets)
