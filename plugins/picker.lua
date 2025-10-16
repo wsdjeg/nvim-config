@@ -1,6 +1,5 @@
 return {
     'wsdjeg/picker.nvim',
-    module = 'picker',
     opts = {
         window = { enable_preview = true },
         highlight = {
