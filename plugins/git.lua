@@ -20,4 +20,5 @@ return {
         { 'n', '<leader>gd', '<cmd>Git diff<cr>', { silent = true, desc = 'git diff' } },
     },
     desc = 'git integration in neovim',
+    dev = true,
 }
