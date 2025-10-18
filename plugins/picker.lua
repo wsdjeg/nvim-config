@@ -25,6 +25,13 @@ return {
         {
 
             'n',
+            '<leader>fi',
+            '<cmd>Picker help_tags --input=<cword><cr>',
+            { silent = true, desc = 'picker cursor help tag' },
+        },
+        {
+
+            'n',
             '<leader>bb',
             '<cmd>Picker buffers<cr>',
             { silent = true, desc = 'fuzzy find listed buffers' },

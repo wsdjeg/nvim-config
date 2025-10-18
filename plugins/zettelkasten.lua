@@ -1,5 +1,5 @@
 return {
-    'wsdjeg/vim-zettelkasten',
+    'wsdjeg/zettelkasten.nvim',
     config_before = function()
         vim.g.zettelkasten_directory = 'D:/wsdjeg/my-blog/zettelkasten'
         vim.g.zettelkasten_template_directory = 'D:/wsdjeg/my-blog/zettelkasten_template'
