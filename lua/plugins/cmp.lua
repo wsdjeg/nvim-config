@@ -58,6 +58,13 @@ local kind_icons = {
 --   By default it is `complete`.
 
 cmp.setup({
+    enabled = function()
+        -- https://github.com/nvim-tree/nvim-tree.lua/pull/3207
+        if vim.bo.filetype == 'NvimTreeFilter' then
+            return false
+        end
+        return true
+    end,
     snippet = {
         -- REQUIRED - you must specify a snippet engine
         expand = function(args)
