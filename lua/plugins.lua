@@ -67,25 +67,6 @@ require('plug').add({
         'wsdjeg/plugin-utils.nvim',
         fetch = true,
     },
-    {
-        'wsdjeg/bookmarks.nvim',
-        config = function()
-            vim.keymap.set('n', 'mm', '<Plug>(bookmarksToggle)', { noremap = false })
-            vim.keymap.set('n', 'mi', '<Plug>(bookmarksAnnotation)', { noremap = false })
-            vim.keymap.set('n', 'mn', '<Plug>(bookmarksNext)', { noremap = false })
-            vim.keymap.set('n', 'mc', '<Plug>(bookmarksClear)', { noremap = false })
-            vim.keymap.set('n', 'ma', '<Plug>(bookmarksListAll)', { noremap = false })
-            vim.keymap.set('n', 'mp', '<Plug>(bookmarksPrevious)', { noremap = false })
-            require('bookmarks').setup({ sign_text = '⚑' })
-            vim.keymap.set(
-                'n',
-                '<leader>fb',
-                '<cmd>Picker bookmarks<cr>',
-                { silent = true, desc = 'fuzzy find bookmarks' }
-            )
-        end,
-        dev = true,
-    },
     -- 一些常用仓库，让 nvim-plug 帮我下载并更新，但不加入 vim 插件列表。
     { 'neovim/neovim', fetch = true },
     { 'vim/vim', fetch = true },
