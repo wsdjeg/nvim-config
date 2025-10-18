@@ -7,13 +7,16 @@ return {
         vim.keymap.set('n', 'mc', '<Plug>(bookmarksClear)', { noremap = false })
         vim.keymap.set('n', 'ma', '<Plug>(bookmarksListAll)', { noremap = false })
         vim.keymap.set('n', 'mp', '<Plug>(bookmarksPrevious)', { noremap = false })
+        vim.keymap.set('n', '<leader>fb', '<Plug>(bookmarksPickerAll)', { noremap = false })
+    end,
+    config = function()
+        ---  this must be called after on_map lazy
         vim.keymap.set('n', '<Plug>(bookmarksPickerAll)', '', {
             callback = function()
                 vim.cmd('Picker bookmarks')
             end,
             noremap = true,
         })
-        vim.keymap.set('n', '<leader>fb', '<Plug>(bookmarksPickerAll)', { noremap = false })
     end,
     opts = {
         sign_text = '⚑',
