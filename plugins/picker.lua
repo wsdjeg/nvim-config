@@ -9,6 +9,7 @@ return {
             position = 'top',
         },
     },
+    cmds = { 'Picker' },
     keys = {
         {
             'n',
