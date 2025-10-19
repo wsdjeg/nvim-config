@@ -250,6 +250,7 @@ require('plug').add({
                     require('luasnip').config.setup({ enable_autosnippets = true })
                     require('luasnip.loaders.from_snipmate').lazy_load({ paths = paths })
                 end,
+                events = { 'InsertEnter' },
             },
             {
                 'uga-rosa/cmp-dictionary',
