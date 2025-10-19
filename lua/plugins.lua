@@ -200,31 +200,33 @@ require('plug').add({
     },
     {
         'wsdjeg/todo.nvim',
-        config = function()
-            vim.keymap.set(
+        keys = {
+            {
                 'n',
                 '<leader>ao',
                 '<cmd>lua require("todo").list()<cr>',
-                { silent = true }
-            )
-        end,
+                { silent = true },
+            },
+        },
+        dev = true,
     },
     {
         'wsdjeg/terminal.nvim',
-        config = function()
-            vim.keymap.set(
+        keys = {
+            {
                 'n',
                 "<leader>'",
                 '<cmd>lua require("terminal").open()<cr>',
-                { silent = true }
-            )
-            vim.keymap.set(
+                { silent = true, desc = 'open terminal in current path'},
+            },
+            {
                 'n',
                 '<leader>"',
                 '<cmd>lua require("terminal").open(vim.fn.expand("%:p:h"))<cr>',
-                { silent = true }
-            )
-        end,
+                { silent = true, desc = 'open terminal in file path' },
+            },
+        },
+        dev = true,
     },
     {
         'hrsh7th/nvim-cmp',
