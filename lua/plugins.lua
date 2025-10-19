@@ -386,6 +386,7 @@ require('plug').add({
             })
             vim.keymap.set('n', '<leader>as', '<cmd>Dashboard<cr>', { silent = true })
         end,
+        dev = true,
     },
     {
         'wsdjeg/record-key.nvim',
