@@ -189,6 +189,7 @@ require('plug').add({
         config = function()
             require('plugins.code-runner')
         end,
+        on_map = { '<leader>lr' },
     },
     { 'wsdjeg/tasks.nvim' },
     { 'rhysd/clever-f.vim' },
@@ -217,7 +218,7 @@ require('plug').add({
                 'n',
                 "<leader>'",
                 '<cmd>lua require("terminal").open()<cr>',
-                { silent = true, desc = 'open terminal in current path'},
+                { silent = true, desc = 'open terminal in current path' },
             },
             {
                 'n',
