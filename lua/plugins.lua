@@ -567,6 +567,7 @@ require('plug').add({
         config = function()
             require('nvim-autopairs').setup({})
         end,
+        events = { 'InsertEnter' },
     },
     {
         'wsdjeg/record-screen.nvim',
@@ -585,6 +586,8 @@ require('plug').add({
                 require('gitlink').open()
             end, { silent = true })
         end,
+        dev = true,
+        on_map = { '<leader>fy', '<leader>fY' },
     },
 })
 require('plug').load()
