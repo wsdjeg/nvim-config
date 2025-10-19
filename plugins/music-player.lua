@@ -17,5 +17,6 @@ return {
             { silent = true, desc = 'fuzzy find music' },
         },
     },
+    on_map = {'<leader>ms', '<leader>mf'},
     dev = true,
 }
