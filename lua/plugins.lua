@@ -74,36 +74,19 @@ require('plug').add({
 })
 require('plug').add({
     {
-        'wsdjeg/rooter.nvim',
-        config = function()
-            require('rooter').setup({
-                root_pattern = { '.git/' },
-                enable_logger = true,
-            })
-            vim.keymap.set(
-                'n',
-                '<leader>fp',
-                '<cmd>Picker project<cr>',
-                { silent = true, desc = 'fuzzy find recent project' }
-            )
-        end,
-    },
-    {
         'wsdjeg/mru.nvim',
-        config = function()
-            require('mru').setup({
-                enable_cache = true,
-                ignore_path_regexs = {
-                    '/.git/',
-                    '/nvim/runtime/doc/',
-                    '.mp3$',
-                    '.mp4$',
-                    '.png$',
-                    '.jpg$',
-                },
-                enable_logger = true,
-            })
-        end,
+        opts = {
+            enable_cache = true,
+            ignore_path_regexs = {
+                '/.git/',
+                '/nvim/runtime/doc/',
+                '.mp3$',
+                '.mp4$',
+                '.png$',
+                '.jpg$',
+            },
+            enable_logger = true,
+        },
         dev = true,
     },
     {
