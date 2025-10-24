@@ -335,25 +335,23 @@ require('plug').add({
     },
     {
         'smoka7/hop.nvim',
-        config_before = function()
-            vim.keymap.set('n', '<leader>jl', '<cmd>HopLine<cr>', { silent = true })
-            vim.keymap.set('n', '<leader>jj', '<cmd>HopChar1<cr>', { silent = true })
-        end,
+        keys = {
+            { 'n', '<leader>jl', '<cmd>HopLine<cr>', { silent = true, desc = 'hop jump line' } },
+            { 'n', '<leader>jj', '<cmd>HopChar1<cr>', { silent = true, desc = 'hop jump char' } },
+        },
         cmds = { 'HopWord', 'HopLine', 'HopChar1' },
-        config = function()
-            require('hop').setup({})
-        end,
+        opts = {},
     },
     {
         'wsdjeg/ctrlg.nvim',
-        config = function()
-            vim.keymap.set(
+        keys = {
+            {
                 'n',
                 '<C-g>',
                 '<cmd>lua require("ctrlg").display()<cr>',
-                { silent = true }
-            )
-        end,
+                { silent = true, desc = 'ctrlg info' },
+            },
+        },
     },
     {
         'mhinz/vim-signify',
