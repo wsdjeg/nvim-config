@@ -59,7 +59,12 @@ local kind_icons = {
 cmp.setup({
     enabled = function()
         -- https://github.com/nvim-tree/nvim-tree.lua/pull/3207
-        if vim.tbl_contains({'NvimTreeFilter', 'snacks_picker_input'}, vim.bo.filetype) then
+        if
+            vim.tbl_contains(
+                { 'NvimTreeFilter', 'snacks_picker_input', 'picker-prompt' },
+                vim.bo.filetype
+            )
+        then
             return false
         end
         return true
