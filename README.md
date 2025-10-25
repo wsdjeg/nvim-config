@@ -6,6 +6,7 @@ This is my own Neovim configuration for Windows.
 - OS: Windows 11
 - Terminal: Windows Terminal
 - `<leader>`: `<Space>`
+- plugin manager: [nvim-plug](https://github.com/wsdjeg/nvim-plug)
 
 ## Installation
 
