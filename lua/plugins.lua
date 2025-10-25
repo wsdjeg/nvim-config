@@ -291,19 +291,6 @@ require('plug').add({
         end,
     },
     {
-        'wsdjeg/tabline.nvim',
-        events = { 'VimEnter' },
-        config = function()
-            for i = 1, 9, 1 do
-                vim.keymap.set('n', '\\' .. i, function()
-                    require('tabline').jump(i)
-                end, { silent = true })
-            end
-
-            require('tabline').setup({ show_index = true })
-        end,
-    },
-    {
         'wsdjeg/dashboard-nvim',
         events = { 'VimEnter' },
         config = function()
