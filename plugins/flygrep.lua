@@ -54,8 +54,19 @@ return {
             require('flygrep').open({ input = vim.fn.expand('<cword>') })
         end, { nargs = '*' })
     end,
-    config_before = function()
-        vim.keymap.set('n', '<leader>s/', '<cmd>FlyGrep<cr>', { silent = true })
-        vim.keymap.set('n', '<leader>sp', '<cmd>FlyGrepCword<cr>', { silent = true })
-    end,
+    keys = {
+        {
+            'n',
+            '<leader>s/',
+            '<cmd>FlyGrep<cr>',
+            { silent = true, desc = 'open flygrep' },
+        },
+        {
+            'n',
+            '<leader>sp',
+            '<cmd>FlyGrepCword<cr>',
+            { silent = true, desc = 'open flygrep with cursor word' },
+        },
+    },
+    desc = 'grep on the fly',
 }
