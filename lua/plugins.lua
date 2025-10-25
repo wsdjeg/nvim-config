@@ -345,33 +345,6 @@ require('plug').add({
         events = { 'VimEnter' },
     },
     {
-        'wsdjeg/format.nvim',
-        config = function()
-            require('format').setup({
-                custom_formatters = {
-                    lua = {
-                        exe = 'stylua',
-                        args = { '-' },
-                        stdin = true,
-                    },
-                },
-            })
-        end,
-        config_before = function()
-            vim.keymap.set('n', '<leader>bf', '<cmd>Format<cr>', { silent = true })
-            vim.keymap.set('n', '<leader>lf', function()
-                local cf = vim.call('context_filetype#get')
-                if vim.o.filetype == 'markdown' and cf.filetype ~= 'markdown' then
-                    local line1 = cf['range'][1][1]
-                    local line2 = cf['range'][2][1]
-                    vim.cmd(string.format('%s,%sFormat! %s', line1, line2, cf.filetype))
-                end
-            end, { silent = true })
-        end,
-        cmds = { 'Format', 'FormatWrite' },
-        depends = { { 'Shougo/context_filetype.vim' } },
-    },
-    {
         'rakr/vim-one',
         config = function()
             vim.api.nvim_create_autocmd({ 'ColorScheme' }, {
