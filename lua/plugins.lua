@@ -108,6 +108,7 @@ require('plug').add({
         end,
         on_map = { '<leader>lr' },
     },
+    { 'wsdjeg/toml.nvim', dev = true },
     { 'wsdjeg/tasks.nvim', dev = true },
     { 'rhysd/clever-f.vim' },
     {
