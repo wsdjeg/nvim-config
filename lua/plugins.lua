@@ -108,7 +108,7 @@ require('plug').add({
         end,
         on_map = { '<leader>lr' },
     },
-    { 'wsdjeg/tasks.nvim' },
+    { 'wsdjeg/tasks.nvim', dev = true },
     { 'rhysd/clever-f.vim' },
     {
         'mzlogin/vim-markdown-toc',
