@@ -1,5 +1,4 @@
-return 
-{
+return {
     'wsdjeg/terminal.nvim',
     keys = {
         {
@@ -16,7 +15,7 @@ return
         },
     },
     opts = {
-        border = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
+        border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
     },
     dev = true,
 }
