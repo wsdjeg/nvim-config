@@ -5,5 +5,5 @@ return {
     { 'Shougo/unite.vim', fetch = true },
     { 'vim-ctrlspace/vim-ctrlspace', fetch = true },
     { 'Yggdroot/a_large_project', fetch = true },
-    { 'Yggdroot/LeaderF' },
+    { 'Yggdroot/LeaderF', fetch = true },
 }
