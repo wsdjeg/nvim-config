@@ -59,6 +59,7 @@ return {
     config = function()
         vim.ui.select = function(items, opt, callback)
             local source = {}
+            opt = opt or {}
             if opt.prompt then
                 source.name = opt.prompt
             else
@@ -78,12 +79,15 @@ return {
                     else
                         entry.str = item
                     end
+                    table.insert(entrys, entry)
                 end
                 return entrys
             end
 
             source.default_action = function(entry)
-                callback(entry.value, entry.idx)
+                if callback then
+                    callback(entry.value, entry.idx)
+                end
             end
 
             require('picker.windows').open(source, {
