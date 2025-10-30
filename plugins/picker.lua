@@ -88,7 +88,6 @@ return {
 
             require('picker.windows').open(source, {
                 buf = vim.api.nvim_get_current_buf(),
-                input = input,
             })
         end
     end,
