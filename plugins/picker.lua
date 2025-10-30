@@ -56,5 +56,41 @@ return {
             { silent = true, desc = 'fuzzy find picker source' },
         },
     },
+    config = function()
+        vim.ui.select = function(items, opt, callback)
+            local source = {}
+            if opt.prompt then
+                source.name = opt.prompt
+            else
+                source.name = 'Select one of:'
+            end
+
+            source.get = function()
+                local entrys = {}
+                for idx, item in ipairs(items) do
+                    local entry = {
+                        value = item,
+                        idx = idx, -- this also can be nil
+                    }
+
+                    if opt.format_item then
+                        entry.str = opt.format_item(item)
+                    else
+                        entry.str = item
+                    end
+                end
+                return entrys
+            end
+
+            source.default_action = function(entry)
+                callback(entry.value, entry.idx)
+            end
+
+            require('picker.windows').open(source, {
+                buf = vim.api.nvim_get_current_buf(),
+                input = input,
+            })
+        end
+    end,
     dev = true,
 }
