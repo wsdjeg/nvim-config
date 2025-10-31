@@ -198,6 +198,7 @@ require('plug').add({
                 },
             })
         end,
+        dev = true,
     },
     {
         'wsdjeg/iedit.nvim',
