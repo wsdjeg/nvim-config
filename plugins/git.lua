@@ -18,6 +18,7 @@ return {
         },
         { 'n', '<leader>gp', '<cmd>Git push<cr>', { silent = true, desc = 'git push' } },
         { 'n', '<leader>gd', '<cmd>Git diff<cr>', { silent = true, desc = 'git diff' } },
+        { 'n', '<leader>gb', '<cmd>Git branch<cr>', { silent = true, desc = 'git diff' } },
     },
     desc = 'git integration in neovim',
     dev = true,
