@@ -23,7 +23,11 @@ end
 
 local function generate_content()
     local lines = {}
-    for _, v in pairs(require('plug').get()) do
+    local plugs = require('plug').get()
+    local names = vim.tbl_keys(plugs)
+    table.sort(names)
+    for _, name in ipairs(names) do
+        local v = plugs[name]
         if v.fetch and v.name ~= 'nvim-plug' and v.name ~= 'job.nvim' then
             goto continue
         end
@@ -38,10 +42,7 @@ local function generate_content()
             table.insert(lines, '| key binding | description |')
             table.insert(lines, '| --- | --- |')
             for _, key in ipairs(v.keys) do
-                table.insert(
-                    lines,
-                    '| `' .. key[2] .. '` | ' .. (key[4].desc or '') .. ' |'
-                )
+                table.insert(lines, '| `' .. key[2] .. '` | ' .. (key[4].desc or '') .. ' |')
             end
         end
         ::continue::

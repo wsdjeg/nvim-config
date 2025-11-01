@@ -106,6 +106,14 @@ require('plug').add({
         config = function()
             require('plugins.code-runner')
         end,
+        keys = {
+            {
+                'n',
+                '<leader>lr',
+                '<cmd>lua require("code-runner").open()<cr>',
+                { silent = true, desc = 'open code runner' },
+            },
+        },
         on_map = { '<leader>lr' },
     },
     { 'wsdjeg/toml.nvim', dev = true },

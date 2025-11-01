@@ -13,7 +13,6 @@ require('code-runner').setup({
         c = { c_runner, '#TEMP#' },
     },
 })
-vim.keymap.set('n', '<leader>lr', '<cmd>lua require("code-runner").open()<cr>', { silent = true })
 
 -- make sure rooter.nvim plugin is loaded before code-runner
 
