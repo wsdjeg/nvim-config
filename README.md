@@ -18,45 +18,58 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 
 <!-- nvim-config doc start -->
 
-- [todo.nvim](https://github.com/wsdjeg/todo.nvim)
-
-| key binding  | description |
-| ------------ | ----------- |
-| `<leader>ao` |             |
-
-- [nvim-surround](https://github.com/kylechui/nvim-surround)
-
-- [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
-
-- [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
-
-- [context_filetype.vim](https://github.com/Shougo/context_filetype.vim)
-
-- [terminal.nvim](https://github.com/wsdjeg/terminal.nvim)
-
-| key binding | description                   |
-| ----------- | ----------------------------- |
-| `<leader>'` | open terminal in current path |
-| `<leader>"` | open terminal in file path    |
+- [ctags.nvim](https://github.com/wsdjeg/ctags.nvim)
 
 - [cmp-path](https://github.com/hrsh7th/cmp-path)
 
-- [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
-
-- [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
-
-- [peek.nvim](https://github.com/toppair/peek.nvim)
-
-- [format.nvim](https://github.com/wsdjeg/format.nvim)
-
-| key binding  | description |
-| ------------ | ----------- |
-| `<leader>bf` |             |
-| `<leader>lf` |             |
+- [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
 
 - [cmp-emoji](https://github.com/hrsh7th/cmp-emoji)
 
+- [vim-snippets](https://github.com/honza/vim-snippets)
+
+- (Neo)vim chat client: [vim-chat](https://github.com/wsdjeg/vim-chat)
+
+| key binding  | description       |
+| ------------ | ----------------- |
+| `<leader>ac` | open chat windows |
+
+- [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
+
+- [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+
+- [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+
+- [peek.nvim](https://github.com/toppair/peek.nvim)
+
+- [cmp-dictionary](https://github.com/uga-rosa/cmp-dictionary)
+
+- [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+
+- [nvim-surround](https://github.com/kylechui/nvim-surround)
+
+- [music-player.nvim](https://github.com/wsdjeg/music-player.nvim)
+
+| key binding  | description        |
+| ------------ | ------------------ |
+| `<leader>ms` | stop musics player |
+| `<leader>mf` | fuzzy find music   |
+
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+
+- [cpicker.nvim](https://github.com/wsdjeg/cpicker.nvim)
+
+- [atone.nvim](https://github.com/XXiaoA/atone.nvim)
+
+| key binding | description             |
+| ----------- | ----------------------- |
+| `<F8>`      | toggle undotree windows |
+
+- [ChineseLinter.vim](https://github.com/wsdjeg/ChineseLinter.vim)
+
+- [code-runner.nvim](https://github.com/wsdjeg/code-runner.nvim)
+
+- [toml.nvim](https://github.com/wsdjeg/toml.nvim)
 
 - git integration in neovim: [git.nvim](https://github.com/wsdjeg/git.nvim)
 
@@ -69,96 +82,14 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 | `<leader>gV` | git log of current file |
 | `<leader>gp` | git push                |
 | `<leader>gd` | git diff                |
+| `<leader>gb` | git diff                |
 
-- [notify.nvim](https://github.com/wsdjeg/notify.nvim)
-
-- [zettelkasten.nvim](https://github.com/wsdjeg/zettelkasten.nvim)
+- grep on the fly: [flygrep.nvim](https://github.com/wsdjeg/flygrep.nvim)
 
 | key binding  | description                   |
 | ------------ | ----------------------------- |
-| `<leader>zb` | open zettelkasten browse      |
-| `<leader>zn` | create new zettelkasten note  |
-| `<leader>zf` | fuzzy find zettelkasten notes |
-| `<leader>zt` | fuzzy find zettelkasten tags  |
-
-- [aerial.nvim](https://github.com/stevearc/aerial.nvim)
-
-- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
-
-- [altf.nvim](https://github.com/wsdjeg/altf.nvim)
-
-- [job.nvim](https://github.com/wsdjeg/job.nvim)
-
-- [cmp-dictionary](https://github.com/uga-rosa/cmp-dictionary)
-
-- [snacks.nvim](https://github.com/folke/snacks.nvim)
-
-- [nvim-plug](https://github.com/wsdjeg/nvim-plug)
-
-- [namu.nvim](https://github.com/bassamsdata/namu.nvim)
-
-- (Neo)vim chat client: [vim-chat](https://github.com/wsdjeg/vim-chat)
-
-| key binding  | description       |
-| ------------ | ----------------- |
-| `<leader>ac` | open chat windows |
-
-- [scrollbar.nvim](https://github.com/wsdjeg/scrollbar.nvim)
-
-- [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-
-- [iedit.nvim](https://github.com/wsdjeg/iedit.nvim)
-
-- [mru.nvim](https://github.com/wsdjeg/mru.nvim)
-
-- [atone.nvim](https://github.com/XXiaoA/atone.nvim)
-
-| key binding | description             |
-| ----------- | ----------------------- |
-| `<F8>`      | toggle undotree windows |
-
-- [picker.nvim](https://github.com/wsdjeg/picker.nvim)
-
-| key binding  | description                        |
-| ------------ | ---------------------------------- |
-| `<C-p>`      | fuzzy find files in current dir    |
-| `<leader>fr` | fuzzy find most recent used files  |
-| `<leader>fi` | picker cursor help tag             |
-| `<leader>bb` | fuzzy find listed buffers          |
-| `<leader>ji` | fuzzy find ctags outline           |
-| `<leader>fl` | fuzzy find lines in current buffer |
-| `<leader>ff` | fuzzy find picker source           |
-
-- [ctags.nvim](https://github.com/wsdjeg/ctags.nvim)
-
-- [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
-
-- [repl.nvim](https://github.com/wsdjeg/repl.nvim)
-
-- [bookmarks.nvim](https://github.com/wsdjeg/bookmarks.nvim)
-
-- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
-
-| key binding  | description      |
-| ------------ | ---------------- |
-| `<F3>`       | toggle file tree |
-| `<leader>fo` |                  |
-
-- [logger.nvim](https://github.com/wsdjeg/logger.nvim)
-
-- [rooter.nvim](https://github.com/wsdjeg/rooter.nvim)
-
-| key binding  | description               |
-| ------------ | ------------------------- |
-| `<leader>fp` | fuzzy find recent project |
-
-- [nvim-window](https://github.com/yorickpeterse/nvim-window)
-
-- [cpicker.nvim](https://github.com/wsdjeg/cpicker.nvim)
-
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-
-- [ChineseLinter.vim](https://github.com/wsdjeg/ChineseLinter.vim)
+| `<leader>s/` | open flygrep                  |
+| `<leader>sp` | open flygrep with cursor word |
 
 - [tabline.nvim](https://github.com/wsdjeg/tabline.nvim)
 
@@ -174,26 +105,31 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 | `\8`        | jump to tab 8 |
 | `\9`        | jump to tab 9 |
 
-- [code-runner.nvim](https://github.com/wsdjeg/code-runner.nvim)
-
-- [statusline.nvim](https://github.com/wsdjeg/statusline.nvim)
+- [aerial.nvim](https://github.com/stevearc/aerial.nvim)
 
 - [tasks.nvim](https://github.com/wsdjeg/tasks.nvim)
 
-- [dashboard-nvim](https://github.com/wsdjeg/dashboard-nvim)
+- [bookmarks.nvim](https://github.com/wsdjeg/bookmarks.nvim)
 
-- [music-player.nvim](https://github.com/wsdjeg/music-player.nvim)
+- [scrollbar.nvim](https://github.com/wsdjeg/scrollbar.nvim)
 
-| key binding  | description        |
-| ------------ | ------------------ |
-| `<leader>ms` | stop musics player |
-| `<leader>mf` | fuzzy find music   |
+- [picker.nvim](https://github.com/wsdjeg/picker.nvim)
 
-- [record-key.nvim](https://github.com/wsdjeg/record-key.nvim)
+| key binding  | description                        |
+| ------------ | ---------------------------------- |
+| `<C-p>`      | fuzzy find files in current dir    |
+| `<leader>fr` | fuzzy find most recent used files  |
+| `<leader>fi` | picker cursor help tag             |
+| `<leader>bb` | fuzzy find listed buffers          |
+| `<leader>ji` | fuzzy find ctags outline           |
+| `<leader>fl` | fuzzy find lines in current buffer |
+| `<leader>ff` | fuzzy find picker source           |
 
-- [gitlink.nvim](https://github.com/wsdjeg/gitlink.nvim)
+- [iedit.nvim](https://github.com/wsdjeg/iedit.nvim)
 
-- [vim-snippets](https://github.com/honza/vim-snippets)
+- [clever-f.vim](https://github.com/rhysd/clever-f.vim)
+
+- [namu.nvim](https://github.com/bassamsdata/namu.nvim)
 
 - [hop.nvim](https://github.com/smoka7/hop.nvim)
 
@@ -202,9 +138,9 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 | `<leader>jl` | hop jump line |
 | `<leader>jj` | hop jump char |
 
-- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+- [repl.nvim](https://github.com/wsdjeg/repl.nvim)
 
-- [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc)
+- [nvim-plug](https://github.com/wsdjeg/nvim-plug)
 
 - [ctrlg.nvim](https://github.com/wsdjeg/ctrlg.nvim)
 
@@ -212,24 +148,89 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 | ----------- | ----------- |
 | `<C-g>`     | ctrlg info  |
 
-- [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
+- [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc)
 
-- [clever-f.vim](https://github.com/rhysd/clever-f.vim)
+- [format.nvim](https://github.com/wsdjeg/format.nvim)
 
-- grep on the fly: [flygrep.nvim](https://github.com/wsdjeg/flygrep.nvim)
+| key binding  | description |
+| ------------ | ----------- |
+| `<leader>bf` |             |
+| `<leader>lf` |             |
+
+- [zettelkasten.nvim](https://github.com/wsdjeg/zettelkasten.nvim)
 
 | key binding  | description                   |
 | ------------ | ----------------------------- |
-| `<leader>s/` | open flygrep                  |
-| `<leader>sp` | open flygrep with cursor word |
+| `<leader>zb` | open zettelkasten browse      |
+| `<leader>zn` | create new zettelkasten note  |
+| `<leader>zf` | fuzzy find zettelkasten notes |
+| `<leader>zt` | fuzzy find zettelkasten tags  |
 
-- [LeaderF](https://github.com/Yggdroot/LeaderF)
+- [terminal.nvim](https://github.com/wsdjeg/terminal.nvim)
 
-- [record-screen.nvim](https://github.com/wsdjeg/record-screen.nvim)
+| key binding | description                   |
+| ----------- | ----------------------------- |
+| `<leader>'` | open terminal in current path |
+| `<leader>"` | open terminal in file path    |
 
-- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [rooter.nvim](https://github.com/wsdjeg/rooter.nvim)
+
+| key binding  | description               |
+| ------------ | ------------------------- |
+| `<leader>fp` | fuzzy find recent project |
+
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+
+- [todo.nvim](https://github.com/wsdjeg/todo.nvim)
+
+| key binding  | description |
+| ------------ | ----------- |
+| `<leader>ao` |             |
 
 - [vim-signify](https://github.com/mhinz/vim-signify)
 
+- [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
+
+- [logger.nvim](https://github.com/wsdjeg/logger.nvim)
+
+- [snacks.nvim](https://github.com/folke/snacks.nvim)
+
+- [dashboard-nvim](https://github.com/wsdjeg/dashboard-nvim)
+
+- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+
+- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
+
+| key binding  | description      |
+| ------------ | ---------------- |
+| `<F3>`       | toggle file tree |
+| `<leader>fo` |                  |
+
+- [notify.nvim](https://github.com/wsdjeg/notify.nvim)
+
+- [job.nvim](https://github.com/wsdjeg/job.nvim)
+
+- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+
+- [altf.nvim](https://github.com/wsdjeg/altf.nvim)
+
+- [nvim-window](https://github.com/yorickpeterse/nvim-window)
+
+- [gitlink.nvim](https://github.com/wsdjeg/gitlink.nvim)
+
+- [record-screen.nvim](https://github.com/wsdjeg/record-screen.nvim)
+
 - [vim-one](https://github.com/rakr/vim-one)
+
+- [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+
+- [statusline.nvim](https://github.com/wsdjeg/statusline.nvim)
+
+- [mru.nvim](https://github.com/wsdjeg/mru.nvim)
+
+- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+
+- [context_filetype.vim](https://github.com/Shougo/context_filetype.vim)
+
+- [record-key.nvim](https://github.com/wsdjeg/record-key.nvim)
 <!-- nvim-config doc end -->
