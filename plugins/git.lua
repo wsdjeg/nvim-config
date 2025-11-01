@@ -9,7 +9,7 @@ return {
         },
         { 'n', '<leader>gA', '<cmd>Git add .<cr>', { silent = true, desc = 'git add all files' } },
         { 'n', '<leader>gc', '<cmd>Git commit<cr>', { silent = true, desc = 'git commit' } },
-        { 'n', '<leader>gv', '<cmd>Git log<cr>', { silent = true, desc = 'git log of project' } },
+        { 'n', '<leader>gv', '<cmd>Git log --decorate --branches<cr>', { silent = true, desc = 'git log of project' } },
         {
             'n',
             '<leader>gV',
