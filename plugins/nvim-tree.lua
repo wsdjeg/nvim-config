@@ -4,6 +4,18 @@ return {
         vim.g.loaded_netrw = 1
         vim.g.loaded_netrwPlugin = 1
     end,
+    config = function()
+        local augroup = vim.api.nvim_create_augroup('eric-nvim-tree', {clear = true})
+        vim.api.nvim_create_autocmd({ 'FileType' }, {
+            group = augroup,
+            pattern = { 'NvimTree' },
+            callback = function(ev)
+                vim.keymap.set('n', '<F2>', '<Nop>', {
+                    buffer = ev.buf,
+                })
+            end,
+        })
+    end,
     module = 'nvim-tree',
     keys = {
         { 'n', '<F3>', '<cmd>NvimTreeToggle<cr>', { silent = true, desc = 'toggle file tree' } },
