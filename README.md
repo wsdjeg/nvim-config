@@ -58,15 +58,15 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 
 - [cpicker.nvim](https://github.com/wsdjeg/cpicker.nvim)
 
-- [ctags.nvim](https://github.com/wsdjeg/ctags.nvim)
+- ctags integration in neovim: [ctags.nvim](https://github.com/wsdjeg/ctags.nvim)
 
-- [ctrlg.nvim](https://github.com/wsdjeg/ctrlg.nvim)
+- better ctrl-g info: [ctrlg.nvim](https://github.com/wsdjeg/ctrlg.nvim)
 
 | key binding | description |
 | ----------- | ----------- |
 | `<C-g>`     | ctrlg info  |
 
-- [dashboard-nvim](https://github.com/wsdjeg/dashboard-nvim)
+- forked dashboard plug: [dashboard-nvim](https://github.com/wsdjeg/dashboard-nvim)
 
 - grep on the fly: [flygrep.nvim](https://github.com/wsdjeg/flygrep.nvim)
 
@@ -116,7 +116,7 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 
 - [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
 
-- [mru.nvim](https://github.com/wsdjeg/mru.nvim)
+- mru(most recently used) files: [mru.nvim](https://github.com/wsdjeg/mru.nvim)
 
 - [music-player.nvim](https://github.com/wsdjeg/music-player.nvim)
 
@@ -166,7 +166,12 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 
 - [record-key.nvim](https://github.com/wsdjeg/record-key.nvim)
 
-- [record-screen.nvim](https://github.com/wsdjeg/record-screen.nvim)
+- screen recording: [record-screen.nvim](https://github.com/wsdjeg/record-screen.nvim)
+
+| key binding | description                |
+| ----------- | -------------------------- |
+| `<F10>`     | record screen with speaker |
+| `<F12>`     | stop recording             |
 
 - [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 
@@ -178,11 +183,11 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 | ------------ | ------------------------- |
 | `<leader>fp` | fuzzy find recent project |
 
-- [scrollbar.nvim](https://github.com/wsdjeg/scrollbar.nvim)
+- floating scrollbar: [scrollbar.nvim](https://github.com/wsdjeg/scrollbar.nvim)
 
 - [snacks.nvim](https://github.com/folke/snacks.nvim)
 
-- [statusline.nvim](https://github.com/wsdjeg/statusline.nvim)
+- module statusline: [statusline.nvim](https://github.com/wsdjeg/statusline.nvim)
 
 - [tabline.nvim](https://github.com/wsdjeg/tabline.nvim)
 
@@ -198,7 +203,7 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 | `\8`        | jump to tab 8 |
 | `\9`        | jump to tab 9 |
 
-- [tasks.nvim](https://github.com/wsdjeg/tasks.nvim)
+- tasks manager: [tasks.nvim](https://github.com/wsdjeg/tasks.nvim)
 
 - [terminal.nvim](https://github.com/wsdjeg/terminal.nvim)
 
@@ -213,7 +218,7 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 | ------------ | ----------- |
 | `<leader>ao` |             |
 
-- [toml.nvim](https://github.com/wsdjeg/toml.nvim)
+- toml file parser: [toml.nvim](https://github.com/wsdjeg/toml.nvim)
 
 - (Neo)vim chat client: [vim-chat](https://github.com/wsdjeg/vim-chat)
 
@@ -223,7 +228,7 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 
 - [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc)
 
-- [vim-one](https://github.com/rakr/vim-one)
+- neovim colorscheme: [vim-one](https://github.com/rakr/vim-one)
 
 - [vim-signify](https://github.com/mhinz/vim-signify)
 

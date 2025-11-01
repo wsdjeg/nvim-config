@@ -66,6 +66,7 @@ require('plug').add({
             enable_logger = true,
         },
         dev = true,
+        desc = 'mru(most recently used) files',
     },
     {
         'wsdjeg/ctags.nvim',
@@ -89,6 +90,7 @@ require('plug').add({
                 require('rooter').reg_callback(update_ctags_option)
             end, { ['repeat'] = 1 })
         end,
+        desc = 'ctags integration in neovim',
     },
     {
         'wsdjeg/cpicker.nvim',
@@ -116,8 +118,8 @@ require('plug').add({
         },
         on_map = { '<leader>lr' },
     },
-    { 'wsdjeg/toml.nvim', dev = true },
-    { 'wsdjeg/tasks.nvim', dev = true },
+    { 'wsdjeg/toml.nvim', dev = true, desc = 'toml file parser' },
+    { 'wsdjeg/tasks.nvim', dev = true, desc = 'tasks manager' },
     { 'rhysd/clever-f.vim' },
     {
         'mzlogin/vim-markdown-toc',
@@ -207,6 +209,7 @@ require('plug').add({
             })
         end,
         dev = true,
+        desc = 'floating scrollbar',
     },
     {
         'wsdjeg/iedit.nvim',
@@ -258,6 +261,7 @@ require('plug').add({
                 )
             end
         end,
+        desc = 'module statusline',
     },
     {
         'wsdjeg/dashboard-nvim',
@@ -270,6 +274,7 @@ require('plug').add({
             vim.keymap.set('n', '<leader>as', '<cmd>Dashboard<cr>', { silent = true })
         end,
         dev = true,
+        desc = 'forked dashboard plug',
     },
     {
         'wsdjeg/record-key.nvim',
@@ -308,6 +313,7 @@ require('plug').add({
                 { silent = true, desc = 'ctrlg info' },
             },
         },
+        desc = 'better ctrl-g info',
     },
     {
         'mhinz/vim-signify',
@@ -346,6 +352,7 @@ require('plug').add({
       ]])
         end,
         priority = 100,
+        desc = 'neovim colorscheme',
     },
     {
         'lukas-reineke/indent-blankline.nvim',
@@ -368,6 +375,21 @@ require('plug').add({
         config = function()
             require('plugins.record-screen')
         end,
+        keys = {
+            {
+                'n',
+                '<F10>',
+                '<cmd>RecordScreen -speaker<Cr>',
+                { silent = true, desc = 'record screen with speaker' },
+            },
+            {
+                'n',
+                '<F12>',
+                '<cmd>RecordScreen stop<Cr>',
+                { silent = true, desc = 'stop recording' },
+            },
+        },
+        desc = 'screen recording',
     },
     {
         'wsdjeg/gitlink.nvim',
