@@ -9,7 +9,7 @@ local c_runner = {
 }
 require('code-runner').setup({
     runners = {
-        lua = { exe = 'lua', opt = { '-' }, usestdin = true },
+        lua = { exe = 'nvim', opt = { '-l' }, usestdin = false },
         c = { c_runner, '#TEMP#' },
     },
 })

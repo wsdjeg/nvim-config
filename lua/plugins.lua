@@ -117,6 +117,7 @@ require('plug').add({
             },
         },
         on_map = { '<leader>lr' },
+        dev = true,
     },
     { 'wsdjeg/toml.nvim', dev = true, desc = 'toml file parser' },
     { 'wsdjeg/tasks.nvim', dev = true, desc = 'tasks manager' },
