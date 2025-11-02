@@ -1,5 +1,7 @@
 local augroup = vim.api.nvim_create_augroup('wsdjeg', { clear = true })
 
+local log = require('logger').derive('eric')
+
 local create_autocmd = vim.api.nvim_create_autocmd
 create_autocmd({ 'BufWritePre' }, {
     pattern = { '*' },
@@ -13,10 +15,12 @@ create_autocmd({ 'BufWritePre' }, {
 local imselect = 'C:\\Users\\wsdjeg\\Downloads\\im-select-mspy.exe'
 
 local function imselect_cn()
+    log.info('im-select-mspy cn')
     vim.system({ imselect, '-k=ctrl+space', '中文模式' })
 end
 
 local function imselect_en()
+    log.info('im-select-mspy en')
     vim.system({ imselect, '-k=ctrl+space', '英语模式' })
 end
 
@@ -38,7 +42,7 @@ create_autocmd({ 'InsertEnter' }, {
     pattern = { '*' },
     group = augroup,
     callback = function(ev)
-            local c = '英语模式'
+        local c = '英语模式'
         if buffer_im[ev.buf] and buffer_im[ev.buf] ~= '英语模式' then
             -- 此处设置快捷键，可以在输入法按键设置里面查看，我选择的是使用 ctrl-space 切换中英文
             -- 默认我记得是 shift，同时这个命令默认也是 `-k=shift`
@@ -47,32 +51,33 @@ create_autocmd({ 'InsertEnter' }, {
     end,
 })
 
-create_autocmd({ 'FocusGained', 'CmdlineLeave', 'VimEnter' }, {
+create_autocmd({ 'FocusGained' }, {
     pattern = { '*' },
     group = augroup,
-    callback = function(_)
-        imselect_en()
-    end,
-})
-create_autocmd({ 'FocusLost' }, {
-    pattern = { '*' },
-    group = augroup,
-    callback = function(_)
-        imselect_cn()
+    callback = function(ev)
+        if vim.fn.mode() == 'n' then
+            imselect_en()
+        elseif vim.fn.mode() == 'i' then
+            if buffer_im[ev.buf] == '英语模式' then
+                imselect_en()
+            elseif buffer_im[ev.buf] == '中文模式' then
+                imselect_cn()
+            end
+        end
     end,
 })
 
-create_autocmd({'InsertLeave'}, {
-    pattern = {'*'},
+create_autocmd({ 'InsertLeave' }, {
+    pattern = { '*' },
     group = augroup,
     callback = function(_)
         vim.wo.cursorline = true
-    end
+    end,
 })
-create_autocmd({'InsertEnter'}, {
-    pattern = {'*'},
+create_autocmd({ 'InsertEnter' }, {
+    pattern = { '*' },
     group = augroup,
     callback = function(_)
         vim.wo.cursorline = false
-    end
+    end,
 })
