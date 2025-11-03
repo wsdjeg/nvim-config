@@ -391,6 +391,7 @@ require('plug').add({
             },
         },
         desc = 'screen recording',
+        dev = true,
     },
     {
         'wsdjeg/gitlink.nvim',
