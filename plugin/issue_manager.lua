@@ -34,3 +34,26 @@ vim.api.nvim_create_user_command('IssueEdit', function(opt)
         end,
     })
 end, { nargs = '*' })
+
+local issue_list_buf = -1
+vim.api.nvim_create_user_command('IssueList', function(opt)
+    if not vim.api.nvim_buf_is_valid(issue_list_buf) then
+        issue_list_buf = vim.api.nvim_create_buf(false, true)
+    end
+    local isapi = require('github.issues')
+
+    local issue = isapi.get(opt.fargs[1], opt.fargs[2], 1)
+    vim.api.nvim_open_win(issue_list_buf, true, { split = 'above' })
+
+    local issues = {issue}
+
+    for _, v in ipairs(issues) do
+        vim.api.nvim_buf_set_lines(
+            issue_list_buf,
+            -1,
+            -1,
+            false,
+            {'#' .. v.number .. '  ' ..  v.title .. ' ' .. '@' .. v.user.login }
+        )
+    end
+end, { nargs = '*' })
