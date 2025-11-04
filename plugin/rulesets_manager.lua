@@ -5,7 +5,7 @@ vim.api.nvim_create_user_command('RulesetsList', function(opt)
 
     for _, r in ipairs(rulesets) do
         local rule = rulesets_api.get_repository_ruleset(opt.fargs[1], opt.fargs[2], r.id)
-        nt.notify(string.format('%s(%s) %s'), rule.name, rule.enforcement, rule.target)
+        nt.notify(string.format('%s(%s) %s', rule.name, rule.enforcement, rule.target))
         nt.notify('include_refs:')
         for _, condition in pairs(rule.conditions) do
             for _, ref in ipairs(condition.include) do
