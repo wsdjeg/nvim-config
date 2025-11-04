@@ -69,4 +69,5 @@ return {
         },
     },
     desc = 'grep on the fly',
+    dev = true,
 }
