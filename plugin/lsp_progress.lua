@@ -49,7 +49,9 @@ vim.schedule(function()
     -- stylua: ignore
     vim.list_extend(lines, vim.tbl_map(function(line) return hp .. line .. hp end, msg))
         vim.list_extend(lines, vp)
-        vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
+        pcall(function()
+            vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
+        end)
         vim.hl.range(buf, ns, hl, { 0, 0 }, { #lines, -1 })
         if keep_ms and keep_ms > 1 then
             timer:start(keep_ms, 0, function()
@@ -58,7 +60,9 @@ vim.schedule(function()
                     if vim.api.nvim_win_is_valid(win) then
                         local ev = vim.o.eventignore
                         vim.o.eventignore = 'all'
-                        vim.api.nvim_win_close(win, true)
+                        pcall(function()
+                            vim.api.nvim_win_close(win, true)
+                        end)
                         vim.o.eventignore = ev
                     end
                 end)
