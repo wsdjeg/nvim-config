@@ -62,6 +62,7 @@ require('plug').add({
                 '.mp4$',
                 '.png$',
                 '.jpg$',
+                'nvim-mru.json$',
             },
             enable_logger = true,
         },
