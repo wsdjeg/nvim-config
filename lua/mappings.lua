@@ -1,6 +1,11 @@
 vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>fs', '<cmd>w<cr>', { silent = true, desc = 'save current buffer' })
-vim.keymap.set('n', '<leader>?', '<cmd>Telescope keymaps<cr>', { silent = true, desc = 'fuzzy find keymaps' })
+vim.keymap.set(
+    'n',
+    '<leader>?',
+    '<cmd>Telescope keymaps<cr>',
+    { silent = true, desc = 'fuzzy find keymaps' }
+)
 vim.keymap.set('n', '<leader>qq', '<cmd>q<cr>', { silent = true })
 vim.keymap.set('n', '<leader>qa', '<cmd>qa<cr>', { silent = true })
 vim.keymap.set('n', '<leader>bm', function(opt)
@@ -27,7 +32,7 @@ vim.keymap.set('n', '<leader>bm', function(opt)
         { win = win }
     )
     vim.api.nvim_set_option_value('number', true, { win = win })
-    vim.api.nvim_set_option_value('relativenumber', false, {win = win})
+    vim.api.nvim_set_option_value('relativenumber', false, { win = win })
 end, { silent = true, desc = 'open message buffer' })
 
 -- Windows manager
@@ -36,6 +41,14 @@ vim.keymap.set('n', 'sh', '<cmd>split<cr>', { silent = true })
 vim.keymap.set('n', 'sv', '<cmd>vsplit<cr>', { silent = true })
 vim.keymap.set('n', 'q', function()
     vim.cmd.quit()
+end, { silent = true })
+
+-- use alt-h/l to move to previous/next buffer
+vim.keymap.set('n', '<M-h>', function()
+    require('tabline').jump('prev')
+end, { silent = true })
+vim.keymap.set('n', '<M-l>', function()
+    require('tabline').jump('next')
 end, { silent = true })
 
 -- Buffer manager
