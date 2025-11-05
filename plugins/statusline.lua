@@ -6,7 +6,7 @@ return {
             return '%{ v:lua.require("git.command.branch").current() .. v:lua.require("git.command.pull").status() .. v:lua.require("git.command.push").status() }'
         end)
         require('statusline').setup({
-            left_sections = { 'winnr', 'filename', 'major mode', 'vcs' },
+            left_sections = { 'winnr', 'filename', 'major mode', 'syntax checking', 'vcs' },
             right_sections = { 'fileformat','fileencoding' , 'cursorpos' },
             separator = 'curve',
             iseparator = 'curve',
