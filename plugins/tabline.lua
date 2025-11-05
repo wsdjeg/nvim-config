@@ -12,7 +12,11 @@ end
 return {
     'wsdjeg/tabline.nvim',
     events = { 'VimEnter' },
-    opts = { show_index = true },
+    opts = {
+        show_index = true,
+        separator = 'curve',
+        iseparator = 'curve',
+    },
     keys = keys,
     dev = true,
 }
