@@ -65,7 +65,7 @@ require('plug').add({
                 'nvim-mru.json$',
             },
             enable_logger = true,
-            sort_by = 'frecency',
+            sort_by = 'lastenter',
         },
         dev = true,
         desc = 'mru(most recently used) files',
