@@ -40,7 +40,7 @@ vim.keymap.set('n', 'so', '<cmd>only<cr>', { silent = true, desc = 'close other 
 vim.keymap.set('n', 'sh', '<cmd>split<cr>', { silent = true })
 vim.keymap.set('n', 'sv', '<cmd>vsplit<cr>', { silent = true })
 vim.keymap.set('n', 'q', function()
-    vim.cmd.quit()
+    vim.cmd.close()
 end, { silent = true })
 
 -- use alt-h/l to move to previous/next buffer
