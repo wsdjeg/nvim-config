@@ -40,7 +40,7 @@ vim.keymap.set('n', 'so', '<cmd>only<cr>', { silent = true, desc = 'close other 
 vim.keymap.set('n', 'sh', '<cmd>split<cr>', { silent = true })
 vim.keymap.set('n', 'sv', '<cmd>vsplit<cr>', { silent = true })
 vim.keymap.set('n', 'q', function()
-   pcall(vim.cmd.close)
+    pcall(vim.cmd.close)
 end, { silent = true })
 
 -- use alt-h/l to move to previous/next buffer
@@ -65,8 +65,26 @@ vim.keymap.set('n', '<leader>bc', function()
     vim.cmd.redrawtabline()
 end, { silent = true, desc = 'clear saved buffers' })
 vim.keymap.set('n', '<leader>bd', function()
-    vim.cmd('bd')
-    vim.cmd.redrawtabline()
+    if vim.o.modified then
+        vim.api.nvim_echo({
+            { 'save changes to "' .. vim.fn.bufname() .. '"?  Yes/No/Cancel', 'WarningMsg' },
+        }, false, {})
+        local c = vim.fn.getchar()
+        if c == 121 then
+            vim.cmd.write()
+        elseif c == 110 then
+            vim.api.nvim_echo({
+                { 'discarded!', 'ModeMsg' },
+            }, false, {})
+        else
+            vim.api.nvim_echo({
+                { 'canceled!', 'ModeMsg' },
+            }, false, {})
+        end
+    else
+        vim.cmd('bd')
+        vim.cmd.redrawtabline()
+    end
 end, { silent = true })
 vim.keymap.set('n', '<leader><tab>', '<cmd>b#<cr>', { silent = true })
 
