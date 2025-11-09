@@ -18,6 +18,8 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 
 <!-- nvim-config doc start -->
 
+The plugins list and key bindings list is updated via [update-readme.lua](update-readme.lua)
+
 - [ChineseLinter.vim](https://github.com/wsdjeg/ChineseLinter.vim)
 
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
@@ -113,6 +115,10 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
   | `<leader>jj` | hop jump char |
 
 - [iedit.nvim](https://github.com/wsdjeg/iedit.nvim)
+
+  | key binding  | description     |
+  | ------------ | --------------- |
+  | `<leader>se` | open iedit mode |
 
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 
@@ -251,4 +257,6 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
   | `<leader>zf` | fuzzy find zettelkasten notes |
   | `<leader>zt` | fuzzy find zettelkasten tags  |
 
-  <!-- nvim-config doc end -->
+enjoy it :)
+
+<!-- nvim-config doc end -->

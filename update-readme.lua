@@ -22,7 +22,7 @@ function M.update(...)
 end
 
 local function generate_content()
-    local lines = {}
+    local lines = {'The plugins list and key bindings list is updated via [update-readme.lua](update-readme.lua)'}
     local plugs = require('plug').get()
     local names = vim.tbl_keys(plugs)
     table.sort(names)
@@ -47,6 +47,8 @@ local function generate_content()
         end
         ::continue::
     end
+    table.insert(lines, '')
+    table.insert(lines, 'enjoy it :)')
     return lines
 end
 

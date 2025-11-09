@@ -228,14 +228,14 @@ require('plug').add({
     },
     {
         'wsdjeg/iedit.nvim',
-        config = function()
-            vim.keymap.set(
+        keys = {
+            {
                 'n',
                 '<leader>se',
                 "<cmd>lua require('iedit').start()<cr>",
-                { silent = true }
-            )
-        end,
+                { silent = true, desc = 'open iedit mode' },
+            },
+        },
     },
     {
         'yorickpeterse/nvim-window',
