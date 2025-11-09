@@ -55,6 +55,12 @@ return {
             '<cmd>Picker<cr>',
             { silent = true, desc = 'fuzzy find picker source' },
         },
+        {
+            'n',
+            '<leader>?',
+            '<cmd>Picker key-mappings<cr>',
+            { silent = true, desc = 'fuzzy find key mappings' },
+        },
     },
     config = function()
         vim.ui.select = function(items, opt, callback)
