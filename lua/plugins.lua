@@ -273,16 +273,19 @@ require('plug').add({
     {
         'wsdjeg/record-key.nvim',
         cmds = { 'RecordKeyToggle' },
-        config_before = function()
-            vim.keymap.set('n', '<F9>', '<cmd>RecordKeyToggle<cr>', { silent = true })
-        end,
-        config = function()
-            require('record-key').setup({
-                timeout = 3000,
-                max_count = 7,
-                winhighlight = 'NormalFloat:Todo,FloatBorder:WinSeparator',
-            })
-        end,
+        keys = {
+            {
+                'n',
+                '<F9>',
+                '<cmd>RecordKeyToggle<cr>',
+                { silent = true, desc = 'toggle recording key' },
+            },
+        },
+        opts = {
+            timeout = 3000,
+            max_count = 7,
+            winhighlight = 'NormalFloat:Todo,FloatBorder:WinSeparator',
+        },
     },
     {
         'wsdjeg/winbar.nvim',

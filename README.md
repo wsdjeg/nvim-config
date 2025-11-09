@@ -107,12 +107,13 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
 - [gitlink.nvim](https://github.com/wsdjeg/gitlink.nvim)
 
-- [hop.nvim](https://github.com/smoka7/hop.nvim)
+- [hop.nvim](https://github.com/wsdjeg/hop.nvim)
 
-  | key binding  | description   |
-  | ------------ | ------------- |
-  | `<leader>jl` | hop jump line |
-  | `<leader>jj` | hop jump char |
+  | key binding  | description      |
+  | ------------ | ---------------- |
+  | `<leader>jl` | hop jump line    |
+  | `<leader>jj` | hop jump char    |
+  | `<leader>j/` | hop jump pattern |
 
 - [iedit.nvim](https://github.com/wsdjeg/iedit.nvim)
 
@@ -175,6 +176,10 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
   | `<leader>ff` | fuzzy find picker source           |
 
 - [record-key.nvim](https://github.com/wsdjeg/record-key.nvim)
+
+  | key binding | description          |
+  | ----------- | -------------------- |
+  | `<F9>`      | toggle recording key |
 
 - screen recording: [record-screen.nvim](https://github.com/wsdjeg/record-screen.nvim)
 
