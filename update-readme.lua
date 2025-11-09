@@ -39,10 +39,10 @@ local function generate_content()
         end
         if v.keys then
             table.insert(lines, '')
-            table.insert(lines, '| key binding | description |')
-            table.insert(lines, '| --- | --- |')
+            table.insert(lines, '  | key binding | description |')
+            table.insert(lines, '  | --- | --- |')
             for _, key in ipairs(v.keys) do
-                table.insert(lines, '| `' .. key[2] .. '` | ' .. (key[4].desc or '') .. ' |')
+                table.insert(lines, '  | `' .. key[2] .. '` | ' .. (key[4].desc or '') .. ' |')
             end
         end
         ::continue::
