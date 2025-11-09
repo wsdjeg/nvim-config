@@ -2,7 +2,7 @@ return {
     'wsdjeg/zettelkasten.nvim',
     opts = {
         notes_path = 'D:/wsdjeg/my-blog/zettelkasten',
-        note_templates_path = 'D:/wsdjeg/my-blog/zettelkasten_template',
+        templates_path = 'D:/wsdjeg/my-blog/zettelkasten_template',
         completion_kind = '[zk]',
     },
     keys = {
