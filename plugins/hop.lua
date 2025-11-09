@@ -5,7 +5,7 @@ return {
         { 'n', '<leader>jj', '<cmd>HopChar1<cr>', { silent = true, desc = 'hop jump char' } },
         { 'n', '<leader>j/', '<cmd>HopPattern<cr>', { silent = true, desc = 'hop jump pattern' } },
     },
-    cmds = { 'HopWord', 'HopLine', 'HopChar1' },
+    cmds = { 'HopPattern', 'HopLine', 'HopChar1' },
     opts = { match_mappings = { 'zh', 'zh_sc' } },
     dev = true,
 }
