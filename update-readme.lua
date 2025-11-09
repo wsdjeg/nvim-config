@@ -33,7 +33,7 @@ local function generate_content()
         end
         table.insert(lines, '')
         if v.desc then
-            table.insert(lines, '- ' .. v.desc .. ': [' .. v.name .. '](' .. v.url .. ')')
+            table.insert(lines, '- [' .. v.name .. '](' .. v.url .. ') - ' .. v.desc)
         else
             table.insert(lines, '- [' .. v.name .. '](' .. v.url .. ')')
         end
