@@ -289,16 +289,6 @@ require('plug').add({
         enabled = false,
     },
     {
-        'wsdjeg/hop.nvim',
-        keys = {
-            { 'n', '<leader>jl', '<cmd>HopLine<cr>', { silent = true, desc = 'hop jump line' } },
-            { 'n', '<leader>jj', '<cmd>HopChar1<cr>', { silent = true, desc = 'hop jump char' } },
-        },
-        cmds = { 'HopWord', 'HopLine', 'HopChar1' },
-        opts = { match_mappings = {'zh', 'zh_sc'} },
-        dev = true,
-    },
-    {
         'wsdjeg/ctrlg.nvim',
         keys = {
             {
