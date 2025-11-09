@@ -289,7 +289,7 @@ require('plug').add({
         enabled = false,
     },
     {
-        'smoka7/hop.nvim',
+        'wsdjeg/hop.nvim',
         keys = {
             { 'n', '<leader>jl', '<cmd>HopLine<cr>', { silent = true, desc = 'hop jump line' } },
             { 'n', '<leader>jj', '<cmd>HopChar1<cr>', { silent = true, desc = 'hop jump char' } },
