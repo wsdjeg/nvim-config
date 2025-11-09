@@ -122,7 +122,19 @@ require('plug').add({
         dev = true,
     },
     { 'wsdjeg/toml.nvim', dev = true, desc = 'toml file parser' },
-    { 'wsdjeg/tasks.nvim', dev = true, desc = 'tasks manager' },
+    {
+        'wsdjeg/tasks.nvim',
+        keys = {
+            {
+                'n',
+                '<leader>ft',
+                '<cmd>Picker tasks<cr>',
+                { silent = true, desc = 'fuzzy find tasks' },
+            },
+        },
+        dev = true,
+        desc = 'tasks manager',
+    },
     { 'rhysd/clever-f.vim' },
     {
         'mzlogin/vim-markdown-toc',

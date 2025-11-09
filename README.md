@@ -77,10 +77,10 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 
 - [format.nvim](https://github.com/wsdjeg/format.nvim)
 
-| key binding  | description |
-| ------------ | ----------- |
-| `<leader>bf` |             |
-| `<leader>lf` |             |
+| key binding  | description           |
+| ------------ | --------------------- |
+| `<leader>bf` | format current buffer |
+| `<leader>lf` | format code block     |
 
 - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 
@@ -96,6 +96,8 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 | `<leader>gp` | git push                |
 | `<leader>gd` | git diff                |
 | `<leader>gb` | git diff                |
+
+- [github.nvim](https://github.com/wsdjeg/github.nvim)
 
 - [gitlink.nvim](https://github.com/wsdjeg/gitlink.nvim)
 
@@ -124,8 +126,6 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 | ------------ | ------------------ |
 | `<leader>ms` | stop musics player |
 | `<leader>mf` | fuzzy find music   |
-
-- [namu.nvim](https://github.com/bassamsdata/namu.nvim)
 
 - [notify.nvim](https://github.com/wsdjeg/notify.nvim)
 
@@ -204,6 +204,10 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 | `\9`        | jump to tab 9 |
 
 - tasks manager: [tasks.nvim](https://github.com/wsdjeg/tasks.nvim)
+
+| key binding  | description      |
+| ------------ | ---------------- |
+| `<leader>ft` | fuzzy find tasks |
 
 - [terminal.nvim](https://github.com/wsdjeg/terminal.nvim)
 

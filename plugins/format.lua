@@ -14,8 +14,7 @@ return {
             'n',
             '<leader>bf',
             '<cmd>Format<cr>',
-            { silent = true },
-            desc = 'format current buffer',
+            { desc = 'format current buffer', silent = true },
         },
         {
             'n',
@@ -28,8 +27,7 @@ return {
                     vim.cmd(string.format('%s,%sFormat! %s', line1, line2, cf.filetype))
                 end
             end,
-            { silent = true },
-            desc = 'format code block',
+            { desc = 'format code block', silent = true },
         },
     },
     cmds = { 'Format', 'FormatWrite' },
