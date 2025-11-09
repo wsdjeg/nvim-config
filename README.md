@@ -64,17 +64,17 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
 - [cpicker.nvim](https://github.com/wsdjeg/cpicker.nvim)
 
-- ctags integration in neovim: [ctags.nvim](https://github.com/wsdjeg/ctags.nvim)
+- [ctags.nvim](https://github.com/wsdjeg/ctags.nvim) - ctags integration in neovim
 
-- better ctrl-g info: [ctrlg.nvim](https://github.com/wsdjeg/ctrlg.nvim)
+- [ctrlg.nvim](https://github.com/wsdjeg/ctrlg.nvim) - better ctrl-g info
 
   | key binding | description |
   | ----------- | ----------- |
   | `<C-g>`     | ctrlg info  |
 
-- forked dashboard plug: [dashboard-nvim](https://github.com/wsdjeg/dashboard-nvim)
+- [dashboard-nvim](https://github.com/wsdjeg/dashboard-nvim) - forked dashboard plug
 
-- grep on the fly: [flygrep.nvim](https://github.com/wsdjeg/flygrep.nvim)
+- [flygrep.nvim](https://github.com/wsdjeg/flygrep.nvim) - grep on the fly
 
   | key binding  | description                   |
   | ------------ | ----------------------------- |
@@ -90,7 +90,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
 - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 
-- git integration in neovim: [git.nvim](https://github.com/wsdjeg/git.nvim)
+- [git.nvim](https://github.com/wsdjeg/git.nvim) - git integration in neovim
 
   | key binding  | description             |
   | ------------ | ----------------------- |
@@ -129,7 +129,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
 - [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
 
-- mru(most recently used) files: [mru.nvim](https://github.com/wsdjeg/mru.nvim)
+- [mru.nvim](https://github.com/wsdjeg/mru.nvim) - mru(most recently used) files
 
 - [music-player.nvim](https://github.com/wsdjeg/music-player.nvim)
 
@@ -181,7 +181,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
   | ----------- | -------------------- |
   | `<F9>`      | toggle recording key |
 
-- screen recording: [record-screen.nvim](https://github.com/wsdjeg/record-screen.nvim)
+- [record-screen.nvim](https://github.com/wsdjeg/record-screen.nvim) - screen recording
 
   | key binding | description                |
   | ----------- | -------------------------- |
@@ -198,11 +198,11 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
   | ------------ | ------------------------- |
   | `<leader>fp` | fuzzy find recent project |
 
-- floating scrollbar: [scrollbar.nvim](https://github.com/wsdjeg/scrollbar.nvim)
+- [scrollbar.nvim](https://github.com/wsdjeg/scrollbar.nvim) - floating scrollbar
 
 - [snacks.nvim](https://github.com/folke/snacks.nvim)
 
-- module statusline: [statusline.nvim](https://github.com/wsdjeg/statusline.nvim)
+- [statusline.nvim](https://github.com/wsdjeg/statusline.nvim) - module statusline
 
 - [tabline.nvim](https://github.com/wsdjeg/tabline.nvim)
 
@@ -218,7 +218,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
   | `\8`        | jump to tab 8 |
   | `\9`        | jump to tab 9 |
 
-- tasks manager: [tasks.nvim](https://github.com/wsdjeg/tasks.nvim)
+- [tasks.nvim](https://github.com/wsdjeg/tasks.nvim) - tasks manager
 
   | key binding  | description      |
   | ------------ | ---------------- |
@@ -237,9 +237,9 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
   | ------------ | ----------- |
   | `<leader>ao` |             |
 
-- toml file parser: [toml.nvim](https://github.com/wsdjeg/toml.nvim)
+- [toml.nvim](https://github.com/wsdjeg/toml.nvim) - toml file parser
 
-- (Neo)vim chat client: [vim-chat](https://github.com/wsdjeg/vim-chat)
+- [vim-chat](https://github.com/wsdjeg/vim-chat) - (Neo)vim chat client
 
   | key binding  | description       |
   | ------------ | ----------------- |
@@ -247,7 +247,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
 - [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc)
 
-- neovim colorscheme: [vim-one](https://github.com/rakr/vim-one)
+- [vim-one](https://github.com/rakr/vim-one) - neovim colorscheme
 
 - [vim-signify](https://github.com/mhinz/vim-signify)
 
