@@ -24,6 +24,10 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 
 - [aerial.nvim](https://github.com/stevearc/aerial.nvim)
 
+| key binding | description          |
+| ----------- | -------------------- |
+| `<F2>`      | open outline windows |
+
 - [altf.nvim](https://github.com/wsdjeg/altf.nvim)
 
 - [atone.nvim](https://github.com/XXiaoA/atone.nvim)
