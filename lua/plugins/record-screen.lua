@@ -25,6 +25,7 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
     local enable_microphone = false
     local enable_camera = false
     local enable_speaker = false
+    local silent = false
     for _, v in ipairs(opt.fargs) do
         if v == '-microphone' then
             enable_microphone = true
@@ -32,6 +33,8 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
             enable_camera = true
         elseif v == '-speaker' then
             enable_speaker = true
+        elseif v == '-silent' then
+            silent = true
         elseif v == 'stop' then
             require('record-screen').stop()
             return
@@ -207,7 +210,7 @@ vim.api.nvim_create_user_command('RecordScreen', function(opt)
             },
         })
     end
-    require('record-screen').start()
+    require('record-screen').start({ silent = silent })
 end, {
     nargs = '*',
     complete = function(...)
