@@ -7,6 +7,11 @@ return {
                 args = { '-' },
                 stdin = true,
             },
+            javascript = {
+                exe = 'clang-format',
+                stdin = true,
+                args = { '-assume-filename=t.js' },
+            },
         },
     },
     keys = {
