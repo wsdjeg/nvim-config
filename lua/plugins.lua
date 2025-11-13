@@ -103,6 +103,7 @@ require('plug').add({
             'CpickerCursorChangeHighlight',
             'CpickerClearColorPatch',
         },
+        dev = true,
     },
     { 'wsdjeg/ChineseLinter.vim', cmds = { 'CheckChinese' } },
     {
