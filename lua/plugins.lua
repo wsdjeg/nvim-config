@@ -105,7 +105,11 @@ require('plug').add({
         },
         dev = true,
     },
-    { 'wsdjeg/ChineseLinter.vim', cmds = { 'CheckChinese' } },
+    {
+        'wsdjeg/ChineseLinter.vim',
+        cmds = { 'CheckChinese' },
+        desc = 'Chinese Document Language Standards Checking Tool',
+    },
     {
         'wsdjeg/code-runner.nvim',
         config = function()
@@ -121,6 +125,7 @@ require('plug').add({
         },
         on_map = { '<leader>lr' },
         dev = true,
+        desc = 'async code runner for neovim',
     },
     { 'wsdjeg/toml.nvim', dev = true, desc = 'toml file parser' },
     {
@@ -134,7 +139,7 @@ require('plug').add({
             },
         },
         dev = true,
-        desc = 'tasks manager',
+        desc = 'tasks manager inspired from vscode',
     },
     { 'rhysd/clever-f.vim' },
     {
@@ -154,6 +159,7 @@ require('plug').add({
             },
         },
         dev = true,
+        desc = 'project todo manager',
     },
     {
         'hrsh7th/nvim-cmp',
@@ -237,6 +243,7 @@ require('plug').add({
                 { silent = true, desc = 'open iedit mode' },
             },
         },
+        desc = 'iedit mode for neovim'
     },
     {
         'yorickpeterse/nvim-window',
@@ -287,6 +294,7 @@ require('plug').add({
             max_count = 7,
             winhighlight = 'NormalFloat:Todo,FloatBorder:WinSeparator',
         },
+        desc = 'key binding recording tool'
     },
     {
         'wsdjeg/winbar.nvim',
