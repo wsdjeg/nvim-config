@@ -18,4 +18,5 @@ return {
         },
     },
     dev = true,
+    desc = 'neovim music player'
 }
