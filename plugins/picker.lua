@@ -14,7 +14,7 @@ return {
         {
             'n',
             '<C-p>',
-            '<cmd>Picker files<cr>',
+            '<cmd>Picker async_files<cr>',
             { silent = true, desc = 'fuzzy find files in current dir' },
         },
         {
