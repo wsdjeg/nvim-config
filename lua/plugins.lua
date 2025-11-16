@@ -104,6 +104,7 @@ require('plug').add({
             'CpickerClearColorPatch',
         },
         dev = true,
+        desc = 'a lightweight color palette for Neovim',
     },
     {
         'wsdjeg/ChineseLinter.vim',
@@ -244,7 +245,7 @@ require('plug').add({
                 { silent = true, desc = 'open iedit mode' },
             },
         },
-        desc = 'iedit mode for neovim'
+        desc = 'iedit mode for neovim',
     },
     {
         'yorickpeterse/nvim-window',
@@ -295,7 +296,7 @@ require('plug').add({
             max_count = 7,
             winhighlight = 'NormalFloat:Todo,FloatBorder:WinSeparator',
         },
-        desc = 'key binding recording tool'
+        desc = 'key binding recording tool',
     },
     {
         'wsdjeg/winbar.nvim',
