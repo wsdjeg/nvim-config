@@ -162,7 +162,7 @@ require('plug').add({
         desc = 'project todo manager',
     },
     {
-        'hrsh7th/nvim-cmp',
+        'wsdjeg/nvim-cmp',
         config = function()
             require('plugins.cmp')
         end,
@@ -198,6 +198,7 @@ require('plug').add({
             { 'saadparwaiz1/cmp_luasnip' },
             { 'rafamadriz/friendly-snippets' },
         },
+        dev = true,
     },
     {
         'wsdjeg/scrollbar.nvim',

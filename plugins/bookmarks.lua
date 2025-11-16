@@ -23,4 +23,5 @@ return {
     },
     on_map = { '<Plug>(bookmarks' },
     dev = true,
+    desc = 'bookmarks manager for neovim'
 }

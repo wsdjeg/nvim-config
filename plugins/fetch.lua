@@ -4,10 +4,12 @@ return {
     {
         'wsdjeg/job.nvim',
         fetch = true,
+        desc = 'neovim job api',
     },
     {
         'wsdjeg/nvim-plug',
         fetch = true,
+        desc = 'neovim plugin manager',
     },
     {
         'sbdchd/neoformat',
