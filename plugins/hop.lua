@@ -8,4 +8,5 @@ return {
     cmds = { 'HopPattern', 'HopLine', 'HopChar1' },
     opts = { match_mappings = { 'zh', 'zh_sc' } },
     dev = true,
+    desc = 'forked hop'
 }
