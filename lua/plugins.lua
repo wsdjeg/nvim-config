@@ -111,23 +111,6 @@ require('plug').add({
         cmds = { 'CheckChinese' },
         desc = 'Chinese Document Language Standards Checking Tool',
     },
-    {
-        'wsdjeg/code-runner.nvim',
-        config = function()
-            require('plugins.code-runner')
-        end,
-        keys = {
-            {
-                'n',
-                '<leader>lr',
-                '<cmd>lua require("code-runner").open()<cr>',
-                { silent = true, desc = 'open code runner' },
-            },
-        },
-        on_map = { '<leader>lr' },
-        dev = true,
-        desc = 'async code runner for neovim',
-    },
     { 'wsdjeg/toml.nvim', dev = true, desc = 'toml file parser' },
     {
         'wsdjeg/tasks.nvim',
