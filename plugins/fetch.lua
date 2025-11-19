@@ -26,5 +26,5 @@ return {
     -- 一些常用仓库，让 nvim-plug 帮我下载并更新，但不加入 vim 插件列表。
     { 'neovim/neovim', fetch = true },
     { 'vim/vim', fetch = true },
-    { 'wsdjeg/SpaceVim', fetch = true },
+    { 'wsdjeg/SpaceVim', fetch = true, desc = 'A modular configuration of Vim and Neovim ' },
 }

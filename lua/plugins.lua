@@ -43,10 +43,12 @@ require('plug').add({
                 { silent = true }
             )
         end,
+        desc = 'neovim runtime logger'
     },
     {
         'wsdjeg/notify.nvim',
         dev = true,
+        desc = 'floating notification'
     },
 })
 require('plug').add({
