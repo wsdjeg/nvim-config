@@ -30,6 +30,7 @@ return {
     events = { 'VimEnter' },
     opts = {
         show_index = true,
+        index_type = 0,
         separator = 'curve',
         iseparator = 'curve',
     },
