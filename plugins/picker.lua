@@ -102,4 +102,5 @@ return {
         end
     end,
     dev = true,
+    desc = 'a lightweight, high-performance fuzzy finder for Neovim',
 }
