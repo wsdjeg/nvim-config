@@ -32,4 +32,5 @@ return {
         },
     },
     dev = true,
+    desc = 'a Zettelkasten note taking plugin',
 }

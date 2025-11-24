@@ -43,12 +43,12 @@ require('plug').add({
                 { silent = true }
             )
         end,
-        desc = 'neovim runtime logger'
+        desc = 'neovim runtime logger',
     },
     {
         'wsdjeg/notify.nvim',
         dev = true,
-        desc = 'floating notification'
+        desc = 'floating notification',
     },
 })
 require('plug').add({
@@ -389,6 +389,7 @@ require('plug').add({
         end,
         dev = true,
         on_map = { '<leader>fy', '<leader>fY' },
+        desc = "Goto/Copy File's Online Link ",
     },
 })
 require('plug').load()

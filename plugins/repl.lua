@@ -17,4 +17,5 @@ return {
     end,
     on_map = { '<leader>lsl', '<leader>lsi' },
     dev = true,
+    desc = 'repl support for neovim',
 }

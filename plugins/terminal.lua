@@ -18,4 +18,5 @@ return {
         border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
     },
     dev = true,
+    desc = 'simple floating terminal plugin for Neovim',
 }

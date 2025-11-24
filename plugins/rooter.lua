@@ -13,4 +13,5 @@ return {
         },
     },
     dev = true,
+    desc = 'Changes Neovim working directory to project root.'
 }

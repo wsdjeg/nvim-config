@@ -36,4 +36,5 @@ return {
     },
     keys = keys,
     dev = true,
+    desc = 'simple tabline plugin for Neovim',
 }
