@@ -148,7 +148,7 @@ require('plug').add({
         desc = 'project todo manager',
     },
     {
-        'wsdjeg/nvim-cmp',
+        'hrsh7th/nvim-cmp',
         config = function()
             require('plugins.cmp')
         end,
