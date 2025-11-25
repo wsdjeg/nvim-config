@@ -65,6 +65,7 @@ require('plug').add({
                 '.png$',
                 '.jpg$',
                 'nvim-mru.json$',
+                'tags$',
             },
             enable_logger = true,
             sort_by = 'lastenter',
