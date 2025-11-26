@@ -14,7 +14,7 @@ local function bootstrap(repo)
     vim.opt.runtimepath:append(bundle_dir .. repo)
 end
 
-bootstrap('wsdjeg/job.nvim')
+-- bootstrap('wsdjeg/job.nvim')
 bootstrap('wsdjeg/logger.nvim')
 bootstrap('wsdjeg/nvim-plug')
 
@@ -26,6 +26,7 @@ require('plug').setup({
     http_proxy = 'http://127.0.0.1:7890',
     https_proxy = 'http://127.0.0.1:7890',
     enable_priority = false,
+    enable_luarocks = true,
     max_processes = 16,
     dev_path = 'D:/',
 })
