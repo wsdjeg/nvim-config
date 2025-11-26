@@ -125,6 +125,7 @@ require('plug').add({
                 { silent = true },
             },
         },
+        type = 'rocks',
         dev = true,
         desc = 'project todo manager',
     },
