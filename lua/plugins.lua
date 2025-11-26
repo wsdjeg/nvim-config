@@ -15,7 +15,7 @@ local function bootstrap(repo)
 end
 
 -- bootstrap('wsdjeg/job.nvim')
-bootstrap('wsdjeg/logger.nvim')
+-- bootstrap('wsdjeg/logger.nvim')
 bootstrap('wsdjeg/nvim-plug')
 
 require('plug').setup({
