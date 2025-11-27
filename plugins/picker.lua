@@ -101,6 +101,7 @@ return {
             })
         end
     end,
+    type = 'rocks',
     dev = true,
     desc = 'a lightweight, high-performance fuzzy finder for Neovim',
 }
