@@ -7,6 +7,7 @@ return {
     },
     cmds = { 'HopPattern', 'HopLine', 'HopChar1' },
     opts = { match_mappings = { 'zh', 'zh_sc' } },
+    type = 'rocks',
     dev = true,
-    desc = 'forked hop'
+    desc = 'forked hop',
 }

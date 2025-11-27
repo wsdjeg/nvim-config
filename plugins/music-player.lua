@@ -18,5 +18,6 @@ return {
         },
     },
     dev = true,
-    desc = 'neovim music player'
+    type = 'rocks',
+    desc = 'neovim music player',
 }

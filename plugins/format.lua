@@ -37,5 +37,6 @@ return {
     },
     cmds = { 'Format', 'FormatWrite' },
     depends = { { 'Shougo/context_filetype.vim' } },
+    type = 'rocks',
     desc = 'asynchronous code formatting plugin for neovim',
 }

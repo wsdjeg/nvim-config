@@ -7,7 +7,7 @@ return {
         end)
         require('statusline').setup({
             left_sections = { 'winnr', 'filename', 'major mode', 'syntax checking', 'vcs' },
-            right_sections = { 'fileformat','fileencoding' , 'cursorpos' },
+            right_sections = { 'fileformat', 'fileencoding', 'cursorpos' },
             separator = 'curve',
             iseparator = 'curve',
         })
@@ -20,6 +20,7 @@ return {
             )
         end
     end,
+    type = 'rocks',
     desc = 'module statusline',
     dev = true,
 }

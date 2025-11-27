@@ -18,5 +18,6 @@ return {
         sort_by = 'lastenter',
     },
     dev = true,
+    type = 'rocks',
     desc = 'mru(most recently used) files',
 }
