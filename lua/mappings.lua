@@ -51,41 +51,6 @@ vim.keymap.set('n', '<M-l>', function()
     require('tabline').jump('next')
 end, { silent = true, desc = 'tabline jump next' })
 
--- Buffer manager
-vim.keymap.set('n', '<leader>bc', function()
-    for i = 1, vim.fn.bufnr('$') do
-        if
-            vim.fn.buflisted(i) == 1
-            and vim.fn.index(vim.fn.tabpagebuflist(), i) == -1
-            and vim.fn.getbufvar(i, '&mod') == 0
-        then
-            vim.cmd(string.format('noautocmd bd %d', i))
-        end
-    end
-    vim.cmd.redrawtabline()
-end, { silent = true, desc = 'clear saved buffers' })
-vim.keymap.set('n', '<leader>bd', function()
-    if vim.o.modified then
-        vim.api.nvim_echo({
-            { 'save changes to "' .. vim.fn.bufname() .. '"?  Yes/No/Cancel', 'WarningMsg' },
-        }, false, {})
-        local c = vim.fn.getchar()
-        if c == 121 then
-            vim.cmd.write()
-        elseif c == 110 then
-            vim.api.nvim_echo({
-                { 'discarded!', 'ModeMsg' },
-            }, false, {})
-        else
-            vim.api.nvim_echo({
-                { 'canceled!', 'ModeMsg' },
-            }, false, {})
-        end
-    else
-        vim.cmd('bd')
-        vim.cmd.redrawtabline()
-    end
-end, { silent = true, desc = 'delete current buffer' })
 vim.keymap.set('n', '<leader><tab>', '<cmd>b#<cr>', { silent = true, desc = 'switch to b#' })
 
 -- LSP mappings
