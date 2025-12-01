@@ -13,7 +13,7 @@ return {
             '<leader>bc',
             function()
                 require('bufdel').delete(function(buf)
-                        return vim.fn.buflisted(buf) == 1
+                    return vim.fn.buflisted(buf) == 1
                         and vim.fn.index(vim.fn.tabpagebuflist(), buf) == -1
                         and vim.fn.getbufvar(buf, '&mod') == 0
                 end)
@@ -21,4 +21,5 @@ return {
             { silent = true, desc = 'clear saved buffers' },
         },
     },
+    desc = 'delete buffer without changing windows layout',
 }
