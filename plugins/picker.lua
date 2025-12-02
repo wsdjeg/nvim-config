@@ -1,6 +1,9 @@
 return {
     'wsdjeg/picker.nvim',
     opts = {
+        filter = {
+            matcher = 'fzy',
+        },
         window = { enable_preview = true },
         highlight = {
             matched = 'Tag',
