@@ -16,6 +16,18 @@ return {
     },
     opts = {
         border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
+        picker = {
+            highlight = {
+                --  [25768   ] ✓ { "cmd.exe", "/s", "/c", '"cmd.exe"' } (~\AppData\Local\nvim) buf:2
+                --   jobpid   status            cmd                             cwd            bufnr
+                jobpid = 'Number',
+                status_ok = 'DiagnosticOk',
+                status_error = 'DiagnosticError',
+                cmd = 'String',
+                cwd = 'Label',
+                buffer = 'Number',
+            },
+        },
     },
     dev = true,
     desc = 'simple floating terminal plugin for Neovim',
