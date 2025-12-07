@@ -12,7 +12,7 @@ return {
         }
         require('code-runner').setup({
             runners = {
-                lua = { exe = 'nvim', opt = { '-l', '-' }, usestdin = true },
+                lua = { exe = 'nvim', opt = { '-l', '-' }, usestdin = true, encoding = 'cp936' },
                 c = { c_runner, '#TEMP#' },
                 ps = { exe = 'powershell.exe', opt = { '-Command', '-' }, usestdin = true },
             },
