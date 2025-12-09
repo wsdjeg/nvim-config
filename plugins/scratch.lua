@@ -14,7 +14,11 @@ return {
             'n',
             '<leader>bS',
             function()
-                require('scratch').create({ nofile = true, filetype = vim.o.filetype })
+                if vim.o.buftype == '' then
+                    require('scratch').create({ nofile = true, filetype = vim.o.filetype })
+                else
+                    require('scratch').create({ nofile = true })
+                end
             end,
             { silent = true },
         },
