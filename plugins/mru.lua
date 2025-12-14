@@ -13,6 +13,7 @@ return {
             '.exe$',
             'nvim-mru.json$',
             'tags$',
+            '^D:/scratch/',
         },
         enable_logger = true,
         sort_by = 'lastenter',
