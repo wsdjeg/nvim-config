@@ -37,7 +37,7 @@ return {
 
             'n',
             '<leader>fh',
-            '<cmd>Picker help_tags',
+            '<cmd>Picker help_tags<Cr>',
             { silent = true, desc = 'picker help tag' },
         },
         {
