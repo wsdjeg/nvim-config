@@ -36,6 +36,13 @@ return {
         {
 
             'n',
+            '<leader>fh',
+            '<cmd>Picker help_tags',
+            { silent = true, desc = 'picker help tag' },
+        },
+        {
+
+            'n',
             '<leader>bb',
             '<cmd>Picker buffers<cr>',
             { silent = true, desc = 'fuzzy find listed buffers' },
