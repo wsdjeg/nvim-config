@@ -206,7 +206,13 @@ require('plug').add({
                 shortcut_type = 'number',
                 config = { project = { enable = false } },
             })
-            vim.keymap.set('n', '<leader>as', '<cmd>Dashboard<cr>', { silent = true })
+            vim.keymap.set('n', '<leader>as', function()
+                if vim.bo.modifiable == false then
+                    vim.cmd('Dashboard')
+                else
+                    vim.cmd('Dashboard!')
+                end
+            end, { silent = true })
         end,
         dev = true,
         desc = 'forked dashboard plug',
