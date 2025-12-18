@@ -14,7 +14,7 @@ return {
             runners = {
                 lua = {
                     exe = 'nvim',
-                    opt = { '-l', '-' },
+                    opt = { '-u', 'NONE', '-l', '-' },
                     usestdin = true,
                     encoding = 'cp936',
                     transform = function(line)
