@@ -8,7 +8,15 @@ return {
         vim.g.neoment = {
             -- Save session data to disk (default: true)
             save_session = true,
-
+            notifier = function(msg, level, opts)
+                local opt = {}
+                if level == vim.log.levels.ERROR then
+                    opt.color = 'Error'
+                elseif level == vim.log.levels.WARN then
+                    opt.color = 'WarningMsg'
+                end
+                require('notify').notify(msg, opt)
+            end,
             -- Icon configuration (all optional)
             icon = {
                 invite = '',
