@@ -1,0 +1,3 @@
+return {
+    'tweekmonster/helpful.vim'
+}
