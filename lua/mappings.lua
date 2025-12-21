@@ -51,6 +51,9 @@ vim.keymap.set('n', '<M-l>', function()
     require('tabline').jump('next')
 end, { silent = true, desc = 'tabline jump next' })
 
+vim.keymap.set('n', '<M-j>', '<C-d>', {silent = true, desc = 'scroll down'})
+vim.keymap.set('n', '<M-k>', '<C-u>', {silent = true, desc = 'scroll up'})
+
 vim.keymap.set('n', '<leader><tab>', '<cmd>b#<cr>', { silent = true, desc = 'switch to b#' })
 
 -- LSP mappings
