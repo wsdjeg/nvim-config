@@ -5,6 +5,7 @@ return {
         require('scrollbar').setup({
             max_size = 10,
             min_size = 5,
+            -- debug = true,
             width = 1,
             right_offset = 1,
             excluded_filetypes = {
