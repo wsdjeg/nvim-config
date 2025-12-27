@@ -87,11 +87,6 @@ require('plug').add({
         dev = true,
         desc = 'a lightweight color palette for Neovim',
     },
-    {
-        'wsdjeg/ChineseLinter.vim',
-        cmds = { 'CheckChinese' },
-        desc = 'Chinese Document Language Standards Checking Tool',
-    },
     { 'wsdjeg/toml.nvim', dev = true, desc = 'toml file parser' },
     {
         'wsdjeg/tasks.nvim',
