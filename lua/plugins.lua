@@ -134,6 +134,7 @@ require('plug').add({
             { 'hrsh7th/cmp-emoji' },
             {
                 'L3MON4D3/LuaSnip',
+                module = 'luasnip',
                 priority = 60,
                 config = function()
                     local paths = {}
