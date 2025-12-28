@@ -2,7 +2,7 @@
 
 This is my own Neovim configuration for Windows.
 
-- Neovim: v0.11.0
+- Neovim: v0.11.1
 - OS: Windows 11
 - Terminal: Windows Terminal
 - `<leader>`: `<Space>`
@@ -20,8 +20,6 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 
 The plugins list and key bindings list is updated via [update-readme.lua](update-readme.lua)
 
-- [ChineseLinter.vim](https://github.com/wsdjeg/ChineseLinter.vim)
-
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 
 - [aerial.nvim](https://github.com/stevearc/aerial.nvim)
@@ -30,7 +28,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
   | ----------- | -------------------- |
   | `<F2>`      | open outline windows |
 
-- [altf.nvim](https://github.com/wsdjeg/altf.nvim)
+- [altf.nvim](https://github.com/wsdjeg/altf.nvim) - alternate files manager
 
 - [atone.nvim](https://github.com/XXiaoA/atone.nvim)
 
@@ -38,7 +36,16 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
   | ----------- | ----------------------- |
   | `<F8>`      | toggle undotree windows |
 
-- [bookmarks.nvim](https://github.com/wsdjeg/bookmarks.nvim)
+- [bookmarks.nvim](https://github.com/wsdjeg/bookmarks.nvim) - bookmarks manager for neovim
+
+- [bufdel.nvim](https://github.com/wsdjeg/bufdel.nvim) - delete buffer without changing windows layout
+
+  | key binding  | description           |
+  | ------------ | --------------------- |
+  | `<leader>bd` | delete current buffer |
+  | `<leader>bc` | clear saved buffers   |
+
+- [chineselinter.nvim](https://github.com/wsdjeg/chineselinter.nvim) - Chinese Document Language Standards Checking Tool
 
 - [clever-f.vim](https://github.com/rhysd/clever-f.vim)
 
@@ -54,7 +61,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
 - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
 
-- [code-runner.nvim](https://github.com/wsdjeg/code-runner.nvim)
+- [code-runner.nvim](https://github.com/wsdjeg/code-runner.nvim) - async code runner for neovim
 
   | key binding  | description      |
   | ------------ | ---------------- |
@@ -62,7 +69,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
 - [context_filetype.vim](https://github.com/Shougo/context_filetype.vim)
 
-- [cpicker.nvim](https://github.com/wsdjeg/cpicker.nvim)
+- [cpicker.nvim](https://github.com/wsdjeg/cpicker.nvim) - a lightweight color palette for Neovim
 
 - [ctags.nvim](https://github.com/wsdjeg/ctags.nvim) - ctags integration in neovim
 
@@ -81,7 +88,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
   | `<leader>s/` | open flygrep                  |
   | `<leader>sp` | open flygrep with cursor word |
 
-- [format.nvim](https://github.com/wsdjeg/format.nvim)
+- [format.nvim](https://github.com/wsdjeg/format.nvim) - asynchronous code formatting plugin for neovim
 
   | key binding  | description           |
   | ------------ | --------------------- |
@@ -103,11 +110,15 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
   | `<leader>gd` | git diff                |
   | `<leader>gb` | git diff                |
 
-- [github.nvim](https://github.com/wsdjeg/github.nvim)
+- [github.nvim](https://github.com/wsdjeg/github.nvim) - github REST api
 
-- [gitlink.nvim](https://github.com/wsdjeg/gitlink.nvim)
+- [gitlink.nvim](https://github.com/wsdjeg/gitlink.nvim) - Goto/Copy File's Online Link
 
-- [hop.nvim](https://github.com/wsdjeg/hop.nvim)
+- [gtags.nvim](https://github.com/wsdjeg/gtags.nvim) - integrates gtags with Neovim
+
+- [helpful.vim](https://github.com/tweekmonster/helpful.vim)
+
+- [hop.nvim](https://github.com/wsdjeg/hop.nvim) - forked hop
 
   | key binding  | description      |
   | ------------ | ---------------- |
@@ -115,7 +126,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
   | `<leader>jj` | hop jump char    |
   | `<leader>j/` | hop jump pattern |
 
-- [iedit.nvim](https://github.com/wsdjeg/iedit.nvim)
+- [iedit.nvim](https://github.com/wsdjeg/iedit.nvim) - iedit mode for neovim
 
   | key binding  | description     |
   | ------------ | --------------- |
@@ -123,28 +134,32 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 
-- [job.nvim](https://github.com/wsdjeg/job.nvim)
+- [job.nvim](https://github.com/wsdjeg/job.nvim) - neovim job api
 
-- [logger.nvim](https://github.com/wsdjeg/logger.nvim)
+- [logevent.nvim](https://github.com/wsdjeg/logevent.nvim)
+
+- [logger.nvim](https://github.com/wsdjeg/logger.nvim) - neovim runtime logger
 
 - [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
 
 - [mru.nvim](https://github.com/wsdjeg/mru.nvim) - mru(most recently used) files
 
-- [music-player.nvim](https://github.com/wsdjeg/music-player.nvim)
+- [music-player.nvim](https://github.com/wsdjeg/music-player.nvim) - neovim music player
 
   | key binding  | description        |
   | ------------ | ------------------ |
   | `<leader>ms` | stop musics player |
   | `<leader>mf` | fuzzy find music   |
 
-- [notify.nvim](https://github.com/wsdjeg/notify.nvim)
+- [neoment](https://github.com/wsdjeg/neoment) - matrix client for neovim
+
+- [notify.nvim](https://github.com/wsdjeg/notify.nvim) - floating notification
 
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 
-- [nvim-plug](https://github.com/wsdjeg/nvim-plug)
+- [nvim-plug](https://github.com/wsdjeg/nvim-plug) - neovim plugin manager
 
 - [nvim-surround](https://github.com/kylechui/nvim-surround)
 
@@ -163,19 +178,25 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
 - [peek.nvim](https://github.com/toppair/peek.nvim)
 
-- [picker.nvim](https://github.com/wsdjeg/picker.nvim)
+- [picker.nvim](https://github.com/wsdjeg/picker.nvim) - a lightweight, high-performance fuzzy finder for Neovim
 
   | key binding  | description                        |
   | ------------ | ---------------------------------- |
   | `<C-p>`      | fuzzy find files in current dir    |
   | `<leader>fr` | fuzzy find most recent used files  |
   | `<leader>fi` | picker cursor help tag             |
+  | `<leader>fh` | picker help tag                    |
   | `<leader>bb` | fuzzy find listed buffers          |
   | `<leader>ji` | fuzzy find ctags outline           |
   | `<leader>fl` | fuzzy find lines in current buffer |
   | `<leader>ff` | fuzzy find picker source           |
+  | `<leader>?`  | fuzzy find key mappings            |
 
-- [record-key.nvim](https://github.com/wsdjeg/record-key.nvim)
+- [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
+
+- [quickfix.nvim](https://github.com/wsdjeg/quickfix.nvim)
+
+- [record-key.nvim](https://github.com/wsdjeg/record-key.nvim) - key binding recording tool
 
   | key binding | description          |
   | ----------- | -------------------- |
@@ -190,54 +211,65 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
 - [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 
-- [repl.nvim](https://github.com/wsdjeg/repl.nvim)
+- [repl.nvim](https://github.com/wsdjeg/repl.nvim) - repl support for neovim
 
-- [rooter.nvim](https://github.com/wsdjeg/rooter.nvim)
+- [rooter.nvim](https://github.com/wsdjeg/rooter.nvim) - Changes Neovim working directory to project root.
 
   | key binding  | description               |
   | ------------ | ------------------------- |
   | `<leader>fp` | fuzzy find recent project |
 
+- [scratch.nvim](https://github.com/wsdjeg/scratch.nvim)
+
+  | key binding  | description |
+  | ------------ | ----------- |
+  | `<leader>bs` |             |
+  | `<leader>bS` |             |
+
 - [scrollbar.nvim](https://github.com/wsdjeg/scrollbar.nvim) - floating scrollbar
 
-- [snacks.nvim](https://github.com/folke/snacks.nvim)
+- [smart-ime.nvim](https://github.com/wsdjeg/smart-ime.nvim)
 
 - [statusline.nvim](https://github.com/wsdjeg/statusline.nvim) - module statusline
 
-- [tabline.nvim](https://github.com/wsdjeg/tabline.nvim)
+- [tabline.nvim](https://github.com/wsdjeg/tabline.nvim) - simple tabline plugin for Neovim
 
-  | key binding | description   |
-  | ----------- | ------------- |
-  | `\1`        | jump to tab 1 |
-  | `\2`        | jump to tab 2 |
-  | `\3`        | jump to tab 3 |
-  | `\4`        | jump to tab 4 |
-  | `\5`        | jump to tab 5 |
-  | `\6`        | jump to tab 6 |
-  | `\7`        | jump to tab 7 |
-  | `\8`        | jump to tab 8 |
-  | `\9`        | jump to tab 9 |
+  | key binding  | description           |
+  | ------------ | --------------------- |
+  | `\1`         | jump to tab 1         |
+  | `\2`         | jump to tab 2         |
+  | `\3`         | jump to tab 3         |
+  | `\4`         | jump to tab 4         |
+  | `\5`         | jump to tab 5         |
+  | `\6`         | jump to tab 6         |
+  | `\7`         | jump to tab 7         |
+  | `\8`         | jump to tab 8         |
+  | `\9`         | jump to tab 9         |
+  | `<leader>bn` | jump to next item     |
+  | `<leader>bp` | jump to previous item |
 
-- [tasks.nvim](https://github.com/wsdjeg/tasks.nvim) - tasks manager
+- [tasks.nvim](https://github.com/wsdjeg/tasks.nvim) - tasks manager inspired from vscode
 
   | key binding  | description      |
   | ------------ | ---------------- |
   | `<leader>ft` | fuzzy find tasks |
 
-- [terminal.nvim](https://github.com/wsdjeg/terminal.nvim)
+- [terminal.nvim](https://github.com/wsdjeg/terminal.nvim) - simple floating terminal plugin for Neovim
 
   | key binding | description                   |
   | ----------- | ----------------------------- |
   | `<leader>'` | open terminal in current path |
   | `<leader>"` | open terminal in file path    |
 
-- [todo.nvim](https://github.com/wsdjeg/todo.nvim)
+- [todo.nvim](https://github.com/wsdjeg/todo.nvim) - project todo manager
 
   | key binding  | description |
   | ------------ | ----------- |
   | `<leader>ao` |             |
 
 - [toml.nvim](https://github.com/wsdjeg/toml.nvim) - toml file parser
+
+- [utils.nvim](https://github.com/wsdjeg/utils.nvim) - A collection of useful utilities for neovim.
 
 - [vim-chat](https://github.com/wsdjeg/vim-chat) - (Neo)vim chat client
 
@@ -253,7 +285,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
 - [vim-snippets](https://github.com/honza/vim-snippets)
 
-- [zettelkasten.nvim](https://github.com/wsdjeg/zettelkasten.nvim)
+- [zettelkasten.nvim](https://github.com/wsdjeg/zettelkasten.nvim) - a Zettelkasten note taking plugin
 
   | key binding  | description                   |
   | ------------ | ----------------------------- |
