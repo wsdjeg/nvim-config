@@ -16,6 +16,7 @@ require('record-screen').setup({
         '-f',
         'mp4',
     },
+    target_dir = 'D:/视频录制/'
 })
 
 -- 参考 https://juejin.cn/post/7361684907809947658
