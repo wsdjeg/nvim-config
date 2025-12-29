@@ -46,8 +46,12 @@ vim.schedule(function()
         local vp = vim.fn['repeat']({ hp }, vpad)
         local lines = {}
         vim.list_extend(lines, vp)
-    -- stylua: ignore
-    vim.list_extend(lines, vim.tbl_map(function(line) return hp .. line .. hp end, msg))
+        vim.list_extend(
+            lines,
+            vim.tbl_map(function(line)
+                return hp .. line .. hp
+            end, msg)
+        )
         vim.list_extend(lines, vp)
         pcall(function()
             vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
