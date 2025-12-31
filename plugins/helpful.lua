@@ -1,3 +1,3 @@
 return {
-    'tweekmonster/helpful.vim'
+  'tweekmonster/helpful.vim',
 }

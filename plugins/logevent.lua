@@ -1,4 +1,4 @@
 return {
-    'wsdjeg/logevent.nvim',
-    dev = true,
+  'wsdjeg/logevent.nvim',
+  dev = true,
 }

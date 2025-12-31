@@ -1,4 +1,4 @@
 return {
-    'wsdjeg/quickfix.nvim',
-    dev = true,
+  'wsdjeg/quickfix.nvim',
+  dev = true,
 }
