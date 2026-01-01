@@ -78,18 +78,6 @@ require('plug').add({
     end,
     desc = 'ctags integration in neovim',
   },
-  {
-    'wsdjeg/cpicker.nvim',
-    cmds = {
-      'Cpicker',
-      'CpickerCursorForeground',
-      'CpickerColorMix',
-      'CpickerCursorChangeHighlight',
-      'CpickerClearColorPatch',
-    },
-    dev = true,
-    desc = 'a lightweight color palette for Neovim',
-  },
   { 'wsdjeg/toml.nvim', dev = true, desc = 'toml file parser' },
   {
     'wsdjeg/tasks.nvim',
