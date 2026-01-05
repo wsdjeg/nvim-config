@@ -159,3 +159,14 @@ vim.keymap.set(
   '<cmd>wincmd l<cr>',
   { silent = true, desc = 'wincmd l' }
 )
+vim.keymap.set('n', 'gf', function()
+  local nt = require('notify')
+
+  local cfile = vim.fn.expand('<cfile>')
+
+  if vim.fn.filereadable(cfile) == 1 or vim.fn.isdirectory(cfile) == 1 then
+    vim.cmd.edit(cfile)
+  else
+    nt.notify('No file name or directory under cursor', 'WarningMsg')
+  end
+end, { silent = true, desc = 'smart gf' })
