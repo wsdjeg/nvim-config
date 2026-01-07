@@ -1,6 +1,7 @@
 return {
   'wsdjeg/calendar.nvim',
   dev = true,
+  -- cmds = { 'Calendar' },
   keys = {
     {
       'n',
@@ -10,6 +11,6 @@ return {
     },
   },
   opts = {
-    locale = 'zh-CN'
-  }
+    locale = 'zh-CN',
+  },
 }

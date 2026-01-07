@@ -21,5 +21,6 @@ return {
       { silent = true, desc = 'clear saved buffers' },
     },
   },
+  on_map = { '<leader>bc', '<leader>bd' },
   desc = 'delete buffer without changing windows layout',
 }

@@ -46,6 +46,7 @@ return {
       },
     }
   end,
+  cmds = { 'Neoment' },
   dev = true,
   desc = 'matrix client for neovim',
 }

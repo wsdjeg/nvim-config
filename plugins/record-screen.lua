@@ -17,6 +17,8 @@ return {
       { silent = true, desc = 'stop recording' },
     },
   },
+  on_map = { '<F10>', '<F12>' },
+  cmds = { 'RecordScreen' },
   desc = 'screen recording',
   dev = true,
 }
