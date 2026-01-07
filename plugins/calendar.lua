@@ -9,4 +9,7 @@ return {
       { silent = true, desc = 'open calendar' },
     },
   },
+  opts = {
+    locale = 'zh-CN'
+  }
 }
