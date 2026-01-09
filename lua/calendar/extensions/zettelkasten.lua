@@ -16,4 +16,9 @@ function M.get(year, month)
   return marks
 end
 
+M.actions = {
+  create_daily_note = function(year, month, day) end,
+  view_daily_notes = function(year, month, day) end,
+}
+
 return M
