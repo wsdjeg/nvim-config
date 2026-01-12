@@ -14,6 +14,7 @@ return {
       'nvim-mru.json$',
       'tags$',
       '^D:/scratch/',
+      '^D:/me/',
     },
     enable_logger = true,
     sort_by = 'lastenter',
