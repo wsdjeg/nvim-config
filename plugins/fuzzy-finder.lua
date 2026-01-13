@@ -3,7 +3,7 @@ return {
   {
     'folke/snacks.nvim',
     opts = { picker = { enable = true } },
-    fetch = true,
+    -- fetch = true,
   },
   { 'Shougo/denite.nvim', fetch = true },
   { 'Shougo/unite.vim', fetch = true },
