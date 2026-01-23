@@ -4,6 +4,7 @@ return {
     notes_path = 'D:/wsdjeg/my-blog/zettelkasten',
     templates_path = 'D:/wsdjeg/my-blog/zettelkasten_template',
     completion_kind = '[zk]',
+    browse_title_width = 50,
   },
   keys = {
     {
