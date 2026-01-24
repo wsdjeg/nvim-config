@@ -146,9 +146,11 @@ cmp.setup({
   window = {
     completion = cmp.config.window.bordered({
       winhighlight = 'Normal:Normal,FloatBorder:WinSeparator,CursorLine:Visual,Search:None',
+      border = 'single',
     }),
     documentation = cmp.config.window.bordered({
       winhighlight = 'Normal:Normal,FloatBorder:WinSeparator,CursorLine:Visual,Search:None',
+      border = 'single',
     }),
   },
   sources = cmp.config.sources({
