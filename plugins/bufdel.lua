@@ -16,7 +16,7 @@ return {
           return vim.fn.buflisted(buf) == 1
             and vim.fn.index(vim.fn.tabpagebuflist(), buf) == -1
             and vim.fn.getbufvar(buf, '&mod') == 0
-        end, { switch = 'lastused' })
+        end)
       end,
       { silent = true, desc = 'clear saved buffers' },
     },
