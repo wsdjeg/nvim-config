@@ -13,4 +13,5 @@ return {
   opts = {
     locale = 'zh-CN',
   },
+  desc = 'A lightweight and extensible calendar plugin for Neovim.'
 }
