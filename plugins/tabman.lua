@@ -19,4 +19,5 @@ return {
       },
     },
   },
+  desc = 'A lightweight tab and window manager for Neovim.'
 }
