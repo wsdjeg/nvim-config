@@ -236,7 +236,7 @@ require('plug').add({
         { silent = true, desc = 'ctrlg info' },
       },
     },
-    desc = 'better ctrl-g info',
+    desc = 'enhanced Ctrl-G status information',
   },
   {
     'mhinz/vim-signify',
