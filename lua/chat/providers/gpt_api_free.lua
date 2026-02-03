@@ -26,7 +26,7 @@ function M.request(requestObj)
   local cmd = {
     'curl',
     '-s',
-    'api.chatanywhere.tech/v1/chat/completions',
+    'https://api.chatanywhere.org/v1/chat/completions',
     '-H',
     'Content-Type: application/json',
     '-H',
