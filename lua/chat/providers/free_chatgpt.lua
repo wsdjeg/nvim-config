@@ -1,4 +1,6 @@
 local M = {}
+local job = require('job')
+local sessions = require('chat.sessions')
 
 function M.available_models()
   return {
@@ -25,16 +27,11 @@ function M.request(requestObj)
     }),
   }
 
-  vim.system(cmd, {
-    text = true,
-    stdout = function(err, data)
-      requestObj.on_stdout(err, data)
-    end,
-  }, function(obj)
-    if obj.code ~= 0 then
-      requestObj.callback(nil, 'HTTP Error:' .. obj.stderr)
-    end
-  end)
+  local jobid = job.start(cmd, {
+    on_stdout = requestObj.on_stdout,
+    on_exit = requestObj.on_exit,
+  })
+  sessions.set_session_jobid(requestObj.session, jobid)
 end
 
 return M
