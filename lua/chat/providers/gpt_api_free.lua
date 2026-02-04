@@ -37,31 +37,18 @@ function M.request(requestObj)
     vim.json.encode({
       model = requestObj.model,
       messages = requestObj.messages,
-      stream = false,
+      stream = true,
     }),
   }
 
-  vim.system(cmd, { text = true }, function(obj)
+  vim.system(cmd, {
+    text = true,
+    stdout = function(err, data)
+      requestObj.on_stdout(err, data)
+    end,
+  }, function(obj)
     if obj.code ~= 0 then
       requestObj.callback(nil, 'HTTP Error:' .. obj.stderr)
-    else
-      if obj.stdout then
-        local response = vim.trim(obj.stdout)
-        if response == '' then
-          requestObj.callback(nil, 'empty response')
-          return
-        end
-        local ok, result = pcall(vim.json.decode, response)
-        if ok then
-          if result.error then
-            requestObj.callback(nil, vim.inspect(result.error))
-          else
-            requestObj.callback(result)
-          end
-        else
-          requestObj.callback(nil, 'JSON parse error: ' .. result)
-        end
-      end
     end
   end)
 end
