@@ -14,6 +14,7 @@ local function bootstrap(repo)
   vim.opt.runtimepath:append(bundle_dir .. repo)
 end
 
+bootstrap('wsdjeg/job.nvim')
 bootstrap('wsdjeg/nvim-plug')
 
 require('plug').setup({
