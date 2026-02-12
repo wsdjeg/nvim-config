@@ -2,12 +2,19 @@ local M = {}
 
 local job = require('job')
 local sessions = require('chat.sessions')
+local config = require('chat.config')
 
 function M.available_models()
-  return {'qwen3-max'}
+  return {
+    'qwen3-max',
+    'kimi-k2.5',
+    'deepseek-v3.2',
+    'kimi-k2-thinking',
+    'Moonshot-Kimi-K2-Instruct',
+  }
 end
 
-function M.request(requestObj)
+function M.request(opt)
   local cmd = {
     'curl',
     '-s',
@@ -15,7 +22,7 @@ function M.request(requestObj)
     '-H',
     'Content-Type: application/json',
     '-H',
-    'Authorization: Bearer ' .. requestObj.api_key,
+    'Authorization: Bearer ' .. config.config.api_key.qwen,
     '-X',
     'POST',
     '-d',
@@ -23,24 +30,26 @@ function M.request(requestObj)
   }
 
   local body = vim.json.encode({
-    model = requestObj.model,
-    messages = requestObj.messages,
+    model = sessions.get_session_model(opt.session),
+    messages = opt.messages,
+    thinking = {
+      type = 'enabled',
+    },
     stream = true,
     stream_options = { include_usage = true },
     tools = require('chat.tools').available_tools(),
   })
 
   local jobid = job.start(cmd, {
-    on_stdout = requestObj.on_stdout,
-    on_stderr = requestObj.on_stderr,
-    on_exit = requestObj.on_exit,
+    on_stdout = opt.on_stdout,
+    on_stderr = opt.on_stderr,
+    on_exit = opt.on_exit,
   })
   job.send(jobid, body)
   job.send(jobid, nil)
-  sessions.set_session_jobid(requestObj.session, jobid)
+  sessions.set_session_jobid(opt.session, jobid)
 
   return jobid
 end
 
 return M
-
