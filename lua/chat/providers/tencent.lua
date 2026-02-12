@@ -8,6 +8,14 @@ function M.available_models()
   return {
     'hunyuan-lite',
     'hunyuan-pro',
+    'hunyuan-2.0-thinking-20251109',
+    'hunyuan-2.0-instruct-20251111',
+    'hunyuan-t1-latest',
+    'hunyuan-a13b',
+    'hunyuan-turbos-latest',
+    'hunyuan-translation',
+    'hunyuan-translation-lite',
+    'hunyuan-large-role-latest',
   }
 end
 
