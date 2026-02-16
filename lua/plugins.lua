@@ -1,3 +1,5 @@
+vim.opt.runtimepath:append('D:/wsdjeg/logger.nvim')
+
 local bundle_dir = 'D:/'
 
 local function bootstrap(repo)
@@ -14,7 +16,6 @@ local function bootstrap(repo)
   vim.opt.runtimepath:append(bundle_dir .. repo)
 end
 
-bootstrap('wsdjeg/logger.nvim')
 bootstrap('wsdjeg/notify.nvim')
 bootstrap('wsdjeg/job.nvim')
 bootstrap('wsdjeg/nvim-plug')
