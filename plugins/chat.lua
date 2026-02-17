@@ -3,6 +3,7 @@ return {
   dev = true,
   config = function()
     vim.cmd.source('d:/me/deepseek-api.lua')
+    require('chat.log').set_level(0)
   end,
   keys = {
     {
