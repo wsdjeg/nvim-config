@@ -1,6 +1,7 @@
 vim.o.backspace = 'indent,eol,start'
 vim.opt.nrformats:remove({ 'octal' })
 vim.o.listchars = 'tab:→ ,eol:↵,trail:·,extends:↷,precedes:↶'
+vim.o.list = true
 vim.o.fillchars = 'vert:│,fold:·'
 vim.o.laststatus = 2
 vim.o.tabstop = 4
