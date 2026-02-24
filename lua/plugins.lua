@@ -13,7 +13,7 @@ local function bootstrap(repo)
       bundle_dir .. repo,
     })
   end
-  vim.opt.runtimepath:append(bundle_dir .. repo)
+  vim.opt.runtimepath:prepend(bundle_dir .. repo)
 end
 
 bootstrap('wsdjeg/notify.nvim')

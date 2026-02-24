@@ -33,6 +33,8 @@ return {
             return false
           elseif string.match(var, 'wsdjeg\\.cache') then
             return false
+          elseif string.match(var, 'plenary.nvim') then
+            return false
           end
           return true
         end, vim.api.nvim_get_runtime_file('', true)),
