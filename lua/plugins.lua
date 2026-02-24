@@ -104,20 +104,6 @@ require('plug').add({
     end,
   },
   {
-    'wsdjeg/todo.nvim',
-    keys = {
-      {
-        'n',
-        '<leader>ao',
-        '<cmd>lua require("todo").list()<cr>',
-        { silent = true },
-      },
-    },
-    type = 'rocks',
-    dev = true,
-    desc = 'project todo manager',
-  },
-  {
     'hrsh7th/nvim-cmp',
     config = function()
       require('plugins.cmp')
