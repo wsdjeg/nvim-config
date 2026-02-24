@@ -45,6 +45,18 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
   | `<leader>bd` | delete current buffer |
   | `<leader>bc` | clear saved buffers   |
 
+- [calendar.nvim](https://github.com/wsdjeg/calendar.nvim) - A lightweight and extensible calendar plugin for Neovim.
+
+  | key binding  | description   |
+  | ------------ | ------------- |
+  | `<leader>ac` | open calendar |
+
+- [chat.nvim](https://github.com/wsdjeg/chat.nvim) - A lightweight Lua chat plugin for Neovim with AI integration.
+
+  | key binding  | description      |
+  | ------------ | ---------------- |
+  | `<leader>ak` | open chat window |
+
 - [chineselinter.nvim](https://github.com/wsdjeg/chineselinter.nvim) - Chinese Document Language Standards Checking Tool
 
 - [clever-f.vim](https://github.com/rhysd/clever-f.vim)
@@ -73,7 +85,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
 - [ctags.nvim](https://github.com/wsdjeg/ctags.nvim) - ctags integration in neovim
 
-- [ctrlg.nvim](https://github.com/wsdjeg/ctrlg.nvim) - better ctrl-g info
+- [ctrlg.nvim](https://github.com/wsdjeg/ctrlg.nvim) - enhanced Ctrl-G status information
 
   | key binding | description |
   | ----------- | ----------- |
@@ -228,7 +240,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
 - [scrollbar.nvim](https://github.com/wsdjeg/scrollbar.nvim) - floating scrollbar
 
-- [smart-ime.nvim](https://github.com/wsdjeg/smart-ime.nvim)
+- [smart-ime.nvim](https://github.com/wsdjeg/smart-ime.nvim) - Smart per-buffer IME switching for Neovim.
 
 - [statusline.nvim](https://github.com/wsdjeg/statusline.nvim) - module statusline
 
@@ -247,6 +259,12 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
   | `\9`         | jump to tab 9         |
   | `<leader>bn` | jump to next item     |
   | `<leader>bp` | jump to previous item |
+
+- [tabman.nvim](https://github.com/wsdjeg/tabman.nvim) - A lightweight tab and window manager for Neovim.
+
+  | key binding  | description |
+  | ------------ | ----------- |
+  | `<leader>tt` |             |
 
 - [tasks.nvim](https://github.com/wsdjeg/tasks.nvim) - tasks manager inspired from vscode
 
@@ -275,7 +293,7 @@ The plugins list and key bindings list is updated via [update-readme.lua](update
 
   | key binding  | description       |
   | ------------ | ----------------- |
-  | `<leader>ac` | open chat windows |
+  | `<leader>aC` | open chat windows |
 
 - [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc)
 

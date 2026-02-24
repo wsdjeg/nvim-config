@@ -2,6 +2,7 @@ return {
   { 'nvim-telescope/telescope.nvim', fetch = true },
   {
     'folke/snacks.nvim',
+    fetch = true,
     opts = { picker = { enable = true } },
     -- fetch = true,
   },
