@@ -52,7 +52,12 @@ function M.request(opt)
 
   local function fix_done_stdout(id, data)
     for idx, line in ipairs(data) do
-      if line == 'data: [DONE]' then
+      if
+        line:match('"finish_reason":"')
+        and line:match(',"usage":{"prompt_tokens"')
+      then
+        table.insert(data, idx + 1, '')
+        table.insert(data, idx + 1, 'data: [DONE]')
         table.insert(data, idx + 1, '')
       end
     end
