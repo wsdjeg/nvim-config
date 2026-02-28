@@ -5,7 +5,7 @@ local sessions = require('chat.sessions')
 local config = require('chat.config')
 
 function M.available_models()
-  return {'glm-5'}
+  return { 'glm-5' }
 end
 
 function M.request(opt)
@@ -27,15 +27,24 @@ function M.request(opt)
     model = sessions.get_session_model(opt.session),
     messages = opt.messages,
     stream = true,
-chat_template_kwargs = {
-enable_thinking = true,
-},
+    chat_template_kwargs = {
+      enable_thinking = true,
+    },
     stream_options = { include_usage = true },
     tools = require('chat.tools').available_tools(),
   })
 
+  local function fix_done_stdout(id, data)
+    for idx, line in ipairs(data) do
+      if line == 'data: [DONE]' then
+        table.insert(data, idx + 1, '')
+      end
+    end
+    opt.on_stdout(id, data)
+  end
+
   local jobid = job.start(cmd, {
-    on_stdout = opt.on_stdout,
+    on_stdout = fix_done_stdout,
     on_stderr = opt.on_stderr,
     on_exit = opt.on_exit,
   })
@@ -47,4 +56,3 @@ enable_thinking = true,
 end
 
 return M
-
