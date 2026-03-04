@@ -1,24 +1,26 @@
 local M = {}
 
+local available_models = {}
+
+local systemObj
+
 local job = require('job')
 local sessions = require('chat.sessions')
 local config = require('chat.config')
 
 function M.available_models()
-  return {
-    'gpt-4o-mini',
-  }
+  return {'gpt-5.1-codex'}
 end
 
 function M.request(opt)
   local cmd = {
     'curl',
     '-s',
-    'https://free.v36.cm/v1/chat/completions',
+    'https://terminal.pub/v1/chat/completions',
     '-H',
     'Content-Type: application/json',
     '-H',
-    'Authorization: Bearer ' .. config.config.api_key.free_chatgpt,
+    'Authorization: Bearer ' .. config.config.api_key.pub,
     '-X',
     'POST',
     '-d',
@@ -28,6 +30,9 @@ function M.request(opt)
   local body = vim.json.encode({
     model = sessions.get_session_model(opt.session),
     messages = opt.messages,
+    thinking = {
+      type = 'enabled',
+    },
     stream = true,
     stream_options = { include_usage = true },
     tools = require('chat.tools').available_tools(),
@@ -46,3 +51,4 @@ function M.request(opt)
 end
 
 return M
+
