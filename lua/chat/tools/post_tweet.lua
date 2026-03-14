@@ -6,7 +6,7 @@ local config = require('chat.config')
 local curl_available = nil
 local function is_curl_available()
   if curl_available == nil then
-    local curl_check = vim.fn.system({ 'curl', '--version' })
+    vim.fn.system({ 'curl', '--version' })
     curl_available = vim.v.shell_error == 0
   end
   return curl_available
@@ -36,9 +36,6 @@ local function percent_encode(str)
     return string.format('%%%02X', string.byte(c))
   end)
 end
-
--- Detect available HMAC-SHA1 implementation
-local hmac_impl = nil
 
 -- Pure Lua SHA1 implementation (fallback)
 local function sha1_lua(msg)
@@ -184,10 +181,9 @@ local function base64_encode(data)
     )
   end
 
-  -- Add padding
   local padding = (3 - #data % 3) % 3
   for i = 1, padding do
-    result[#result - i + 1] = '='
+    result[#result - padding + i] = '='
   end
 
   return table.concat(result)
@@ -419,10 +415,9 @@ To get your OAuth 1.0a credentials:
   local body_json = vim.json.encode(request_body)
 
   -- Build OAuth 1.0a Authorization header
-  -- For JSON body, we need to include the text parameter in signature
-  local body_params = {
-    text = action.text,
-  }
+  -- Note: JSON request body does NOT participate in OAuth signature calculation
+  -- Only query parameters should be included in body_params
+  local body_params = {}
 
   local auth_header =
     build_oauth_header('POST', url, body_params, credentials)
