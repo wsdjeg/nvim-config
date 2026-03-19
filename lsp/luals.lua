@@ -1,6 +1,15 @@
 local lua_rtp = vim.split(package.path, ';')
 table.insert(lua_rtp, 'lua/?.lua')
 table.insert(lua_rtp, 'lua/?/init.lua')
+local plug = require('plug')
+local library = {'${3rd}/luv/library', vim.env.VIMRUNTIME}
+
+for _, v in ipairs(plug.get()) do
+  if v.dev_path and v.dev_path:match('wsdjeg') then
+    table.insert(library, v.dev_path)
+  end
+end
+
 return {
   cmd = {
     'lua-language-server',
@@ -26,18 +35,7 @@ return {
       hint = { enable = true, setType = true },
       workspace = {
         -- Make the server aware of Neovim runtime files
-        library = vim.tbl_filter(function(var)
-          if string.match(var, 'SpaceVim\\bundle\\neodev.nvim') then
-            return true
-          elseif string.match(var, 'SpaceVim\\bundle') then
-            return false
-          elseif string.match(var, 'wsdjeg\\.cache') then
-            return false
-          elseif string.match(var, 'plenary.nvim') then
-            return false
-          end
-          return true
-        end, vim.api.nvim_get_runtime_file('', true)),
+        library = library,
         preloadFileSize = 2000,
         ignoreDir = { 'bundle' },
       },
