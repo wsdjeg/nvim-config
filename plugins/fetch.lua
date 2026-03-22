@@ -24,6 +24,7 @@ return {
   { 'neovim/neovim', fetch = true },
   { 'openclaw/openclaw', fetch = true },
   { 'wong2/weixin-agent-sdk', fetch = true },
+  { 'epiral/weixin-bot', fetch = true },
   { 'aiming-lab/SimpleMem', fetch = true },
   { 'vim/vim', fetch = true },
   { 'yetone/avante.nvim', fetch = true },
