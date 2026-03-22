@@ -23,6 +23,7 @@ return {
   -- 一些常用仓库，让 nvim-plug 帮我下载并更新，但不加入 vim 插件列表。
   { 'neovim/neovim', fetch = true },
   { 'openclaw/openclaw', fetch = true },
+  { 'wong2/weixin-agent-sdk', fetch = true },
   { 'aiming-lab/SimpleMem', fetch = true },
   { 'vim/vim', fetch = true },
   { 'yetone/avante.nvim', fetch = true },
