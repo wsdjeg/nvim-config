@@ -26,6 +26,7 @@ function M.request(opt)
   local anthropic_messages = {}
 
   -- Convert OpenAI message format to Anthropic format
+  -- https://platform.claude.com/docs/en/api/messages#content_block_param
   for _, msg in ipairs(messages) do
     if msg.role == 'system' then
       system_prompt = msg.content
