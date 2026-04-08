@@ -21,39 +21,8 @@ function M.available_models()
 end
 
 function M.request(opt)
-  local messages = opt.messages
-  local system_prompt = nil
-  local anthropic_messages = {}
 
-  -- Convert OpenAI message format to Anthropic format
-  -- https://platform.claude.com/docs/en/api/messages#content_block_param
-  for _, msg in ipairs(messages) do
-    if msg.role == 'system' then
-      system_prompt = msg.content
-    elseif msg.role == 'user' or msg.role == 'assistant' then
-      table.insert(anthropic_messages, {
-        role = msg.role,
-        content = {
-          {
-            type = 'text',
-            text = msg.content,
-          },
-        },
-      })
-    elseif msg.role == 'tool' then
-      -- Convert tool results
-      table.insert(anthropic_messages, {
-        role = 'user',
-        content = {
-          {
-            type = 'tool_result',
-            tool_use_id = msg.tool_call_id,
-            content = { type = 'text', text = msg.content },
-          },
-        },
-      })
-    end
-  end
+  local system_prompt, anthropic_messages = require('chat.protocol.anthropic').convert_message(opt.messages)
 
   require('chat.log').debug(vim.inspect(anthropic_messages))
 
