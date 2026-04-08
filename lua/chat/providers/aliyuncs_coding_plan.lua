@@ -54,6 +54,8 @@ function M.request(opt)
     model = sessions.get_session_model(opt.session),
     messages = anthropic_messages,
     max_tokens = 4096,
+    -- enable_thinking = true, -- ✅ 已经正确配置！
+    thinking = { type = 'enabled' },
     stream = true,
   }
 
@@ -111,4 +113,3 @@ function M._convert_tools(tools)
 end
 
 return M
-
