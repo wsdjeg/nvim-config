@@ -54,6 +54,8 @@ function M.request(opt)
     end
   end
 
+  require('chat.log').debug(vim.inspect(anthropic_messages))
+
   -- Build request body
   local body = {
     model = sessions.get_session_model(opt.session),
