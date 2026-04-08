@@ -32,7 +32,12 @@ function M.request(opt)
     elseif msg.role == 'user' or msg.role == 'assistant' then
       table.insert(anthropic_messages, {
         role = msg.role,
-        content = msg.content,
+        content = {
+          {
+            type = 'text',
+            text = msg.content,
+          },
+        },
       })
     elseif msg.role == 'tool' then
       -- Convert tool results
@@ -42,7 +47,7 @@ function M.request(opt)
           {
             type = 'tool_result',
             tool_use_id = msg.tool_call_id,
-            content = msg.content,
+            content = { type = 'text', text = msg.content },
           },
         },
       })
@@ -54,7 +59,6 @@ function M.request(opt)
     model = sessions.get_session_model(opt.session),
     messages = anthropic_messages,
     max_tokens = 4096,
-    -- enable_thinking = true, -- ✅ 已经正确配置！
     thinking = { type = 'enabled' },
     stream = true,
   }
