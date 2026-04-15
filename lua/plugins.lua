@@ -52,6 +52,10 @@ require('plug').add({
     'wsdjeg/notify.nvim',
     dev = true,
     desc = 'floating notification',
+    opts = {
+      border = { '┏', '━', '┓', '┃', '┛', '━', '┗', '┃' }
+        or 'rounded',
+    },
   },
 })
 require('plug').add({
