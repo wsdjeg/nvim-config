@@ -23,7 +23,7 @@ end
 
 local function generate_content()
   local lines = {
-    'The plugins list and key bindings list is updated via [update-readme.lua](update-readme.lua)',
+    'The plugins list and key bindings list are updated via [update-readme.lua](update-readme.lua)',
   }
   local plugs = require('plug').get()
   local names = vim.tbl_keys(plugs)

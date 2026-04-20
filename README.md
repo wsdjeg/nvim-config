@@ -2,11 +2,11 @@
 
 This is my own Neovim configuration for Windows.
 
-- Neovim: v0.11.1
+- Neovim: v0.12.1
 - OS: Windows 11
-- Terminal: Windows Terminal
+- Terminal: [WezTerm](https://wezterm.org/)
 - `<leader>`: `<Space>`
-- plugin manager: [nvim-plug](https://github.com/wsdjeg/nvim-plug)
+- Plugin Manager: [nvim-plug](https://github.com/wsdjeg/nvim-plug)
 
 ## Installation
 
@@ -18,7 +18,7 @@ git clone https://github.com/wsdjeg/nvim-config.git ~/AppData/Local/nvim
 
 <!-- nvim-config doc start -->
 
-The plugins list and key bindings list is updated via [update-readme.lua](update-readme.lua)
+The plugins list and key bindings list are updated via [update-readme.lua](update-readme.lua)
 
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 
