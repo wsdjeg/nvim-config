@@ -4,7 +4,10 @@ return {
     filter = {
       matcher = 'fzy',
     },
-    window = { enable_preview = true },
+    window = {
+      enable_preview = true,
+      border = { '┏', '━', '┓', '┃', '┛', '━', '┗', '┃' },
+    },
     highlight = {
       matched = 'Tag',
     },
