@@ -7,6 +7,11 @@ return {
     desc = 'neovim job api',
   },
   {
+    'NousResearch/hermes-agent',
+    fetch = true,
+    desc = 'hermes agent',
+  },
+  {
     'wsdjeg/nvim-plug',
     fetch = true,
     desc = 'neovim plugin manager',
