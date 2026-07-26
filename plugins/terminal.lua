@@ -16,6 +16,7 @@ return {
   },
   opts = {
     border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
+    shell = {'cmd.exe', '/d', '/k', 'cls'},
     picker = {
       highlight = {
         --  [25768   ] ✓ { "cmd.exe", "/s", "/c", '"cmd.exe"' } (~\AppData\Local\nvim) buf:2
