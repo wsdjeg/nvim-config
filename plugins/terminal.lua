@@ -16,7 +16,25 @@ return {
   },
   opts = {
     border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
-    shell = {'cmd.exe', '/d', '/k', 'cls'},
+    shell = { 'cmd.exe', '/d', '/k', 'cls' },
+    shells = {
+      {
+        name = 'cmd',
+        cmd = { 'cmd.exe', '/d', '/k', 'cls' },
+      },
+      {
+        name = 'powershell',
+        cmd = { 'powershell.exe', '-NoProfile' },
+      },
+      {
+        name = 'bash',
+        cmd = { 'bash' },
+      },
+      {
+        name = 'zsh',
+        cmd = { 'zsh' },
+      },
+    },
     picker = {
       highlight = {
         --  [25768   ] ✓ { "cmd.exe", "/s", "/c", '"cmd.exe"' } (~\AppData\Local\nvim) buf:2
